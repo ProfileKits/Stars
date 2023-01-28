@@ -22,7 +22,6 @@ public class MainActivity extends CNBaseActivity {
 
     @Override
     protected void initView() {
-
         textView = findViewById(R.id.tv);
         textView2 = findViewById(R.id.tv2);
 
