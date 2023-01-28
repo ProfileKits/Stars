@@ -1,9 +1,7 @@
 plugins {
     id 'com.android.library'
-    id 'maven-publish'
 }
-group = 'com.github.ProfileKits'
-version = '1.0'
+
 android {
     compileSdkVersion 33
 
@@ -45,18 +43,4 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
-}
-
-afterEvaluate {
-    // 官方建议使用上传方法
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                groupId = 'com.github.ProfileKits' //groupId 随便取 , 这个是依赖库的组 id
-                artifactId = 'Tools'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
-                version = '1.0' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
-            }
-        }
-    }
 }
