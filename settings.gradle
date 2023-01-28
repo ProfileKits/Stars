@@ -1,0 +1,3 @@
+rootProject.name = "Chestnut"
+include ':app'
+include ':Chestnutslibrary'

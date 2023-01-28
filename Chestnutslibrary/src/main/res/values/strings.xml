@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tip_permission_header">请允许APP获得以下权限</string>
+    <string name="tip_permission_camera">·照相权限，用于拍摄功能</string>
+    <string name="tip_permission_voice">·录音权限，用于发送语音</string>
+    <string name="tip_permission_phone">·手机状态权限，仅获取设备的状态，不监控通话记录</string>
+    <string name="tip_permission_storage">·存储权限，用于保存文件</string>
+    <string name="tip_permission_location">·定位权限，用于发送位置</string>
+    <string name="tip_unkown_error_place_holder">未知异常，%s</string>
+    <string name="data_exception">数据异常，请稍后重试</string>
+    <string name="net_exception">网络异常，请稍后重试</string>
+
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确认</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+</resources>

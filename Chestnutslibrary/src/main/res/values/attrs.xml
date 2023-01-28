@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="cleanEditText">
+        <attr name="icon" format="reference"></attr>
+        <attr name="focusIcon" format="reference"></attr>
+        <attr name="deleteIcon" format="reference"></attr>
+        <attr name="iconWidth" format="dimension"></attr>
+        <attr name="iconHeight" format="dimension"></attr>
+        <attr name="deleteIconWidth" format="dimension"></attr>
+        <attr name="deleteIconHeight" format="dimension"></attr>
+        <attr name="dividerColor" format="color"></attr>
+        <attr name="dividerBonds" format="dimension"></attr>
+        <attr name="focusDividerColor" format="color"></attr>
+        <attr name="dividerMarginLeft" format="dimension"></attr>
+        <attr name="dividerMarginRight" format="dimension"></attr>
+        <attr name="focusTextColor" format="color"></attr>
+        <attr name="background" format="reference"></attr>
+        <attr name="cursor" format="reference"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="RealtimeBlurView">
+        <attr name="realtimeBlurRadius" format="dimension"/>
+        <attr name="realtimeDownsampleFactor" format="float"/>
+        <attr name="realtimeOverlayColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="RoundedRectangleBlurView">
+        <attr name="roundedRectangleRadius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="FlikerProgressBar">
+        <attr name="loadingColor" format="color"/>
+        <attr name="stopColor" format="color"/>
+        <attr name="finishColor" format="color"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="borderWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="pickerview_textSize" format="dimension"/>
+        <attr name="pickerview_textColorOut" format="color"/>
+        <attr name="pickerview_textColorCenter" format="color"/>
+        <attr name="pickerview_dividerColor" format="color"/>
+    </declare-styleable>
+</resources>
