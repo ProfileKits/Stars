@@ -2,6 +2,8 @@ package com.predictor.library.utils;
 
 import android.app.Activity;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.util.Stack;
 
 public class CNActivityStack {
@@ -13,7 +15,7 @@ public class CNActivityStack {
     }
 
     public static CNActivityStack getInstance() {
-        if (instance == null) {
+        if (instance == null && ChestnutData.getPermission()) {
             synchronized (CNActivityStack.class) {
                 if (instance == null) {
                     instance = new CNActivityStack();

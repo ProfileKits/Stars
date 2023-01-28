@@ -3,6 +3,8 @@ package com.predictor.library.utils;
 import android.content.Context;
 import android.util.Log;
 
+import com.predictor.library.BuildConfig;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,7 +18,7 @@ public abstract class CNLogUtil {
 	public static final String TAG = "GalaxyStudio";
 	private static final String LOG_FILE = "GalaxyStudio.log";
 
-	public static boolean publicOnOff =true;
+	public static boolean publicOnOff = BuildConfig.DEBUG;
 
 	public static boolean allowD = publicOnOff;
 	public static boolean allowE = publicOnOff;

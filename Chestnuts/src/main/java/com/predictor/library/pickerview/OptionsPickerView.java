@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 
 import com.predictor.library.R;
+import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.pickerview.view.BasePickerView;
 import com.predictor.library.pickerview.view.WheelOptions;
 
@@ -24,19 +25,21 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
     private static final String TAG_CANCEL = "cancel";
     public OptionsPickerView(Context context) {
         super(context);
-        LayoutInflater.from(context).inflate(R.layout.pickerview_options, contentContainer);
-        // -----确定和取消按钮
-        btnSubmit = findViewById(R.id.btnSubmit);
-        btnSubmit.setTag(TAG_SUBMIT);
-        btnCancel = findViewById(R.id.btnCancel);
-        btnCancel.setTag(TAG_CANCEL);
-        btnSubmit.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
-        //顶部标题
-        tvTitle = (TextView) findViewById(R.id.tvTitle);
-        // ----转轮
-        final View optionspicker = findViewById(R.id.optionspicker);
-        wheelOptions = new WheelOptions(optionspicker);
+        if(ChestnutData.getPermission()){
+            LayoutInflater.from(context).inflate(R.layout.pickerview_options, contentContainer);
+            // -----确定和取消按钮
+            btnSubmit = findViewById(R.id.btnSubmit);
+            btnSubmit.setTag(TAG_SUBMIT);
+            btnCancel = findViewById(R.id.btnCancel);
+            btnCancel.setTag(TAG_CANCEL);
+            btnSubmit.setOnClickListener(this);
+            btnCancel.setOnClickListener(this);
+            //顶部标题
+            tvTitle = (TextView) findViewById(R.id.tvTitle);
+            // ----转轮
+            final View optionspicker = findViewById(R.id.optionspicker);
+            wheelOptions = new WheelOptions(optionspicker);
+        }
     }
     public void setPicker(ArrayList<T> optionsItems) {
         wheelOptions.setPicker(optionsItems, null, null, false);

@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 
 import com.predictor.library.R;
+import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.pickerview.view.BasePickerView;
 import com.predictor.library.pickerview.view.WheelTime;
 
@@ -19,7 +20,7 @@ import java.util.Date;
  */
 public class TimePickerView extends BasePickerView implements View.OnClickListener {
     public enum Type {
-        ALL, YEAR_MONTH_DAY, HOURS_MINS, MONTH_DAY_HOUR_MIN , YEAR_MONTH
+        ALL, YEAR_MONTH_DAY, HOURS_MINS, MONTH_DAY_HOUR_MIN, YEAR_MONTH
     }// 四种选择模式，年月日时分，年月日，时分，月日时分
 
     WheelTime wheelTime;
@@ -31,38 +32,39 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 
     public TimePickerView(Context context, Type type) {
         super(context);
+        if (ChestnutData.getPermission()) {
+            LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
+            // -----确定和取消按钮
+            btnSubmit = findViewById(R.id.btnSubmit);
+            btnSubmit.setTag(TAG_SUBMIT);
+            btnCancel = findViewById(R.id.btnCancel);
+            btnCancel.setTag(TAG_CANCEL);
+            btnSubmit.setOnClickListener(this);
+            btnCancel.setOnClickListener(this);
+            //顶部标题
+            tvTitle = (TextView) findViewById(R.id.tvTitle);
+            // ----时间转轮
+            final View timepickerview = findViewById(R.id.timepicker);
+            wheelTime = new WheelTime(timepickerview, type);
 
-        LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
-        // -----确定和取消按钮
-        btnSubmit = findViewById(R.id.btnSubmit);
-        btnSubmit.setTag(TAG_SUBMIT);
-        btnCancel = findViewById(R.id.btnCancel);
-        btnCancel.setTag(TAG_CANCEL);
-        btnSubmit.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
-        //顶部标题
-        tvTitle = (TextView) findViewById(R.id.tvTitle);
-        // ----时间转轮
-        final View timepickerview = findViewById(R.id.timepicker);
-        wheelTime = new WheelTime(timepickerview, type);
-
-        //默认选中当前时间
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-        int hours = calendar.get(Calendar.HOUR_OF_DAY);
-        int minute = calendar.get(Calendar.MINUTE);
-        wheelTime.setPicker(year, month, day, hours, minute);
-
+            //默认选中当前时间
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTimeInMillis(System.currentTimeMillis());
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+            int hours = calendar.get(Calendar.HOUR_OF_DAY);
+            int minute = calendar.get(Calendar.MINUTE);
+            wheelTime.setPicker(year, month, day, hours, minute);
+        }
     }
 
     /**
      * 设置可以选择的时间范围
      * 要在setTime之前调用才有效果
+     *
      * @param startYear 开始年份
-     * @param endYear 结束年份
+     * @param endYear   结束年份
      */
     public void setRange(int startYear, int endYear) {
         wheelTime.setStartYear(startYear);
@@ -71,6 +73,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 
     /**
      * 设置选中时间
+     *
      * @param date 时间
      */
     public void setTime(Date date) {
@@ -109,6 +112,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 
     /**
      * 设置是否循环滚动
+     *
      * @param cyclic 是否循环
      */
     public void setCyclic(boolean cyclic) {
@@ -143,7 +147,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         this.timeSelectListener = timeSelectListener;
     }
 
-    public void setTitle(String title){
+    public void setTitle(String title) {
         tvTitle.setText(title);
     }
 }

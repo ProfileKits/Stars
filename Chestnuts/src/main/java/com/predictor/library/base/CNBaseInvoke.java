@@ -2,7 +2,9 @@ package com.predictor.library.base;
 
 import android.content.Context;
 
+import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.utils.CNBaseTools;
+import com.predictor.library.utils.CNLogUtil;
 
 /**
  * 工具类初始化 主要识初始化CNBaseTools 和 CNImageTools
@@ -20,8 +22,15 @@ public class CNBaseInvoke {
         return CNBaseInvoke;
     }
 
-    public void init(Context context) {
+    public boolean init(Context context, String key) {
         CNBaseTools.init(context);
-    }
+        boolean k = ChestnutData.getToken(context, key);
+        if(!k){//初始化失败
 
+        }
+        String realKey = ChestnutData.getKey(context);
+        boolean permission = ChestnutData.getPermission();
+        CNLogUtil.i("realKey:"+realKey+ "--permission:"+permission);
+        return k;
+    }
 }

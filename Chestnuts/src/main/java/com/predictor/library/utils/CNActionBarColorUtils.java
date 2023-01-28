@@ -8,10 +8,12 @@ import android.view.WindowManager;
 import androidx.appcompat.app.ActionBar;
 
 import com.predictor.library.base.CNBaseActivity;
+import com.predictor.library.jni.ChestnutData;
 
 
 public class CNActionBarColorUtils {
     public static void titleTrans(CNBaseActivity activity, int color1, int color2) {
+        if(ChestnutData.getPermission())
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS |

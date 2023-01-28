@@ -12,7 +12,6 @@ import java.util.GregorianCalendar;
  * <p>时间转换工具类</p>
  */
 public class CNDateFormatUtil {
-
     /**
      * 格式：yyyy-MM-dd
      */
