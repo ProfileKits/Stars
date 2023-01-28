@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Chestnuts" />
+            <option value="$PROJECT_DIR$/Encryption" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

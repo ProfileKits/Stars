@@ -10,19 +10,9 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        ndk {
-            moduleName "ChestnutData"
-            abiFilters "armeabi-v7a"
-        }
     }
 
     buildTypes {
-        sourceSets {
-            main {
-                jni.srcDirs = []
-                jniLibs.srcDirs = ['src/main/libs']
-            }
-        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -33,12 +23,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-//    externalNativeBuild {
-//        ndkBuild {
-//            path 'src/main/jni/Android.mk'
-//        }
-//    }
 }
 
 

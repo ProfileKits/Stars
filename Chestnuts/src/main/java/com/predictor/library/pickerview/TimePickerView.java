@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 
 import com.predictor.library.R;
-import com.predictor.library.jni.ChestnutData;
+
 import com.predictor.library.pickerview.view.BasePickerView;
 import com.predictor.library.pickerview.view.WheelTime;
 
@@ -32,7 +32,6 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 
     public TimePickerView(Context context, Type type) {
         super(context);
-        if (ChestnutData.getPermission()) {
             LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
             // -----确定和取消按钮
             btnSubmit = findViewById(R.id.btnSubmit);
@@ -56,7 +55,6 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             int hours = calendar.get(Calendar.HOUR_OF_DAY);
             int minute = calendar.get(Calendar.MINUTE);
             wheelTime.setPicker(year, month, day, hours, minute);
-        }
     }
 
     /**

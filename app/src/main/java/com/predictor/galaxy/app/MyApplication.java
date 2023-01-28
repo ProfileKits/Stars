@@ -5,8 +5,9 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
+import com.flycode.encryption.init.Encryption;
+import com.flycode.encryption.jni.ChestnutData;
 import com.predictor.library.base.CNBaseInvoke;
-import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.utils.CNLogUtil;
 
 import java.security.MessageDigest;
@@ -35,10 +36,11 @@ public class MyApplication extends Application {
     }
 
     private void initData() {
-       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode());
-        CNLogUtil.i("key:"+key);
+        CNBaseInvoke.getInstance().init(this);
+        boolean key = Encryption.getInstance().init(this, ChestnutData.getStartCode());
+        CNLogUtil.i("key:" + key);
         String realKey = getSha1Value(this);
-        CNLogUtil.i("key:"+realKey);
+        CNLogUtil.i("key:" + realKey);
     }
 
     private byte[] getSign(Context context) {

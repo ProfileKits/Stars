@@ -1,3 +1,4 @@
 rootProject.name = "Chestnut"
 include ':app'
 include ':Chestnuts'
+include ':Encryption'

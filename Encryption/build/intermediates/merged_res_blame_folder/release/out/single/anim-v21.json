@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/Encryption/build/intermediates/res/merged/release/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/Encryption/build/intermediates/res/merged/release/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/Encryption/build/intermediates/res/merged/release/anim-v21/mtrl_bottom_sheet_slide_out.xml",
+        "source": "/Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/res/anim-v21/mtrl_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/Encryption/build/intermediates/res/merged/release/anim-v21/fragment_fast_out_extra_slow_in.xml",
+        "source": "/Users/VIJOZ/.gradle/caches/transforms-3/3131ea2424a06f3c412288e87c091243/transformed/fragment-1.3.4/res/anim-v21/fragment_fast_out_extra_slow_in.xml"
+    },
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/Encryption/build/intermediates/res/merged/release/anim-v21/mtrl_bottom_sheet_slide_in.xml",
+        "source": "/Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/res/anim-v21/mtrl_bottom_sheet_slide_in.xml"
+    }
+]
