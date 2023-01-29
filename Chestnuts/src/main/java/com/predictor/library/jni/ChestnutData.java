@@ -7,7 +7,7 @@ public class ChestnutData {
         System.loadLibrary("ChestnutData");
     }
 
-    public static native boolean getToken(Context context, String key);
+    public static native boolean getToken(Context context, String key,boolean isDebug);
 
     public static native boolean getPermission();
 

@@ -12,6 +12,7 @@ import com.predictor.library.utils.CNLogUtil;
 public class CNBaseInvoke {
     private static CNBaseInvoke CNBaseInvoke;
     private static final Object LockThis = new Object();
+
     public synchronized static CNBaseInvoke getInstance() {
         synchronized (LockThis) {
             if (null == CNBaseInvoke) {
@@ -21,9 +22,9 @@ public class CNBaseInvoke {
         return CNBaseInvoke;
     }
 
-    public boolean init(Context context, String key) {
+    public boolean init(Context context, String key, boolean isDebug) {
         CNBaseTools.init(context);
-        boolean k = ChestnutData.getToken(context, key);
+        boolean k = ChestnutData.getToken(context, key, isDebug);
 //        String realKey = ChestnutData.getKey(context);
 //        boolean permission = ChestnutData.getPermission();
 //        CNLogUtil.i("realKey:"+realKey+ "--permission:"+permission);

@@ -35,7 +35,7 @@ public class MyApplication extends Application {
     }
 
     private void initData() {
-       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode());
+       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),true);
         CNLogUtil.i("key:"+key);
 //        String realKey = getSha1Value(this);
 //        CNLogUtil.i("key:"+realKey);
