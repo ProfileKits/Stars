@@ -1,6 +1,7 @@
 package com.predictor.library.utils;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.view.ActionMode;
@@ -92,6 +93,22 @@ public class CNEditTextUtil {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * 给Drawable着色
+     * @param context 上下文
+     * @param res 待着色的R.drawable.resources 资源
+     * @param colorStateList  ColorStateList,如 ColorStateList.valueOf(Color.RED)
+     * @return 完成着色的 Drawable
+     */
+    public static Drawable tintDrawable(Context context, int res, ColorStateList colorStateList) {
+        Drawable drawable = context.getResources().getDrawable(res);
+        final Drawable wrappedDrawable = DrawableCompat.wrap(drawable.mutate());
+        DrawableCompat.setTintList(wrappedDrawable, colorStateList);
+        return wrappedDrawable;
+    }
+
 
     /**
      * 给Drawable着色

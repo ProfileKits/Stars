@@ -7,6 +7,7 @@ import com.predictor.galaxy.bean.PickerViewData;
 import com.predictor.galaxy.bean.TimeBean;
 import com.predictor.library.pickerview.OptionsPickerView;
 import com.predictor.library.pickerview.TimePickerView;
+import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.pickerview.model.IPickerViewData;
 
 

@@ -15,13 +15,12 @@ import com.predictor.library.artanimation.library.Techniques;
 import com.predictor.library.base.CNBaseActivity;
 
 import com.predictor.library.example.SetSelfWithPoint;
+import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.utils.CNAnimationUtils;
-import com.predictor.library.utils.CNCustomToast;
 import com.predictor.library.utils.CNDES;
 import com.predictor.library.utils.CNLogUtil;
 import com.predictor.library.view.CNTextTool;
 import com.predictor.galaxy.view.PickerView;
-import com.predictor.galaxy.view.SelectTimeCallBack;
 
 
 public class MainActivity extends CNBaseActivity {

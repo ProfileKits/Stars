@@ -120,6 +120,12 @@ public class CNFileUtils {
         return null;
     }
 
+    /**
+     * 拷贝文件
+     * @param source
+     * @param dest
+     * @throws IOException
+     */
     public static void copyFile(File source, File dest) throws IOException {
         InputStream is = null;
         OutputStream os = null;
