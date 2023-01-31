@@ -1,5 +1,8 @@
 package com.predictor.library.utils;
 
+import android.annotation.SuppressLint;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -7,6 +10,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import java.lang.reflect.Field;
 //禁止输入框复制粘贴
@@ -85,6 +90,52 @@ public class CNEditTextUtil {
             mSelectionControllerEnabledField.set(editorObject, false);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    /**
+     * 给Drawable着色
+     * @param drawable 待着色的drawable
+     * @param colorStateList  ColorStateList,如 ColorStateList.valueOf(Color.RED)
+     * @return 完成着色的 Drawable
+     */
+    public static Drawable tintDrawable(Drawable drawable, ColorStateList colorStateList) {
+        final Drawable wrappedDrawable = DrawableCompat.wrap(drawable.mutate());
+        DrawableCompat.setTintList(wrappedDrawable, colorStateList);
+        return wrappedDrawable;
+    }
+
+
+    /**
+     *  给EditText光标着色
+     * @param editText EditText对象
+     * @param color Color,如Color.RED
+     */
+    public static void tintCursorDrawable(EditText editText, int color) {
+        try {
+            @SuppressLint("SoonBlockedPrivateApi") Field fCursorDrawableRes = TextView.class.getDeclaredField("mCursorDrawableRes");
+            fCursorDrawableRes.setAccessible(true);
+            int mCursorDrawableRes = fCursorDrawableRes.getInt(editText);
+            Field fEditor = TextView.class.getDeclaredField("mEditor");
+            fEditor.setAccessible(true);
+            Object editor = fEditor.get(editText);
+            Class<?> clazz = editor.getClass();
+            Field fCursorDrawable = clazz.getDeclaredField("mCursorDrawable");
+            fCursorDrawable.setAccessible(true);
+
+            if (mCursorDrawableRes <= 0) {
+                return;
+            }
+
+            Drawable cursorDrawable = editText.getContext().getResources().getDrawable(mCursorDrawableRes);
+            if (cursorDrawable == null) {
+                return;
+            }
+
+            Drawable tintDrawable  = tintDrawable(cursorDrawable, ColorStateList.valueOf(color));
+            Drawable[] drawables = new Drawable[] {tintDrawable, tintDrawable};
+            fCursorDrawable.set(editor, drawables);
+        } catch (Throwable ignored) {
         }
     }
 }

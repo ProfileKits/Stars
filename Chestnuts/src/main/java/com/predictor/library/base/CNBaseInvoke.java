@@ -1,5 +1,6 @@
 package com.predictor.library.base;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.predictor.library.jni.ChestnutData;
@@ -12,6 +13,8 @@ import com.predictor.library.utils.CNLogUtil;
 public class CNBaseInvoke {
     private static CNBaseInvoke CNBaseInvoke;
     private static final Object LockThis = new Object();
+    @SuppressLint("StaticFieldLeak")
+    private static Context context;
 
     public synchronized static CNBaseInvoke getInstance() {
         synchronized (LockThis) {
@@ -23,11 +26,23 @@ public class CNBaseInvoke {
     }
 
     public boolean init(Context context, String key, boolean isDebug) {
+        this.context = context;
         CNBaseTools.init(context);
         boolean k = ChestnutData.getToken(context, key, isDebug);
+
 //        String realKey = ChestnutData.getKey(context);
 //        boolean permission = ChestnutData.getPermission();
 //        CNLogUtil.i("realKey:"+realKey+ "--permission:"+permission);
         return k;
+    }
+
+    /**
+     * 获取ApplicationContext
+     *
+     * @return ApplicationContext
+     */
+    public static Context getContext() {
+        if (context != null) return context;
+        throw new NullPointerException("u should init first");
     }
 }

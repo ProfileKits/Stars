@@ -3,6 +3,7 @@ package com.predictor.library.base;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -21,6 +22,9 @@ import com.gyf.immersionbar.ImmersionBar;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public abstract class CNBaseActivity extends AppCompatActivity {
     protected Context mContext;
@@ -226,5 +230,42 @@ public abstract class CNBaseActivity extends AppCompatActivity {
                 startActivityForResult(startIntent, requestCode);
             }
         }
+    }
+
+
+    /**
+     * 功能描述：带数据的Activity之间的跳转
+     *
+     * @param activity
+     * @param cls
+     * @param hashMap
+     */
+    public static void startActivity(Activity activity, Class<? extends Activity> cls,
+                                           HashMap<String, ? extends Object> hashMap) {
+        Intent intent = new Intent(activity, cls);
+        Iterator<?> iterator = hashMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            @SuppressWarnings("unchecked")
+            Map.Entry<String, Object> entry = (Map.Entry<String, Object>) iterator
+                    .next();
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            if (value instanceof String) {
+                intent.putExtra(key, (String) value);
+            }
+            if (value instanceof Boolean) {
+                intent.putExtra(key, (boolean) value);
+            }
+            if (value instanceof Integer) {
+                intent.putExtra(key, (int) value);
+            }
+            if (value instanceof Float) {
+                intent.putExtra(key, (float) value);
+            }
+            if (value instanceof Double) {
+                intent.putExtra(key, (double) value);
+            }
+        }
+        activity.startActivity(intent);
     }
 }

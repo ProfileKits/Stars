@@ -1,5 +1,6 @@
 package com.predictor.library.utils;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -12,10 +13,15 @@ import android.util.Log;
 import androidx.annotation.WorkerThread;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -27,6 +33,67 @@ public class CNHttpUtil {
 
     public static boolean isURL(String text) {
         return getURLList(text).size() > 0;
+    }
+
+    /**
+     * url 解码
+     * @param schemeUrl url
+     * @return 解码url
+     */
+    public static String decodeURL(String schemeUrl) {
+        try {
+            return URLDecoder.decode(schemeUrl, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return schemeUrl;
+    }
+
+    /**
+     * url 编码
+     * @param schemeUrl url
+     * @return 编码url
+     */
+    public static String encodeURL(String schemeUrl) {
+        try {
+            return URLEncoder.encode(schemeUrl, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        ;
+        return schemeUrl;
+    }
+
+    /**
+     * 返回带参数的get请求url地址
+     * @param url url
+     * @param params 参数
+     * @return 带参数的get请求url地址
+     */
+    public static String getURLWithParams(String url, Map<String, String> params){
+        return url+"?"+joinParam(params);
+    }
+
+    /**
+     * 连接参数
+     * @param params 参数
+     * @return 连接结果
+     */
+    private static StringBuffer joinParam(Map<String, String> params) {
+        StringBuffer result = new StringBuffer();
+        Iterator<Map.Entry<String, String>> iterator = params.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> param = iterator.next();
+            String key = param.getKey();
+            String value = param.getValue();
+            result.append(key).append('=').append(value);
+            if (iterator.hasNext()) {
+                result.append('&');
+            }
+        }
+        return result;
     }
 
     public static List<String> getURLList(String str) {
@@ -68,8 +135,8 @@ public class CNHttpUtil {
     public static boolean isGprsOrWifiConnected(Context context) {
         ConnectivityManager mConnectivityManager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo gprs = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-        NetworkInfo wifi = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        @SuppressLint("MissingPermission") NetworkInfo gprs = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        @SuppressLint("MissingPermission") NetworkInfo wifi = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         boolean isConnectedGprs = gprs != null && gprs.isConnected();
         boolean isConnectedWifi = wifi != null && wifi.isConnected();
         return isConnectedGprs || isConnectedWifi;
@@ -79,7 +146,7 @@ public class CNHttpUtil {
     public static boolean isConnectedGprs(Context context) {
         ConnectivityManager mConnectivityManager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo gprs = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        @SuppressLint("MissingPermission") NetworkInfo gprs = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         boolean isConnectedGprs = gprs != null && gprs.isConnected();
         return isConnectedGprs;
     }
@@ -92,8 +159,8 @@ public class CNHttpUtil {
      */
     public static boolean checkNetworkInfo(Context mContext) {
         ConnectivityManager conMan = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo.State mobile = conMan.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState();
-        NetworkInfo.State wifi = conMan.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();
+        @SuppressLint("MissingPermission") NetworkInfo.State mobile = conMan.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState();
+        @SuppressLint("MissingPermission") NetworkInfo.State wifi = conMan.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();
         if (mobile == NetworkInfo.State.CONNECTED || mobile == NetworkInfo.State.CONNECTING)
             return true;
         return wifi == NetworkInfo.State.CONNECTED || wifi == NetworkInfo.State.CONNECTING;
@@ -106,6 +173,7 @@ public class CNHttpUtil {
      * @param context
      * @return
      */
+    @SuppressLint("MissingPermission")
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static int getNetworkState(Context context) {
         int result = NetWork.NONE;
@@ -140,7 +208,7 @@ public class CNHttpUtil {
     public static boolean isConnectedWifi(Context context) {
         ConnectivityManager mConnectivityManager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo wifi = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        @SuppressLint("MissingPermission") NetworkInfo wifi = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         boolean isConnectedWifi = wifi != null && wifi.isConnected();
         return isConnectedWifi;
     }

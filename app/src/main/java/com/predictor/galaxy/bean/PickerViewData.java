@@ -2,9 +2,6 @@ package com.predictor.galaxy.bean;
 
 import com.predictor.library.pickerview.model.IPickerViewData;
 
-/**
- * Created by Administrator on 2016/7/13.
- */
 public class PickerViewData implements IPickerViewData {
     private String content;
 

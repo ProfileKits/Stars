@@ -3,6 +3,7 @@ package com.predictor.library.utils;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -13,46 +14,32 @@ import android.view.animation.TranslateAnimation;
 
 import java.util.Random;
 
+/**
+ * 使用startWith启动常用动画
+ * 例如：CNAnimationUtils.startWith(textView, CNAnimationUtils.IN_ROTATE360,  1000);
+ */
 public class CNAnimationUtils {
-    private static final int rela1 = Animation.RELATIVE_TO_SELF;
-    private static final int rela2 = Animation.RELATIVE_TO_PARENT;
+    private static final int SELF = Animation.RELATIVE_TO_SELF;
+    private static final int PARENT = Animation.RELATIVE_TO_PARENT;
 
-    private static final int IN_FAED = 1;
-    private static final int IN_SLIDE = 2;
-    private static final int IN_SCALE = 3;
-    private static final int IN_ROTATE = 4;
-    private static final int IN_SCALE_ROTATE = 5;
-    private static final int IN_SLIDE_FADE = 6;
-
-    private static final int OUT_FAED = 11;
-    private static final int OUT_SLIDE = 12;
-    private static final int OUT_SCALE = 13;
-    private static final int OUT_ROTATE = 14;
-    private static final int OUT_SCALE_ROTATE = 15;
-    private static final int OUT_SLIDE_FADE = 16;
-
-    private static final int OUT_RIGHT_SLIDE = 17;
-
+    public static final int IN_FAED = 1;
+    public static final int IN_SLIDE = 2;
+    public static final int IN_SCALE = 3;
+    public static final int IN_ROTATE = 4;
+    public static final int IN_SCALE_ROTATE = 5;
+    public static final int IN_SLIDE_FADE = 6;
+    public static final int IN_ROTATE360 = 7;
+    public static final int OUT_FAED = 11;
+    public static final int OUT_SLIDE = 12;
+    public static final int OUT_SCALE = 13;
+    public static final int OUT_ROTATE = 14;
+    public static final int OUT_SCALE_ROTATE = 15;
+    public static final int OUT_SLIDE_FADE = 16;
+    public static final int OUT_RIGHT_SLIDE = 17;
     private static Random random = new Random();
 
     public static int randomAnimationInIndex() {
         return random.nextInt(IN_SLIDE_FADE) + 1;
-    }
-
-    public static int getNextInAnimationIndex() {
-        return IN_SLIDE;
-    }
-
-    public static int getNextOutAnimationIndex() {
-        return OUT_FAED;
-    }
-
-    public static int getPreviousOutAnimationIndex() {
-        return OUT_RIGHT_SLIDE;
-    }
-
-    public static int getPreviousInAnimationIndex() {
-        return IN_FAED;
     }
 
     /**
@@ -68,6 +55,38 @@ public class CNAnimationUtils {
         }
     }
 
+    //设置并启动动画
+    public static void startWith(View view, int index, long delayTimeToStop, long duration, int repeatCount) {
+        Animation animation = getAnimation(index);
+        animation.setDuration(duration);
+        animation.setRepeatCount(repeatCount);
+        animation.startNow();
+        if (delayTimeToStop > 0) {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    view.clearAnimation();
+                }
+            }, delayTimeToStop);
+        }
+        view.setAnimation(animation);
+    }
+
+    //设置并启动动画
+    public static Animation startWith(View view, int index, long duration) {
+        Animation animation = getAnimation(index);
+        animation.setDuration(duration);
+        animation.setRepeatCount(-1);
+        animation.startNow();
+        view.setAnimation(animation);
+        return animation;
+    }
+
+    //停止动画
+    public static void stopWith(View view){
+        view.clearAnimation();
+    }
+
     public static Animation getAnimation(int index) {
         Animation animation = null;
         switch (index) {
@@ -75,13 +94,16 @@ public class CNAnimationUtils {
                 animation = new AlphaAnimation(0, 1);
                 break;
             case IN_SLIDE:
-                animation = new TranslateAnimation(rela2, 1, rela2, 0, rela2, 0, rela2, 0);
+                animation = new TranslateAnimation(PARENT, 1, PARENT, 0, PARENT, 0, PARENT, 0);
                 break;
             case IN_SCALE:
-                animation = new ScaleAnimation(0, 1, 0, 1, rela2, 0.5f, rela2, 0.5f);
+                animation = new ScaleAnimation(0, 1, 0, 1, PARENT, 0.5f, PARENT, 0.5f);
                 break;
             case IN_ROTATE:
-                animation = new RotateAnimation(-90, 0, rela1, 0, rela1, 1);
+                animation = new RotateAnimation(-90, 0, SELF, 0, SELF, 1);
+                break;
+            case IN_ROTATE360:
+                animation = getRotate();
                 break;
             case IN_SCALE_ROTATE:
                 animation = getScaleRotateIn();
@@ -89,18 +111,17 @@ public class CNAnimationUtils {
             case IN_SLIDE_FADE:
                 animation = getSlideFadeIn();
                 break;
-            //
             case OUT_FAED:
                 animation = new AlphaAnimation(1, 0);
                 break;
             case OUT_SLIDE:
-                animation = new TranslateAnimation(rela2, 0, rela2, -1, rela2, 0, rela2, 0);
+                animation = new TranslateAnimation(PARENT, 0, PARENT, -1, PARENT, 0, PARENT, 0);
                 break;
             case OUT_SCALE:
-                animation = new ScaleAnimation(1, 0, 1, 0, rela2, 0.5f, rela2, 0.5f);
+                animation = new ScaleAnimation(1, 0, 1, 0, PARENT, 0.5f, PARENT, 0.5f);
                 break;
             case OUT_ROTATE:
-                animation = new RotateAnimation(0, 90, rela1, 0, rela1, 1);
+                animation = new RotateAnimation(0, 90, SELF, 0, SELF, 1);
                 break;
             case OUT_SCALE_ROTATE:
                 animation = getScaleRotateOut();
@@ -109,7 +130,7 @@ public class CNAnimationUtils {
                 animation = getSlideFadeOut();
                 break;
             case OUT_RIGHT_SLIDE:
-                animation = new TranslateAnimation(rela2, 0, rela2, 1, rela2, 0, rela2, 0);
+                animation = new TranslateAnimation(PARENT, 0, PARENT, 1, PARENT, 0, PARENT, 0);
                 break;
         }
 
@@ -120,8 +141,8 @@ public class CNAnimationUtils {
     }
 
     private static Animation getScaleRotateIn() {
-        ScaleAnimation animation1 = new ScaleAnimation(0, 1, 0, 1, rela1, 0.5f, rela1, 0.5f);
-        RotateAnimation animation2 = new RotateAnimation(0, 360, rela1, 0.5f, rela1, 0.5f);
+        ScaleAnimation animation1 = new ScaleAnimation(0, 1, 0, 1, SELF, 0.5f, SELF, 0.5f);
+        RotateAnimation animation2 = new RotateAnimation(0, 360, SELF, 0.5f, SELF, 0.5f);
         AnimationSet animation = new AnimationSet(false);
         animation.addAnimation(animation1);
         animation.addAnimation(animation2);
@@ -129,16 +150,22 @@ public class CNAnimationUtils {
     }
 
     private static Animation getScaleRotateOut() {
-        ScaleAnimation animation1 = new ScaleAnimation(1, 0, 1, 0, rela1, 0.5f, rela1, 0.5f);
-        RotateAnimation animation2 = new RotateAnimation(0, 360, rela1, 0.5f, rela1, 0.5f);
+        ScaleAnimation animation1 = new ScaleAnimation(1, 0, 1, 0, SELF, 0.5f, SELF, 0.5f);
+        RotateAnimation animation2 = new RotateAnimation(0, 360, SELF, 0.5f, SELF, 0.5f);
         AnimationSet animation = new AnimationSet(false);
         animation.addAnimation(animation1);
         animation.addAnimation(animation2);
         return animation;
     }
 
+
+    private static Animation getRotate() {
+        RotateAnimation anim = new RotateAnimation(0, 360, SELF, 0.5f, SELF, 0.5f);
+        return anim;
+    }
+
     private static Animation getSlideFadeIn() {
-        TranslateAnimation animation1 = new TranslateAnimation(rela2, 1, rela2, 0, rela2, 0, rela2, 0);
+        TranslateAnimation animation1 = new TranslateAnimation(PARENT, 1, PARENT, 0, PARENT, 0, PARENT, 0);
         AlphaAnimation animation2 = new AlphaAnimation(0, 1);
         AnimationSet animation = new AnimationSet(false);
         animation.addAnimation(animation1);
@@ -147,7 +174,7 @@ public class CNAnimationUtils {
     }
 
     private static Animation getSlideFadeOut() {
-        TranslateAnimation animation1 = new TranslateAnimation(rela2, 0, rela2, -1, rela2, 0, rela2, 0);
+        TranslateAnimation animation1 = new TranslateAnimation(PARENT, 0, PARENT, -1, PARENT, 0, PARENT, 0);
         AlphaAnimation animation2 = new AlphaAnimation(1, 0);
         AnimationSet animation = new AnimationSet(false);
         animation.addAnimation(animation1);

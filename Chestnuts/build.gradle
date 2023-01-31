@@ -54,10 +54,13 @@ dependencies {
     //gson工具
     implementation 'com.google.code.gson:gson:2.8.7'
     //设置底部导航栏和状态栏
+    //依赖的时候可能会出现冲突，请把你的工程改成这个版本的immersionbar
     implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
     //网络框架
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'//可能会成为冲突问题
+    api 'io.reactivex.rxjava2:rxjava:2.2.4'//可能会成为冲突问题
 }

@@ -1,13 +1,13 @@
 package com.predictor.galaxy.view;
 
 import android.content.Context;
+import android.os.Handler;
 
 import com.predictor.galaxy.bean.PickerViewData;
 import com.predictor.galaxy.bean.TimeBean;
 import com.predictor.library.pickerview.OptionsPickerView;
 import com.predictor.library.pickerview.TimePickerView;
 import com.predictor.library.pickerview.model.IPickerViewData;
-
 
 
 import java.text.SimpleDateFormat;
@@ -34,12 +34,18 @@ public class PickerView {
         }
     }
 
-    public PickerView(Context context, SelectTimeCallBack callBack) {
+    public PickerView(Context context, String title, SelectTimeCallBack callBack) {
         this.context = context;
-        setPickerListener(callBack);
+        setPickerListener(callBack, title);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                pvOptions.show();
+            }
+        }, 200);
     }
 
-    private void setPickerListener(SelectTimeCallBack callBack){
+    private void setPickerListener(SelectTimeCallBack callBack, String title) {
         //时间选择器
         pvTime = new TimePickerView(context, TimePickerView.Type.MONTH_DAY_HOUR_MIN);
         //控制时间范围
@@ -55,29 +61,42 @@ public class PickerView {
             public void onTimeSelect(Date date) {
                 callBack.onTimeSelect(getTime(date));
             }
+
         });
 
         //选项选择器
         pvOptions = new OptionsPickerView(context);
+        pvOptions.setTitle(title);
+
         //选项1
+        options1Items.add(new TimeBean("立即取件"));
         options1Items.add(new TimeBean("今天"));
         options1Items.add(new TimeBean("明天"));
 
-        ArrayList<String> options2Items_01 = getTodayHourData();
-        ArrayList<String> options2Items_02 = getHourData();
+        //选项3
+        ArrayList<String> options2Items_01 = new ArrayList<>();
+        options2Items_01.add("--");
+        ArrayList<String> options2Items_02 = getTodayHourData();
+        ArrayList<String> options2Items_03 = getHourData();
 
         options2Items.add(options2Items_01);
         options2Items.add(options2Items_02);
+        options2Items.add(options2Items_03);
 
         //选项3
         ArrayList<ArrayList<IPickerViewData>> options3Items_01 = new ArrayList<>();
         ArrayList<ArrayList<IPickerViewData>> options3Items_02 = new ArrayList<>();
+        ArrayList<ArrayList<IPickerViewData>> options3Items_03 = new ArrayList<>();
 
-        options3Items_01=getmD2();
-        options3Items_02 = getmD();
+        ArrayList<IPickerViewData> options3Items_01_01 = new ArrayList<>();
+        options3Items_01_01.add(new PickerViewData("--"));
+        options3Items_01.add(options3Items_01_01);
+        options3Items_02 = getmD2();
+        options3Items_03 = getmD();
 
         options3Items.add(options3Items_01);
         options3Items.add(options3Items_02);
+        options3Items.add(options3Items_03);
 
         //三级联动效果
         pvOptions.setPicker(options1Items, options2Items, options3Items, true);
@@ -92,10 +111,15 @@ public class PickerView {
             @Override
             public void onOptionsSelect(int options1, int option2, int options3) {
                 //返回的分别是三个级别的选中位置
-                String tx = options1Items.get(options1).getPickerViewText()+" "
-                        + options2Items.get(options1).get(option2)
-                        + options3Items.get(options1).get(option2).get(options3).getPickerViewText();
+                String tx = options1Items.get(options1).getPickerViewText()
+                        + (options2Items.get(options1).get(option2).equals("--") ? "" : options2Items.get(options1).get(option2))
+                        + (options3Items.get(options1).get(option2).get(options3).getPickerViewText().equals("--") ? "" : options3Items.get(options1).get(option2).get(options3).getPickerViewText());
                 callBack.onTimeSelect(tx);
+            }
+
+            @Override
+            public void onOptionsCancel() {
+                callBack.onCancel();
             }
         });
 
@@ -111,7 +135,7 @@ public class PickerView {
      */
     private ArrayList<String> getTodayHourData() {
         int max = currentHour();
-        if (max < 23 && currentMin() > 45) {
+        if (max < 23 && currentMin() > 50) {
             max = max + 1;
         }
         ArrayList<String> lists = new ArrayList<>();
@@ -160,14 +184,14 @@ public class PickerView {
     private ArrayList<ArrayList<IPickerViewData>> getmD2() {
         //14
         int max = currentHour();
-        if (currentMin() > 45) {
+        if (currentMin() > 50) {
             max = max + 1;
         }
         int value = 24 - max;
         ArrayList<ArrayList<IPickerViewData>> d = new ArrayList<>();
         for (int i = 0; i < value; i++) {
             if (i == 0) {
-                d.add(getTodyMinData());
+                d.add(getTodyMinData2());
             } else {
                 d.add(getMinData());
             }
@@ -177,10 +201,9 @@ public class PickerView {
     }
 
     /**
-     * 明天 后天  分2222
+     * 获取今天的分钟数据
      */
     private ArrayList<IPickerViewData> getTodyMinData() {
-
         int min = currentMin();
         int current = 0;
         if (min > 35 && min <= 45) {
@@ -198,6 +221,38 @@ public class PickerView {
         } else if (min > 25 && min <= 35) {
             current = 5;
         }
+
+        int max = currentHour();
+        if (max > 23 && min > 35) {
+            current = 5;
+        }
+
+        ArrayList<IPickerViewData> dataArrayList = new ArrayList<>();
+        for (int i = current; i < 6; i++) {
+            dataArrayList.add(new PickerViewData((i * 10) + "分"));
+        }
+        return dataArrayList;
+    }
+
+
+    /**
+     * 获取今天的分钟数据
+     */
+    private ArrayList<IPickerViewData> getTodyMinData2() {
+        int min = currentMin();
+        int current = 0;
+        if (min > 40 && min <= 50) {
+            current = 5;
+        } else if (min > 30 && min <= 40) {
+            current = 4;
+        } else if (min > 20 && min <= 30) {
+            current = 3;
+        } else if (min > 10 && min <= 20) {
+            current = 2;
+        } else if (min > 0 && min <= 10) {
+            current = 1;
+        }
+
         int max = currentHour();
         if (max > 23 && min > 35) {
             current = 5;

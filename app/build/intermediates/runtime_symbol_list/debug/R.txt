@@ -1786,6 +1786,7 @@ int drawable notification_template_icon_low_bg 0x7f07008f
 int drawable notification_tile_bg 0x7f070090
 int drawable notify_panel_notification_icon_bg 0x7f070091
 int drawable selector_pickerview_btn 0x7f070092
+int drawable sys_toast 0x7f070096
 int drawable test_custom_background 0x7f070093
 int drawable tooltip_frame_dark 0x7f070094
 int drawable tooltip_frame_light 0x7f070095
@@ -2162,6 +2163,7 @@ int id stop 0x7f080171
 int id stretch 0x7f080172
 int id submenuarrow 0x7f080173
 int id submit_area 0x7f080174
+int id sys_show_toast_txt 0x7f0801bc
 int id tabMode 0x7f080175
 int id tag_accessibility_actions 0x7f080176
 int id tag_accessibility_clickable_spans 0x7f080177
@@ -2377,6 +2379,7 @@ int layout select_dialog_item_material 0x7f0b0064
 int layout select_dialog_multichoice_material 0x7f0b0065
 int layout select_dialog_singlechoice_material 0x7f0b0066
 int layout support_simple_spinner_dropdown_item 0x7f0b0067
+int layout sys_show_toast 0x7f0b0077
 int layout test_action_chip 0x7f0b0068
 int layout test_chip_zero_corner_radius 0x7f0b0069
 int layout test_design_checkbox 0x7f0b006a

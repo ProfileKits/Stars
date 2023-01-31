@@ -120,6 +120,9 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
     public void onClick(View v) {
         String tag=(String) v.getTag();
         if(tag.equals(TAG_CANCEL)) {
+            if(optionsSelectListener!=null){
+                optionsSelectListener.onOptionsCancel();
+            }
             dismiss();
         }
         else {
@@ -133,6 +136,7 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
 
     public interface OnOptionsSelectListener {
         void onOptionsSelect(int options1, int option2, int options3);
+        void onOptionsCancel();
     }
 
     public void setOnoptionsSelectListener(

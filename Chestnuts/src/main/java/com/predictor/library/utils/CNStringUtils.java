@@ -1026,7 +1026,7 @@ public class CNStringUtils {
      * @param closeables closeable
      */
     public static void closeIO(Closeable... closeables) {
-        if (closeables == null) {
+        if (closeables == null|| closeables.length <= 0) {
             return;
         }
         try {
@@ -1039,6 +1039,7 @@ public class CNStringUtils {
             e.printStackTrace();
         }
     }
+
 
     /**
      * inputStream转byteArr

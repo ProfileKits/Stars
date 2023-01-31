@@ -58,6 +58,7 @@ drawable delete_selector
 drawable edit_transparent
 drawable editview_bg
 drawable selector_pickerview_btn
+drawable sys_toast
 id btnCancel
 id btnSubmit
 id center
@@ -73,6 +74,7 @@ id options3
 id optionspicker
 id outmost_container
 id right
+id sys_show_toast_txt
 id timepicker
 id tvTitle
 id year
@@ -81,6 +83,7 @@ layout include_pickerview_topbar
 layout layout_basepickerview
 layout pickerview_options
 layout pickerview_time
+layout sys_show_toast
 string data_exception
 string net_exception
 string pickerview_cancel

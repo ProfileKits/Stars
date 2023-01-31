@@ -4,6 +4,7 @@ import static com.predictor.library.utils.CNFileUtils.createOrExistsFile;
 import static com.predictor.library.utils.CNFileUtils.getFileByPath;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
@@ -35,6 +36,7 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.util.Log;
+import android.util.TypedValue;
 import android.widget.ImageView;
 
 import java.io.BufferedInputStream;
@@ -122,6 +124,37 @@ public class CNImageTool {
         final float fontScale = CNBaseTools.getContext().getResources().getDisplayMetrics().scaledDensity;
         return (int) (pxValue / fontScale + 0.5f);
     }
+
+    /**
+     * pt转px
+     * @param context
+     * @param value
+     * @return
+     */
+    public static int pt2px(Context context, float value) {
+        return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PT, value, context.getResources().getDisplayMetrics()) + 0.5f);
+    }
+
+    /**
+     * in转px
+     * @param context
+     * @param value
+     * @return
+     */
+    public static int in2px(Context context, float value) {
+        return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_IN, value, context.getResources().getDisplayMetrics()) + 0.5f);
+    }
+
+    /**
+     * mm转px
+     * @param context
+     * @param value
+     * @return
+     */
+    public static int mm2px(Context context, float value) {
+        return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_MM, value, context.getResources().getDisplayMetrics()) + 0.5f);
+    }
+
 
     /**
      * 得到本地或者网络上的bitmap url - 网络或者本地图片的绝对路径,比如:

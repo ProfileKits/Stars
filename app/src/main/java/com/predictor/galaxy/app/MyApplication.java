@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
+import com.predictor.galaxy.BuildConfig;
 import com.predictor.library.base.CNBaseInvoke;
 import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.utils.CNLogUtil;
@@ -28,6 +29,8 @@ public class MyApplication extends Application {
         return myApplication;
     }
 
+    public static final boolean DEBUG_MODE = BuildConfig.DEBUG;//是否为Debug模式
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -35,7 +38,7 @@ public class MyApplication extends Application {
     }
 
     private void initData() {
-       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),true);
+       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE);
         CNLogUtil.i("key:"+key);
 //        String realKey = getSha1Value(this);
 //        CNLogUtil.i("key:"+realKey);

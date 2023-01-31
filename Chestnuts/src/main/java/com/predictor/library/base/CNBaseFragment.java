@@ -15,7 +15,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public abstract class CNBaseFragment extends Fragment {
     public Typeface typeface;
@@ -238,14 +241,46 @@ public abstract class CNBaseFragment extends Fragment {
 
 
 
-    public void jumpActivity(Class<? extends CNBaseActivity> clazz) {
+    public void startActivity(Class<? extends CNBaseActivity> clazz) {
         Intent intent = new Intent(mContext, clazz);
         startActivity(intent);
     }
 
-    public void jumpActivity(Class<? extends CNBaseActivity> clazz, Bundle bundle) {
+    public void startActivity(Class<? extends CNBaseActivity> clazz, Bundle bundle) {
         Intent intent = new Intent(mContext, clazz);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    /**
+     * 功能描述：带数据的Activity之间的跳转
+     */
+    public void startActivity( Class<? extends Activity> cls,
+                                           HashMap<String, ? extends Object> hashMap) {
+        Intent intent = new Intent(mContext, cls);
+        Iterator<?> iterator = hashMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            @SuppressWarnings("unchecked")
+            Map.Entry<String, Object> entry = (Map.Entry<String, Object>) iterator
+                    .next();
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            if (value instanceof String) {
+                intent.putExtra(key, (String) value);
+            }
+            if (value instanceof Boolean) {
+                intent.putExtra(key, (boolean) value);
+            }
+            if (value instanceof Integer) {
+                intent.putExtra(key, (int) value);
+            }
+            if (value instanceof Float) {
+                intent.putExtra(key, (float) value);
+            }
+            if (value instanceof Double) {
+                intent.putExtra(key, (double) value);
+            }
+        }
+        mContext.startActivity(intent);
     }
 }

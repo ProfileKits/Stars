@@ -2,6 +2,8 @@ package com.predictor.library.utils;
 
 
 
+import com.predictor.library.base.AppLogMessageMgr;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -259,6 +261,28 @@ public class CNDateFormatUtil {
         Calendar c = Calendar.getInstance();
         c.setTime(date);
         return c.get(Calendar.SECOND);
+    }
+
+
+    /**
+     * 检查日期是否有效
+     * @param year 年
+     * @param month 月
+     * @param day 日
+     * @return boolean
+     */
+    public static boolean getDateIsTrue(String year, String month, String day){
+        try {
+            String data = year + month + day;
+            SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyyMMdd");
+            simpledateformat.setLenient(false);
+            simpledateformat.parse(data);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            AppLogMessageMgr.e("AppSysDateMgr-->>getDateIsTrue", e.getMessage().toString());
+            return false;
+        }
+        return true;
     }
 
     /**********************我是华丽丽的分割线***************************************************/
