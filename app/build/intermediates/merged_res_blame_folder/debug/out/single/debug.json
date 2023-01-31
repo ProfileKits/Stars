@@ -4,6 +4,14 @@
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/layout_fragment_me.xml.flat",
+        "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/fragment_me.xml"
+    },
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/layout_activity_view_pager.xml.flat",
+        "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/activity_view_pager.xml"
+    },
+    {
         "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/activity_main.xml"
     },
@@ -50,6 +58,10 @@
     {
         "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
+        "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/fragment_home.xml"
     },
     {
         "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",

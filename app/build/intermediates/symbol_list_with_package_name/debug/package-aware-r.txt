@@ -1881,6 +1881,7 @@ id bottom
 id bounce
 id btnCancel
 id btnSubmit
+id btn_viewpage
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -2100,6 +2101,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rb_home
+id rb_me
 id rectangles
 id report_tv
 id reverseSawtooth
@@ -2228,6 +2231,7 @@ id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id viewpager
 id visible
 id visible_removing_fragment_view_tag
 id withText
@@ -2306,6 +2310,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_second
+layout activity_view_pager
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2322,6 +2327,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_home
+layout fragment_me
 layout include_pickerview_topbar
 layout layout_basepickerview
 layout material_chip_input_combo

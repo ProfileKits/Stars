@@ -16,28 +16,42 @@
         android:orientation="vertical">
 
 
-        <com.predictor.library.view.CNCleanEditText
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_vertical"
-            android:hint="账号"
-            android:padding="10dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:textColor="@color/black"
-            android:textColorHint="#888"
-            app:background="@drawable/editview_bg"
-            app:deleteIcon="@drawable/delete"
-            app:deleteIconHeight="20dp"
-            app:deleteIconWidth="20dp"
-            app:dividerColor="#888"
-            app:dividerMarginLeft="10dp"
-            app:dividerMarginRight="10dp"
-            app:focusDividerColor="#888"
-            app:focusTextColor="#505050"
-            app:iconHeight="20dp"
-            app:iconWidth="20dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.predictor.library.view.CNCleanEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="账号"
+                android:padding="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#888"
+                app:background="@drawable/editview_bg"
+                app:deleteIcon="@drawable/delete"
+                app:deleteIconHeight="20dp"
+                app:deleteIconWidth="20dp"
+                app:dividerColor="#888"
+                app:dividerMarginLeft="10dp"
+                app:dividerMarginRight="10dp"
+                app:focusDividerColor="#888"
+                app:focusTextColor="#505050"
+                app:iconHeight="20dp"
+                app:iconWidth="20dp" />
+
+            <Button
+                android:id="@+id/btn_viewpage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ViewPager" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
             android:id="@+id/tv"

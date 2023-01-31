@@ -6,6 +6,7 @@ import android.text.Layout;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,14 +25,18 @@ import com.predictor.galaxy.view.PickerView;
 
 
 public class MainActivity extends CNBaseActivity {
-    TextView textView, textView2;
+    private TextView textView, textView2;
     private PickerView pickerView;
+    private Button btn_viewpage;
     private CNDoooArt.YoYoString rope;
 
     @Override
     protected void initView() {
         textView = findViewById(R.id.tv);
         textView2 = findViewById(R.id.tv2);
+        btn_viewpage = findViewById(R.id.btn_viewpage);
+
+        CNLogUtil.i("key22222222222:");
     }
 
     private void testDES() {
@@ -123,7 +128,12 @@ public class MainActivity extends CNBaseActivity {
 
     @Override
     protected void initListener() {
-
+        btn_viewpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewPagerActivity.class);
+            }
+        });
         //点击弹出选项选择器
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

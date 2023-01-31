@@ -15,7 +15,6 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- 用于Glide解析https图片加载不出来的问题 -->
     <application
         android:name="com.predictor.galaxy.app.MyApplication"
         android:allowBackup="true"
@@ -27,6 +26,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.predictor.galaxy.ui.ViewPagerActivity"
+            android:exported="false" />
         <activity
             android:name="com.predictor.galaxy.ui.SecondActivity"
             android:exported="false" />

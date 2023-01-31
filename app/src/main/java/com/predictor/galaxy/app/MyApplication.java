@@ -6,6 +6,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 import com.predictor.galaxy.BuildConfig;
+import com.predictor.library.base.CNBaseApp;
 import com.predictor.library.base.CNBaseInvoke;
 import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.utils.CNLogUtil;
@@ -15,7 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-public class MyApplication extends Application {
+public class MyApplication extends CNBaseApp {
     private static MyApplication myApplication;
 
     private static final Object LockThis = new Object();
@@ -37,9 +38,14 @@ public class MyApplication extends Application {
         initData();
     }
 
+    @Override
+    public boolean setDebug() {
+        return DEBUG_MODE;
+    }
+
     private void initData() {
-       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE);
-        CNLogUtil.i("key:"+key);
+//       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE);
+//        CNLogUtil.i("key:"+key);
 //        String realKey = getSha1Value(this);
 //        CNLogUtil.i("key:"+realKey);
     }
