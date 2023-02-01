@@ -65,8 +65,6 @@ public class ViewPagerActivity extends CNBaseActivity {
         viewpager.setAdapter(pagerViewAdapter);
 
 //        viewpager.setCurrentItem(0, false);
-
-
     }
 
     @Override
