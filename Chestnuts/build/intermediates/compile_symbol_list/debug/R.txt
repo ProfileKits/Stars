@@ -447,6 +447,9 @@ int attr fontProviderSystemFontFamily 0x0
 int attr fontStyle 0x0
 int attr fontVariationSettings 0x0
 int attr fontWeight 0x0
+int attr font_name 0x0
+int attr font_size_after 0x0
+int attr font_size_before 0x0
 int attr forceApplySystemWindowInsetTop 0x0
 int attr foregroundInsidePadding 0x0
 int attr framePosition 0x0
@@ -455,6 +458,8 @@ int attr gestureInsetBottomIgnored 0x0
 int attr goIcon 0x0
 int attr haloColor 0x0
 int attr haloRadius 0x0
+int attr has_Relaxation 0x0
+int attr has_use 0x0
 int attr headerLayout 0x0
 int attr height 0x0
 int attr helperText 0x0
@@ -1768,6 +1773,7 @@ int drawable ic_mtrl_checked_circle 0x0
 int drawable ic_mtrl_chip_checked_black 0x0
 int drawable ic_mtrl_chip_checked_circle 0x0
 int drawable ic_mtrl_chip_close_circle 0x0
+int drawable kaixin 0x0
 int drawable material_cursor_drawable 0x0
 int drawable material_ic_calendar_black_24dp 0x0
 int drawable material_ic_clear_black_24dp 0x0
@@ -1802,9 +1808,12 @@ int drawable notification_template_icon_low_bg 0x0
 int drawable notification_tile_bg 0x0
 int drawable notify_panel_notification_icon_bg 0x0
 int drawable selector_pickerview_btn 0x0
+int drawable shape_toast 0x0
 int drawable sys_toast 0x0
 int drawable test_custom_background 0x0
 int drawable test_level_drawable 0x0
+int drawable toast_black_background 0x0
+int drawable toast_white_background 0x0
 int drawable tooltip_frame_dark 0x0
 int drawable tooltip_frame_light 0x0
 int id BOTTOM_END 0x0
@@ -2021,6 +2030,7 @@ int id month_navigation_next 0x0
 int id month_navigation_previous 0x0
 int id month_title 0x0
 int id motion_base 0x0
+int id msg 0x0
 int id mtrl_anchor_parent 0x0
 int id mtrl_calendar_day_selector_frame 0x0
 int id mtrl_calendar_days_of_week 0x0
@@ -2284,6 +2294,7 @@ int layout design_text_input_end_icon 0x0
 int layout design_text_input_start_icon 0x0
 int layout include_pickerview_topbar 0x0
 int layout layout_basepickerview 0x0
+int layout layout_toast 0x0
 int layout material_chip_input_combo 0x0
 int layout material_clock_display 0x0
 int layout material_clock_display_divider 0x0
@@ -2355,6 +2366,8 @@ int layout text_view_with_line_height_from_layout 0x0
 int layout text_view_with_line_height_from_style 0x0
 int layout text_view_with_theme_line_height 0x0
 int layout text_view_without_line_height 0x0
+int layout toast_balck 0x0
+int layout toast_white 0x0
 int menu example_menu 0x0
 int menu example_menu2 0x0
 int plurals mtrl_badge_content_description 0x0
@@ -2385,6 +2398,7 @@ int string abc_searchview_description_voice 0x0
 int string abc_shareactionprovider_share_with 0x0
 int string abc_shareactionprovider_share_with_application 0x0
 int string abc_toolbar_collapse_description 0x0
+int string app_name 0x0
 int string appbar_scrolling_view_behavior 0x0
 int string bottom_sheet_behavior 0x0
 int string bottomsheet_action_expand_halfway 0x0
@@ -4035,6 +4049,12 @@ int styleable FontFamilyFont_fontStyle 6
 int styleable FontFamilyFont_fontVariationSettings 7
 int styleable FontFamilyFont_fontWeight 8
 int styleable FontFamilyFont_ttcIndex 9
+int[] styleable FontTextView { 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable FontTextView_font_name 0
+int styleable FontTextView_font_size_after 1
+int styleable FontTextView_font_size_before 2
+int styleable FontTextView_has_Relaxation 3
+int styleable FontTextView_has_use 4
 int[] styleable ForegroundLinearLayout { 0x1010109, 0x1010200, 0x0 }
 int styleable ForegroundLinearLayout_android_foreground 0
 int styleable ForegroundLinearLayout_android_foregroundGravity 1

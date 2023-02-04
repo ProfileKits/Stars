@@ -16,6 +16,11 @@ attr? finishColor
 attr? focusDividerColor
 attr? focusIcon
 attr? focusTextColor
+attr? font_name
+attr? font_size_after
+attr? font_size_before
+attr? has_Relaxation
+attr? has_use
 attr? icon
 attr? iconHeight
 attr? iconWidth
@@ -57,8 +62,12 @@ drawable delete
 drawable delete_selector
 drawable edit_transparent
 drawable editview_bg
+drawable kaixin
 drawable selector_pickerview_btn
+drawable shape_toast
 drawable sys_toast
+drawable toast_black_background
+drawable toast_white_background
 id btnCancel
 id btnSubmit
 id center
@@ -66,8 +75,10 @@ id content_container
 id day
 id hour
 id left
+id message
 id min
 id month
+id msg
 id options1
 id options2
 id options3
@@ -81,9 +92,12 @@ id year
 integer animation_default_duration
 layout include_pickerview_topbar
 layout layout_basepickerview
+layout layout_toast
 layout pickerview_options
 layout pickerview_time
 layout sys_show_toast
+layout toast_balck
+layout toast_white
 string data_exception
 string net_exception
 string pickerview_cancel
@@ -102,6 +116,7 @@ string tip_permission_storage
 string tip_permission_voice
 string tip_unkown_error_place_holder
 styleable FlikerProgressBar loadingColor stopColor finishColor radius borderWidth
+styleable FontTextView font_name has_use has_Relaxation font_size_before font_size_after
 styleable RealtimeBlurView realtimeBlurRadius realtimeDownsampleFactor realtimeOverlayColor
 styleable RoundedRectangleBlurView roundedRectangleRadius
 styleable cleanEditText icon focusIcon deleteIcon iconWidth iconHeight deleteIconWidth deleteIconHeight dividerColor dividerBonds focusDividerColor dividerMarginLeft dividerMarginRight focusTextColor background cursor

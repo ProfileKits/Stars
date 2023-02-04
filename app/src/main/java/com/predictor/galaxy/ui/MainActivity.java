@@ -16,10 +16,16 @@ import com.predictor.library.artanimation.library.Techniques;
 import com.predictor.library.base.CNBaseActivity;
 
 import com.predictor.library.example.SetSelfWithPoint;
+import com.predictor.library.listener.OnChangeListener;
 import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.utils.CNAnimationUtils;
+import com.predictor.library.utils.CNBugly;
 import com.predictor.library.utils.CNDES;
+import com.predictor.library.utils.CNEditTextUtil;
 import com.predictor.library.utils.CNLogUtil;
+import com.predictor.library.utils.CNTextViewUtil;
+import com.predictor.library.utils.CNToastCustom;
+import com.predictor.library.view.CNCleanEditText;
 import com.predictor.library.view.CNTextTool;
 import com.predictor.galaxy.view.PickerView;
 
@@ -29,13 +35,28 @@ public class MainActivity extends CNBaseActivity {
     private PickerView pickerView;
     private Button btn_viewpage;
     private CNDoooArt.YoYoString rope;
+    private CNCleanEditText et;
 
     @Override
     protected void initView() {
         textView = findViewById(R.id.tv);
         textView2 = findViewById(R.id.tv2);
         btn_viewpage = findViewById(R.id.btn_viewpage);
+        et = findViewById(R.id.et);
 
+
+        CNEditTextUtil.setChangeListener(et, new OnChangeListener() {
+            @Override
+            public void change() {
+                CNBugly.testCrash();
+//                CNToast.show(MainActivity.this,et.getText().toString());
+//                CNCustomToast.ToastLongTopCenter(MainActivity.this,et.getText().toString());
+//                CNToastCustom.showWhiteToast(MainActivity.this,"测试");
+//                CNToastCustom.setCustom(MainActivity.this,et.getText().toString(),100,100,10,255,28,false);
+                CNToastCustom.showBlackToast(MainActivity.this,et.getText().toString());
+            }
+        });
+        CNTextViewUtil.setTextLeftIcon(this,R.drawable.kaixin,textView2,0);
         CNLogUtil.i("key22222222222:");
     }
 

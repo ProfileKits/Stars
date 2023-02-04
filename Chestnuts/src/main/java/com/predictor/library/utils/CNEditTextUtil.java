@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.core.graphics.drawable.DrawableCompat;
+
+import com.predictor.library.listener.OnChangeListener;
 
 import java.lang.reflect.Field;
 //禁止输入框复制粘贴
@@ -154,5 +158,29 @@ public class CNEditTextUtil {
             fCursorDrawable.set(editor, drawables);
         } catch (Throwable ignored) {
         }
+    }
+
+
+    public static void setChangeListener(final EditText editText, final OnChangeListener onChangeListener) {
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                onChangeListener.change();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+    }
+
+    public static void setCanotENTER(EditText editText) {
+
     }
 }

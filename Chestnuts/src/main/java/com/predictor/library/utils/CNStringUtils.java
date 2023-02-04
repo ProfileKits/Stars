@@ -116,6 +116,27 @@ public class CNStringUtils {
         return spannableString;
     }
 
+
+    /**
+     * 添加文本颜色Span
+     * 例：
+     * SpannableStringBuilder builder = new SpannableStringBuilder();
+     * builder.append(CNStringUtils.setColorSpan(Color.parseColor("#00ccdd"),"、"));
+     *
+     * @param color
+     * @param text
+     * @return
+     */
+    public static SpannableString setColorSpan(int color, String text) {
+        if (TextUtils.isEmpty(text)) {
+            text = "null";
+        }
+        SpannableString spannableString = new SpannableString(text);
+        spannableString.setSpan(new ForegroundColorSpan(color), 0, text.length(),
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        return spannableString;
+    }
+
     /**
      * 判断是不是一个合法的电子邮件地址
      *

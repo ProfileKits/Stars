@@ -43,6 +43,12 @@ public class MyApplication extends CNBaseApp {
         return DEBUG_MODE;
     }
 
+    @Override
+    public String setBuglyKey() {
+        return null;
+    }
+
+
     private void initData() {
 //       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE);
 //        CNLogUtil.i("key:"+key);

@@ -30,7 +30,6 @@ import java.util.regex.PatternSyntaxException;
  * RxTools的常用工具类
  */
 public class CNBaseTools {
-
     @SuppressLint("StaticFieldLeak")
     private static Context context;
     private static long lastClickTime;
@@ -409,6 +408,7 @@ public class CNBaseTools {
             return "";
         }
     }
+
 
 
 }

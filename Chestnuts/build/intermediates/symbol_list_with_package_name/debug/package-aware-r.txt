@@ -448,6 +448,9 @@ attr fontProviderSystemFontFamily
 attr fontStyle
 attr fontVariationSettings
 attr fontWeight
+attr font_name
+attr font_size_after
+attr font_size_before
 attr forceApplySystemWindowInsetTop
 attr foregroundInsidePadding
 attr framePosition
@@ -456,6 +459,8 @@ attr gestureInsetBottomIgnored
 attr goIcon
 attr haloColor
 attr haloRadius
+attr has_Relaxation
+attr has_use
 attr headerLayout
 attr height
 attr helperText
@@ -1769,6 +1774,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable kaixin
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1803,9 +1809,12 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable selector_pickerview_btn
+drawable shape_toast
 drawable sys_toast
 drawable test_custom_background
 drawable test_level_drawable
+drawable toast_black_background
+drawable toast_white_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id BOTTOM_END
@@ -2022,6 +2031,7 @@ id month_navigation_next
 id month_navigation_previous
 id month_title
 id motion_base
+id msg
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
 id mtrl_calendar_days_of_week
@@ -2285,6 +2295,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout include_pickerview_topbar
 layout layout_basepickerview
+layout layout_toast
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2356,6 +2367,8 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout toast_balck
+layout toast_white
 menu example_menu
 menu example_menu2
 plurals mtrl_badge_content_description
@@ -2386,6 +2399,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
@@ -3254,6 +3268,7 @@ styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontStyle android_fontVariationSettings android_fontWeight android_ttcIndex font fontStyle fontVariationSettings fontWeight ttcIndex
+styleable FontTextView font_name font_size_after font_size_before has_Relaxation has_use
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable Fragment android_id android_name android_tag
 styleable FragmentContainerView android_name android_tag

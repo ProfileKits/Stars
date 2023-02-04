@@ -47,6 +47,13 @@
         <attr format="dimension" name="radius"/>
         <attr format="dimension" name="borderWidth"/>
     </declare-styleable>
+    <declare-styleable name="FontTextView">
+        <attr format="string" name="font_name"/>
+        <attr format="boolean" name="has_use"/>
+        <attr format="boolean" name="has_Relaxation"/>
+        <attr format="dimension" name="font_size_before"/>
+        <attr format="dimension" name="font_size_after"/>
+    </declare-styleable>
     <declare-styleable name="RealtimeBlurView">
         <attr format="dimension" name="realtimeBlurRadius"/>
         <attr format="float" name="realtimeDownsampleFactor"/>
