@@ -5,7 +5,6 @@ import android.content.Context;
 
 import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.utils.CNBaseTools;
-import com.predictor.library.utils.CNLogUtil;
 import com.tencent.bugly.crashreport.CrashReport;
 
 /**

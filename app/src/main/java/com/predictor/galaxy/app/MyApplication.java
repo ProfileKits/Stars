@@ -1,15 +1,12 @@
 package com.predictor.galaxy.app;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 import com.predictor.galaxy.BuildConfig;
+import com.predictor.galaxy.net.RetrofitService;
 import com.predictor.library.base.CNBaseApp;
-import com.predictor.library.base.CNBaseInvoke;
-import com.predictor.library.jni.ChestnutData;
-import com.predictor.library.utils.CNLogUtil;
 
 import java.security.MessageDigest;
 import java.util.Iterator;
@@ -48,8 +45,22 @@ public class MyApplication extends CNBaseApp {
         return null;
     }
 
+    @Override
+    public String[] setBaseUrl() {
+        //第一个地址是测试基地址，第二个是正式基地址
+        return new String[]{"https://zfljh.top/","https://zfljh.top/"};
+    }
+
+    //设置app的token
+    public void setToken(String token){
+        RetrofitService.getInstance().setHeader(token);
+
+    }
 
     private void initData() {
+        //设置token
+        setToken("Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjNjODZhZmJiLTgyMjItNDM2ZC1iYzVmLTgwOGZiNjAwMGZiYiJ9.8U2NV9NrTLZN2maIholOTI_twisa1KAsTc9wjMFj1BTI5j9Y0M19jqUAUqkzXwkn17UTHpUTQCIDtxnMvSeW5w");
+
 //       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE);
 //        CNLogUtil.i("key:"+key);
 //        String realKey = getSha1Value(this);

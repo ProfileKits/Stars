@@ -3,6 +3,8 @@ package com.predictor.library.utils;
 import android.app.Activity;
 import android.content.Context;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.util.LinkedList;
 
 /**
@@ -21,7 +23,7 @@ public class CNActivityManager {
      * 单一实例
      */
     public static CNActivityManager getInstance() {
-        if (instance == null) {
+        if (instance == null && ChestnutData.getPermission()) {
             instance = new CNActivityManager();
         }
         return instance;
@@ -60,9 +62,10 @@ public class CNActivityManager {
             activity.finish();
         }
     }
+
     /**
      * 保留指定 Activity
-     * */
+     */
     public void retainAcitivity(Class<?> cls) {
         for (int i = 0; i < activityStack.size(); i++) {
             Activity activity = activityStack.get(i);

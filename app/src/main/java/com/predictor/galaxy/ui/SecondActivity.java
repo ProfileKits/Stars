@@ -4,8 +4,6 @@ import com.predictor.galaxy.R;
 import com.predictor.library.base.CNBaseActivity;
 
 public class SecondActivity extends CNBaseActivity {
-
-
     @Override
     protected void initView() {
 

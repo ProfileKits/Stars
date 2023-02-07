@@ -9,9 +9,7 @@ import java.math.BigDecimal;
  * 主要功能： 资金运算工具类
  */
 public class CNMoneyFormat {
-	
-	
-	
+
 	   private static final int DEF_DIV_SCALE = 10;  
 	  
 	    /** 

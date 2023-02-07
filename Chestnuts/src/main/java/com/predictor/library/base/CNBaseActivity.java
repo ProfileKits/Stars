@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.PermissionChecker;
 
 import com.gyf.immersionbar.ImmersionBar;
+import com.predictor.library.jni.ChestnutData;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -38,12 +39,14 @@ public abstract class CNBaseActivity extends AppCompatActivity {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutResID());
-        mContext = this;
+        if(ChestnutData.getPermission()){
+            setContentView(getLayoutResID());
+            mContext = this;
 
-        initView();
-        initData();
-        initListener();
+            initView();
+            initData();
+            initListener();
+        }
     }
 
 

@@ -1,5 +1,10 @@
 R_DEF: Internal format may change without notice
 local
+anim item_alpha_anim
+anim item_scale_anim
+anim item_translate_bybottom
+anim item_translate_byleft
+anim item_translate_byright
 anim slide_in_bottom
 anim slide_out_bottom
 attr? background

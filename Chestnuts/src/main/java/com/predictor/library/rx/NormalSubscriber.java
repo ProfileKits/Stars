@@ -19,8 +19,6 @@ public abstract class NormalSubscriber<T> {
      * @param e
      */
     public void onError(Throwable e) {
-//        Log.e("TAG", "onError() called!!!");
-
         e.printStackTrace();
         onFinish();
     }

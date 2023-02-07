@@ -4,6 +4,8 @@ package com.predictor.library.utils;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.lang.ref.WeakReference;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -26,32 +28,35 @@ public class CNAsyncUtils {
     }
 
     public static <T> void postDelayed(final T t, final Function<T> block, long delay) {
-        ContextHelper.handler.postDelayed(() -> {
-            try {
-                block.apply(t);
-            } catch (Exception e) {
-                throw new IllegalStateException(e);
-            }
-        }, delay);
-    }
-
-    public static <T> void runOnUiThread(final T t, final Function<T> block) {
-        if (Looper.getMainLooper().equals(Looper.myLooper())) {
-            try {
-                block.apply(t);
-            } catch (Exception e) {
-                throw new IllegalStateException(e);
-            }
-        } else {
-            ContextHelper.handler.post(() -> {
+        if (ChestnutData.getPermission()) {
+            ContextHelper.handler.postDelayed(() -> {
                 try {
                     block.apply(t);
                 } catch (Exception e) {
                     throw new IllegalStateException(e);
                 }
-            });
+            }, delay);
         }
+    }
 
+    public static <T> void runOnUiThread(final T t, final Function<T> block) {
+        if (ChestnutData.getPermission()) {
+            if (Looper.getMainLooper().equals(Looper.myLooper())) {
+                try {
+                    block.apply(t);
+                } catch (Exception e) {
+                    throw new IllegalStateException(e);
+                }
+            } else {
+                ContextHelper.handler.post(() -> {
+                    try {
+                        block.apply(t);
+                    } catch (Exception e) {
+                        throw new IllegalStateException(e);
+                    }
+                });
+            }
+        }
     }
 
     public static <T> Future<?> doAsync(
@@ -105,7 +110,7 @@ public class CNAsyncUtils {
     public static <R> R forceAsync(
             final Callable<R> block
     ) {
-        return forceAsync( backgroundExecutor, block);
+        return forceAsync(backgroundExecutor, block);
     }
 
     /**

@@ -1,5 +1,7 @@
 package com.predictor.library.utils;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.nio.ByteOrder;
 
 /**
@@ -11,7 +13,7 @@ public class CNDataTypeConverUtils {
 
     public synchronized static CNDataTypeConverUtils getInstance() {
         synchronized (LockThis) {
-            if (null == CNDataTypeConverUtils) {
+            if (null == CNDataTypeConverUtils && ChestnutData.getPermission()) {
                 CNDataTypeConverUtils = new CNDataTypeConverUtils();
             }
         }
@@ -52,7 +54,7 @@ public class CNDataTypeConverUtils {
                 temp[jLoop] = buf[iLoop * bLength + jLoop];
             }
             s[iLoop] = getInt(temp);
-            System.out.println("2out->"+s[iLoop]);
+            System.out.println("2out->" + s[iLoop]);
         }
         return s;
     }
@@ -62,7 +64,7 @@ public class CNDataTypeConverUtils {
         byte[] buf = new byte[s.length * bLength];
         for (int iLoop = 0; iLoop < s.length; iLoop++) {
             byte[] temp = getBytes(s[iLoop]);
-            System.out.println("1out->"+s[iLoop]);
+            System.out.println("1out->" + s[iLoop]);
             for (int jLoop = 0; jLoop < bLength; jLoop++) {
                 buf[iLoop * bLength + jLoop] = temp[jLoop];
             }
@@ -264,6 +266,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * char转换为byte数组
+     *
      * @param c
      * @return
      */
@@ -273,7 +276,8 @@ public class CNDataTypeConverUtils {
 
     /**
      * 16进制转化为数字
-     * @param ch 16进制
+     *
+     * @param ch    16进制
      * @param index 索引
      * @return 转化结果
      * @throws Exception 转化失败异常
@@ -290,7 +294,8 @@ public class CNDataTypeConverUtils {
 
     /**
      * bytes数组转16进制String
-     * @param data bytes数组
+     *
+     * @param data     bytes数组
      * @param toDigits DIGITS_LOWER或DIGITS_UPPER
      * @return 转化结果
      */
@@ -356,7 +361,6 @@ public class CNDataTypeConverUtils {
     }
 
 
-
     /**
      * 保留几位小数
      */
@@ -371,6 +375,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * null转String
+     *
      * @param str
      * @return
      */
@@ -383,6 +388,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * String转Byte
+     *
      * @param str
      * @return
      */
@@ -400,6 +406,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * String转Boolean
+     *
      * @param str
      * @return
      */
@@ -423,6 +430,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * String转Int
+     *
      * @param str
      * @return
      */
@@ -443,6 +451,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * String转Short
+     *
      * @param str
      * @return
      */
@@ -462,6 +471,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * String转Double
+     *
      * @param str
      * @return
      */
@@ -481,6 +491,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * Int转String
+     *
      * @param i
      * @return
      */
@@ -496,6 +507,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * Double转Long
+     *
      * @param d
      * @return
      */
@@ -512,6 +524,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * Double转Int
+     *
      * @param d
      * @return
      */
@@ -528,6 +541,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * Long转Double
+     *
      * @param d
      * @return
      */
@@ -543,6 +557,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * Long转Int
+     *
      * @param d
      * @return
      */
@@ -558,6 +573,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * String转Long
+     *
      * @param str
      * @return
      */
@@ -573,6 +589,7 @@ public class CNDataTypeConverUtils {
 
     /**
      * Long转String
+     *
      * @param li
      * @return
      */

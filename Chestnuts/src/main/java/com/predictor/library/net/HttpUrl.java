@@ -2,25 +2,30 @@ package com.predictor.library.net;
 
 
 import com.predictor.library.BuildConfig;
+import com.predictor.library.jni.ChestnutData;
 
 public class HttpUrl {
-    private static final String BASE_URL;
-    private static final boolean DEBUG = BuildConfig.DEBUG;
-    public static final String RELEASES_URL = "https://run.com";
-    public static final String TEST_URL = "http://test.com/";
+    private static String BASE_URL="";
 
-    static {
-        if (DEBUG) {//测试地址
-            BASE_URL = TEST_URL;
-        } else {//正式地址
-            BASE_URL = RELEASES_URL;
+    private static final boolean DEBUG = BuildConfig.DEBUG;
+    private static String RELEASES_URL = "https://releases";
+    private static String TEST_URL = "https://test";
+
+    public static void setBaseUrl(String testUrl,String releaseUrl){
+        if (ChestnutData.getPermission()) {
+            TEST_URL = testUrl;
+            RELEASES_URL = releaseUrl;
         }
     }
 
-    //首页列表地址
-    public static final String HomePageList = BASE_URL +"index/index";
-
     public static String getBaseUrl() {
+        if (ChestnutData.getPermission()){
+            if (DEBUG) {//测试地址
+                BASE_URL = TEST_URL;
+            } else {//正式地址
+                BASE_URL = RELEASES_URL;
+            }
+        }
         return BASE_URL;
     }
 

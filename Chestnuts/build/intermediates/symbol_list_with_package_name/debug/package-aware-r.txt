@@ -28,6 +28,11 @@ anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
 anim fragment_fast_out_extra_slow_in
+anim item_alpha_anim
+anim item_scale_anim
+anim item_translate_bybottom
+anim item_translate_byleft
+anim item_translate_byright
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator

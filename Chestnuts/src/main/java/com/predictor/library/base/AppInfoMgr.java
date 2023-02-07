@@ -10,8 +10,6 @@ import java.io.File;
 import java.util.Hashtable;
 
 public class AppInfoMgr {
-
-	
 	/**
 	 * 获取身份证号所有区域编码设置
 	 * @return Hashtable   

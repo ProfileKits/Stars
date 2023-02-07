@@ -1,12 +1,13 @@
 package com.predictor.library.net;
-
+import com.predictor.library.jni.ChestnutData;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.util.concurrent.TimeUnit;
-
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.X509TrustManager;
 
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -14,13 +15,13 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitUtil {
-    private static volatile Retrofit sInstance;
+    private volatile Retrofit sInstance;
     /*超时设置*/
-    private static final int DEFAULT_TIMEOUT = 10;
-    private static OkHttpClient.Builder okHttpClient;
-
-    private static OkHttpClient.Builder getOkHttp() throws NoSuchAlgorithmException {
-        if (okHttpClient == null) {
+    private final int DEFAULT_TIMEOUT = 15;
+    private OkHttpClient.Builder okHttpClient;
+    private static CompositeDisposable compositeSubscription;
+    private OkHttpClient.Builder getOkHttp() throws NoSuchAlgorithmException {
+        if (okHttpClient == null && ChestnutData.getPermission()) {
             okHttpClient = new OkHttpClient.Builder();
             okHttpClient.sslSocketFactory(SSLContext.getDefault().getSocketFactory(),
                     new X509TrustManager() {
@@ -37,6 +38,7 @@ public class RetrofitUtil {
                             return new java.security.cert.X509Certificate[]{};
                         }
                     });
+
             okHttpClient.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS).
                     readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS).
                     writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
@@ -45,7 +47,13 @@ public class RetrofitUtil {
         return okHttpClient;
     }
 
-    public static Retrofit getInstance() throws NoSuchAlgorithmException {
+    public static void RetrofitRelease() {
+        compositeSubscription.dispose();
+        compositeSubscription.clear();
+    }
+
+
+    public Retrofit getInstance() throws NoSuchAlgorithmException {
         if (sInstance == null) {
             synchronized (RetrofitUtil.class) {
                 OkHttpClient.Builder httpClient = getOkHttp();
@@ -59,4 +67,15 @@ public class RetrofitUtil {
         }
         return sInstance;
     }
+
+    public static void addSubscription(Disposable subscription) {
+        if (subscription == null) {
+            return;
+        }
+        if (compositeSubscription == null) {
+            compositeSubscription = new CompositeDisposable();
+        }
+        compositeSubscription.add(subscription);
+    }
+
 }

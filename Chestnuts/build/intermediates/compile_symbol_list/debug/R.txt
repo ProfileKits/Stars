@@ -27,6 +27,11 @@ int anim design_bottom_sheet_slide_out 0x0
 int anim design_snackbar_in 0x0
 int anim design_snackbar_out 0x0
 int anim fragment_fast_out_extra_slow_in 0x0
+int anim item_alpha_anim 0x0
+int anim item_scale_anim 0x0
+int anim item_translate_bybottom 0x0
+int anim item_translate_byleft 0x0
+int anim item_translate_byright 0x0
 int anim mtrl_bottom_sheet_slide_in 0x0
 int anim mtrl_bottom_sheet_slide_out 0x0
 int anim mtrl_card_lowers_interpolator 0x0

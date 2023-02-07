@@ -16,8 +16,8 @@ import java.io.IOException;
  */
 public abstract class CNLogUtil {
 	
-	public static final String TAG = "GalaxyStudio";
-	private static final String LOG_FILE = "GalaxyStudio.log";
+	public static final String TAG = "galaxy";
+	private static final String LOG_FILE = "Galaxy.log";
 
 	public static boolean publicOnOff = ChestnutData.getPermission();
 

@@ -15,6 +15,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -57,7 +59,7 @@ public abstract class CNBaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (null == rootView) {
+        if (null == rootView && ChestnutData.getPermission()) {
             rootView = inflater.inflate(getLayoutResID(), container, false);
         }
         isViewCreated = true;

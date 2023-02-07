@@ -42,7 +42,6 @@ public class CNScreenUtil {
     }
 
 
-
     /**
      * 获取状态栏的高度
      */
@@ -117,7 +116,7 @@ public class CNScreenUtil {
      * @param view
      * @param width
      */
-    public static void setLayoutWidth(View view, int width) {
+    public static void setViewWidth(View view, int width) {
        /* MarginLayoutParams margin=new MarginLayoutParams(view.getLayoutParams());
         margin.setMargins(margin.leftMargin,y, margin.rightMargin, y+margin.height);
         //RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(margin);
@@ -147,11 +146,88 @@ public class CNScreenUtil {
         }
     }
 
-    public static void setViewWidthOrHeigh(View view, int width, int heigh) {
+
+
+    /**
+     * 設置View的高度（像素）。若設置爲自適應則應該傳入MarginLayoutParams.WRAP_CONTENT
+     *
+     * @param view
+     * @param height
+     */
+    public static void setViewHeight(View view, int height) {
+       /* MarginLayoutParams margin=new MarginLayoutParams(view.getLayoutParams());
+        margin.setMargins(margin.leftMargin,y, margin.rightMargin, y+margin.height);
+        //RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(margin);
+        //view.setLayoutParams(layoutParams);
+        ViewGroup.MarginLayoutParams  layoutParams =newLayParms(view, margin);
+        //RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(margin);
+        view.setLayoutParams(layoutParams);
+        view.requestLayout();*/
+        if (view.getParent() instanceof FrameLayout) {
+            FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) view.getLayoutParams();
+            lp.height = height;
+            view.setLayoutParams(lp);
+            //view.setX(x);
+            view.requestLayout();
+        } else if (view.getParent() instanceof RelativeLayout) {
+            RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) view.getLayoutParams();
+            lp.height = height;
+            view.setLayoutParams(lp);
+            //view.setX(x);
+            view.requestLayout();
+        } else if (view.getParent() instanceof LinearLayout) {
+            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) view.getLayoutParams();
+            lp.height = height;
+            view.setLayoutParams(lp);
+            //view.setX(x);
+            view.requestLayout();
+        }
+    }
+
+
+    /**
+     * 设置view的宽度和高度
+     * @param view
+     * @param width
+     * @param height
+     */
+    public static void setViewWidthAndHeight(View view, int width, int height) {
         RelativeLayout.LayoutParams linearParams = (RelativeLayout.LayoutParams) view.getLayoutParams(); //取控件textView当前的布局参数 linearParams.height = 20;// 控件的高强制设成20
-        linearParams.width = width;// 控件的宽强制设成30
-        linearParams.height = heigh;// 控件的宽强制设成30
-        view.setLayoutParams(linearParams);
+
+        if (view.getParent() instanceof FrameLayout) {
+            FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) view.getLayoutParams();
+            if (width > 0) {
+                linearParams.width = width;
+            }
+            if (height > 0) {
+                lp.height = height;
+            }
+            view.setLayoutParams(lp);
+            //view.setX(x);
+            view.requestLayout();
+        } else if (view.getParent() instanceof RelativeLayout) {
+            RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) view.getLayoutParams();
+            if (width > 0) {
+                linearParams.width = width;
+            }
+            if (height > 0) {
+                lp.height = height;
+            }
+            view.setLayoutParams(lp);
+            //view.setX(x);
+            view.requestLayout();
+        } else if (view.getParent() instanceof LinearLayout) {
+            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) view.getLayoutParams();
+            if (width > 0) {
+                linearParams.width = width;
+            }
+            if (height > 0) {
+                lp.height = height;
+            }
+            view.setLayoutParams(lp);
+            //view.setX(x);
+            view.requestLayout();
+        }
     }
 
     /**

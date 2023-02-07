@@ -51,6 +51,30 @@ public class CNViewUtils {
             && motionY >= vLoc[1] && motionY <= (vLoc[1] + v.getHeight());
     }
 
+
+    /**
+     * 设置view高度
+     * @param view
+     * @param height
+     */
+    public static void setViewHeight(View view, int height) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        layoutParams.height = height;
+        view.setLayoutParams(layoutParams);//设置高度
+    }
+
+
+    /**
+     * 设置view宽度
+     * @param view
+     * @param width
+     */
+    public static void setViewWidth(View view, int width) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        layoutParams.width = width;
+        view.setLayoutParams(layoutParams);//设置高度
+    }
+
     /**
      *
      * @param view

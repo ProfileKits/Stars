@@ -12,6 +12,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.IBinder;
 
+import com.predictor.library.jni.ChestnutData;
+
 
 public class DownloadService extends Service {
 
@@ -41,12 +43,14 @@ public class DownloadService extends Service {
     }
 
     private void downloadFile(String fileurl) {
-        filePath = "/sdcard/Download/" + fileurl.substring(fileurl.lastIndexOf("/") + 1);
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(fileurl));
-        request.setDestinationInExternalPublicDir("/Download/", fileurl.substring(fileurl.lastIndexOf("/") + 1));
-        mDownloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-        mTaskId = mDownloadManager.enqueue(request);
-        registerReceiver(mReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        if(ChestnutData.getPermission()) {
+            filePath = "/sdcard/Download/" + fileurl.substring(fileurl.lastIndexOf("/") + 1);
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(fileurl));
+            request.setDestinationInExternalPublicDir("/Download/", fileurl.substring(fileurl.lastIndexOf("/") + 1));
+            mDownloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+            mTaskId = mDownloadManager.enqueue(request);
+            registerReceiver(mReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        }
     }
 
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {

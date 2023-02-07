@@ -15,8 +15,6 @@ import javax.crypto.spec.SecretKeySpec;
  */
 
 public class CNAESUtils {
-
-
     /*
      * 生成密钥
      */

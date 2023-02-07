@@ -14,6 +14,15 @@
         <entry key="app/src/main/res/layout/activity_me.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/activity_view_pager.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/fragment_me.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/item_notify.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/item_pull.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/item_slide_bottom.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/item_slide_with.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/layout_foot.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/layout_head.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/row_report.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/menu/menu_drag_swip.xml" value="0.32760416666666664" />
       </map>
     </option>
   </component>
