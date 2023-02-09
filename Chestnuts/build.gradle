@@ -64,5 +64,5 @@ dependencies {
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'//可能会成为冲突问题
     api 'io.reactivex.rxjava2:rxjava:2.2.4'//可能会成为冲突问题
     implementation 'com.tencent.bugly:crashreport:latest.release'
-    implementation 'com.alibaba.fastjson2:fastjson2:2.0.23'
+    implementation 'com.alibaba:fastjson:1.2.8'
 }

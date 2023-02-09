@@ -1,4 +1,4 @@
-#Fri Feb 10 01:05:26 CST 2023
+#Fri Feb 10 02:28:57 CST 2023
 path.4=12/classes.dex
 path.3=11/classes.dex
 path.2=10/classes.dex
@@ -19,7 +19,6 @@ base.8=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeL
 base.7=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeLibDexDebug/15/classes.dex
 base.6=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeLibDexDebug/14/classes.dex
 base.5=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeLibDexDebug/13/classes.dex
-renamed.27=classes28.dex
 renamed.26=classes27.dex
 renamed.25=classes26.dex
 renamed.24=classes25.dex
@@ -27,8 +26,7 @@ renamed.23=classes24.dex
 renamed.22=classes23.dex
 renamed.21=classes22.dex
 renamed.20=classes21.dex
-base.27=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
-base.26=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.26=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
 base.25=/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
 renamed.18=classes19.dex
 renamed.17=classes18.dex
@@ -80,6 +78,5 @@ path.23=7/classes.dex
 path.24=14/classes.dex
 path.21=2/classes.dex
 path.22=5/classes.dex
-path.27=6/classes.dex
 path.25=4/classes.dex
-path.26=classes2.dex
+path.26=6/classes.dex
