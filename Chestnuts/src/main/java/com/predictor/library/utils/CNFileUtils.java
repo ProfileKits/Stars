@@ -663,6 +663,23 @@ public class CNFileUtils {
         return list;
     }
 
+
+    //获取保存目录
+    public static String getSaveDirectory(String str) {
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            String rootDir = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + str + "/";
+            File file = new File(rootDir);
+            if (!file.exists()) {
+                if (!file.mkdirs()) {
+                    return null;
+                }
+            }
+            return rootDir;
+        } else {
+            return null;
+        }
+    }
+
     /**
      * 获取SharedPreferences文件内容
      *

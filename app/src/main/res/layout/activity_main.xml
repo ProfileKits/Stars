@@ -9,79 +9,122 @@
     android:layout_marginRight="30dp"
     tools:context=".ui.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/ll_layout"
+    <com.predictor.library.view.CNOverScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
+            android:id="@+id/ll_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <com.predictor.library.view.CNCleanEditText
-                android:id="@+id/et"
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:hint="账号"
-                android:padding="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textColor="@color/black"
-                android:textColorHint="#888"
-                app:background="@drawable/editview_bg"
-                app:deleteIcon="@drawable/delete"
-                app:deleteIconHeight="20dp"
-                app:deleteIconWidth="20dp"
-                app:dividerColor="#888"
-                app:dividerMarginLeft="10dp"
-                app:dividerMarginRight="10dp"
-                app:focusDividerColor="#888"
-                app:focusTextColor="#505050"
-                app:iconHeight="20dp"
-                app:iconWidth="20dp" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_viewpage"
+                <com.predictor.library.view.CNCleanEditText
+                    android:id="@+id/et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="账号"
+                    android:padding="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#888"
+                    app:background="@drawable/editview_bg"
+                    app:deleteIcon="@drawable/delete"
+                    app:deleteIconHeight="20dp"
+                    app:deleteIconWidth="20dp"
+                    app:dividerColor="#888"
+                    app:dividerMarginLeft="10dp"
+                    app:dividerMarginRight="10dp"
+                    app:focusDividerColor="#888"
+                    app:focusTextColor="#505050"
+                    app:iconHeight="20dp"
+                    app:iconWidth="20dp" />
+
+                <Button
+                    android:id="@+id/btn_viewpage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ViewPager" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <com.predictor.library.view.CNProgressCircle
+                android:id="@+id/progress_circle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                app:number_text_size="50sp"
+                app:progress_background_line_color="#7800bd"
+                app:progress_background_line_width="23dp"
+                app:progress_circle_line_color="#33c042"
+                app:progress_circle_line_width="23dp"
+                app:text_color="#333333"
+                app:unit="%"
+                app:unit_text_size="30sp" />
+
+
+            <com.predictor.library.view.CNVerifyEditText
+                android:id="@+id/et_verify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ViewPager" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
+                app:verify_background_normal="@drawable/code_bg_gray"
+                app:verify_count="4"
+                app:verify_height="55dp"
+                app:verify_inputType="number"
+                app:verify_keyboard="false"
+                app:verify_margin="15dp"
+                app:verify_password="true"
+                app:verify_password_visible_time="500"
+                app:verify_textColor="#020820"
+                app:verify_textSize="30sp"
+                app:verify_width="55dp" />
 
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:gravity="center_horizontal"
-            android:text="Hello World!"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
-            android:text="Hello World!"
-            android:textSize="47sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:gravity="center_horizontal"
+                android:text="Hello World!"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:paddingBottom="50dp"
+                android:text="Hello World!"
+                android:textSize="47sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+    </com.predictor.library.view.CNOverScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

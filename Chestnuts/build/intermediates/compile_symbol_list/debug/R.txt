@@ -710,6 +710,7 @@ int attr nestedScrollFlags 0x0
 int attr nestedScrollViewStyle 0x0
 int attr nestedScrollable 0x0
 int attr number 0x0
+int attr number_text_size 0x0
 int attr numericModifiers 0x0
 int attr onCross 0x0
 int attr onHide 0x0
@@ -763,6 +764,10 @@ int attr preserveIconSpacing 0x0
 int attr pressedTranslationZ 0x0
 int attr progressBarPadding 0x0
 int attr progressBarStyle 0x0
+int attr progress_background_line_color 0x0
+int attr progress_background_line_width 0x0
+int attr progress_circle_line_color 0x0
+int attr progress_circle_line_width 0x0
 int attr queryBackground 0x0
 int attr queryHint 0x0
 int attr queryPatterns 0x0
@@ -921,6 +926,7 @@ int attr textInputLayoutFocusedRectEnabled 0x0
 int attr textInputStyle 0x0
 int attr textLocale 0x0
 int attr textStartPadding 0x0
+int attr text_color 0x0
 int attr theme 0x0
 int attr themeLineHeight 0x0
 int attr thickness 0x0
@@ -982,9 +988,23 @@ int attr triggerId 0x0
 int attr triggerReceiver 0x0
 int attr triggerSlack 0x0
 int attr ttcIndex 0x0
+int attr unit 0x0
+int attr unit_text_size 0x0
 int attr useCompatPadding 0x0
 int attr useMaterialThemeColors 0x0
 int attr values 0x0
+int attr verify_background_normal 0x0
+int attr verify_background_selected 0x0
+int attr verify_count 0x0
+int attr verify_height 0x0
+int attr verify_inputType 0x0
+int attr verify_keyboard 0x0
+int attr verify_margin 0x0
+int attr verify_password 0x0
+int attr verify_password_visible_time 0x0
+int attr verify_textColor 0x0
+int attr verify_textSize 0x0
+int attr verify_width 0x0
 int attr verticalOffset 0x0
 int attr viewInflaterClass 0x0
 int attr visibilityMode 0x0
@@ -1642,6 +1662,7 @@ int dimen pickerview_topbar_height 0x0
 int dimen pickerview_topbar_paddingleft 0x0
 int dimen pickerview_topbar_paddingright 0x0
 int dimen pickerview_topbar_title_textsize 0x0
+int dimen scale_textSize 0x0
 int dimen test_mtrl_calendar_day_cornerSize 0x0
 int dimen test_navigation_bar_active_item_max_width 0x0
 int dimen test_navigation_bar_active_item_min_width 0x0
@@ -1763,6 +1784,7 @@ int drawable btn_radio_off_mtrl 0x0
 int drawable btn_radio_off_to_on_mtrl_animation 0x0
 int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
+int drawable code_bg_gray 0x0
 int drawable delete 0x0
 int drawable delete_selector 0x0
 int drawable design_fab_background 0x0
@@ -4886,6 +4908,28 @@ int styleable pickerview_pickerview_gravity 1
 int styleable pickerview_pickerview_textColorCenter 2
 int styleable pickerview_pickerview_textColorOut 3
 int styleable pickerview_pickerview_textSize 4
+int[] styleable progress_circle { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable progress_circle_number_text_size 0
+int styleable progress_circle_progress_background_line_color 1
+int styleable progress_circle_progress_background_line_width 2
+int styleable progress_circle_progress_circle_line_color 3
+int styleable progress_circle_progress_circle_line_width 4
+int styleable progress_circle_text_color 5
+int styleable progress_circle_unit 6
+int styleable progress_circle_unit_text_size 7
+int[] styleable verify_EditText { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable verify_EditText_verify_background_normal 0
+int styleable verify_EditText_verify_background_selected 1
+int styleable verify_EditText_verify_count 2
+int styleable verify_EditText_verify_height 3
+int styleable verify_EditText_verify_inputType 4
+int styleable verify_EditText_verify_keyboard 5
+int styleable verify_EditText_verify_margin 6
+int styleable verify_EditText_verify_password 7
+int styleable verify_EditText_verify_password_visible_time 8
+int styleable verify_EditText_verify_textColor 9
+int styleable verify_EditText_verify_textSize 10
+int styleable verify_EditText_verify_width 11
 int xml standalone_badge 0x0
 int xml standalone_badge_gravity_bottom_end 0x0
 int xml standalone_badge_gravity_bottom_start 0x0

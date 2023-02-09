@@ -49,6 +49,11 @@ public class CNBaseInvoke {
         return k;
     }
 
+
+    public String getSign(Context context) {
+        return ChestnutData.getKey(context);
+    }
+
     /**
      * 获取ApplicationContext
      *

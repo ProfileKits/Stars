@@ -2,7 +2,10 @@ package com.predictor.galaxy.ui;
 
 import android.animation.Animator;
 import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
 import android.text.Layout;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -11,16 +14,22 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+
 import com.predictor.galaxy.R;
+import com.predictor.galaxy.bean.Person;
 import com.predictor.galaxy.bean.RankingBean;
+import com.predictor.galaxy.module.TestCallback;
+import com.predictor.galaxy.net.RetrofitNetwork;
 import com.predictor.galaxy.net.RetrofitService;
 import com.predictor.library.artanimation.library.CNDoooArt;
 import com.predictor.library.artanimation.library.Techniques;
 import com.predictor.library.base.CNBaseActivity;
 
+import com.predictor.library.base.CNBaseInvoke;
+import com.predictor.library.callback.CNCallbackback;
 import com.predictor.library.example.SetSelfWithPoint;
 import com.predictor.library.listener.OnChangeListener;
-import com.predictor.library.net.HttpUrl;
 import com.predictor.library.net.RetrofitUtil;
 import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.rx.ApiResult;
@@ -32,18 +41,26 @@ import com.predictor.library.utils.CNDES;
 import com.predictor.library.utils.CNEditTextUtil;
 import com.predictor.library.utils.CNFastClickCheckUtil;
 import com.predictor.library.utils.CNHttpUtil;
+import com.predictor.library.utils.CNJsonUtils;
 import com.predictor.library.utils.CNLogUtil;
 import com.predictor.library.utils.CNTextViewUtil;
 import com.predictor.library.utils.CNToast;
 import com.predictor.library.utils.CNToastCustom;
 import com.predictor.library.view.CNCleanEditText;
+import com.predictor.library.view.CNProgressCircle;
 import com.predictor.library.view.CNTextTool;
 import com.predictor.galaxy.view.PickerView;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import io.reactivex.disposables.Disposable;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 
 
 public class MainActivity extends CNBaseActivity {
@@ -54,6 +71,11 @@ public class MainActivity extends CNBaseActivity {
     private CNDoooArt.YoYoString rope;
     private CNCleanEditText et;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.i("KEYSGIN", CNBaseInvoke.getInstance().getSign(this));
+    }
 
     @Override
     protected void initView() {
@@ -62,13 +84,18 @@ public class MainActivity extends CNBaseActivity {
         textView2 = findViewById(R.id.tv2);
         btn_viewpage = findViewById(R.id.btn_viewpage);
         et = findViewById(R.id.et);
+//        CNKeyboardUtil.disableKeyboard(this);
+        CNProgressCircle circle = findViewById(R.id.progress_circle);
+        circle.setMaxProgress(100);
+        circle.setProgress(20);
+        circle.setProgress(100, 9000);
 
 //       CNToast.show(mContext,"是否为手机号："+CNValidatorUtil.isPhone("17022222222",true)+"");
 
         CNEditTextUtil.setChangeListener(et, new OnChangeListener() {
             @Override
             public void change() {
-                CNBugly.testCrash();
+//                CNBugly.testCrash();//测试Bugly Crash
 //                CNToast.show(MainActivity.this,et.getText().toString());
 //                CNCustomToast.ToastLongTopCenter(MainActivity.this,et.getText().toString());
 //                CNToastCustom.showWhiteToast(MainActivity.this,"测试");
@@ -102,6 +129,7 @@ public class MainActivity extends CNBaseActivity {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void initData() {
         //打印日志
@@ -120,15 +148,58 @@ public class MainActivity extends CNBaseActivity {
                 .into(textView);
 
 //        CNToast.show(this,"Hello World");
-
 //        CNSnackbar.show(this,"Hello World",textView);
-
         //自定义Toast
 //        CNCustomToast.ToastLongCenter(MainActivity.this, "自定义Toast");
 
         //旋转动画
         CNAnimationUtils.startWith(textView, CNAnimationUtils.IN_ROTATE360, 1000);
-        initNetwork();
+//        initNetwork();
+
+//      submitOrder();
+
+        TestCallback testCallback = new TestCallback();
+        CNLogUtil.i(testCallback.Go());
+
+    }
+
+
+    //数据转换
+    private void dataTodata() {
+        Person person = new Person();
+        person.setName("张三");
+        person.setId("6");
+        Gson gson = new Gson();
+        String json = gson.toJson(person);
+        Type type = new TypeToken<Map<String, Object>>() {
+        }.getType();
+        Map<String, Object> map = gson.fromJson(json, type);
+        CNLogUtil.i("打印map集合：" + map.toString());
+
+        try {
+            Person person1 = (Person) CNJsonUtils.mapToObject(map, Person.class);
+            CNLogUtil.i("打印转后的person：" + person1.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //测试数据 模拟提交订单
+    private void submitOrder() {
+        String jsonStr = "{\"agingType\":2,\"appointmentLoadTime\":\"2023-02-08 20:29:35\",\"dist\":6483048.399999999,\"goodsName\":\"蛋糕\",\"goodsType\":\"cake\",\"goodsWeight\":\"1\",\"orderType\":1,\"receiverAddress\":\"天津杨柳青高尔夫俱乐部 1103\",\"receiverLat\":\"39.164274\",\"receiverLon\":\"117.00036\",\"receiverName\":\"李李李李\",\"receiverPhone\":\"18989898989\",\"sendAddress\":\"1%推理社 112\",\"sendLat\":\"39.375546\",\"sendLon\":\"117.054218\",\"sendName\":\"张张张\",\"sendPhone\":\"15080808080\",\"userRemark\":\"请填写其它配送要求\"}";
+        RequestBody body = RequestBody.create(jsonStr, MediaType.parse("application/json; charset=utf-8"));
+        RetrofitNetwork.getInstance().submitTcExpressOrder(mContext, body, new RetrofitNetwork.NetResult() {
+            @Override
+            public void success(Object result) {
+                CNLogUtil.i("提交成功：" + result.toString());
+            }
+
+            @Override
+            public void error(String msg) {
+                CNLogUtil.i("提交失败：" + msg.toString());
+            }
+        });
     }
 
     private void initNetwork() {
@@ -252,4 +323,6 @@ public class MainActivity extends CNBaseActivity {
                 , null, R.color.white, R.color.white, R.color.white, R.color.white);
         return true;
     }
+
+
 }

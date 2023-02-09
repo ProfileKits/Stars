@@ -16,6 +16,7 @@ import com.predictor.galaxy.fragment.MeFragment;
 import com.predictor.library.adapter.PagerViewAdapter;
 import com.predictor.library.base.CNBaseActivity;
 import com.predictor.library.base.CNBaseFragment;
+import com.predictor.library.callback.CNCallbackback;
 import com.predictor.library.listener.OnDoIntListener;
 import com.predictor.library.utils.CNToast;
 
@@ -43,6 +44,13 @@ public class ViewPagerActivity extends CNBaseActivity {
 
     @Override
     protected void initData() {
+        CNCallbackback callback = new CNCallbackback() {
+            @Override
+            public String Go() {
+                return null;
+            }
+        };
+        callback.Go();
         fragments.add(HomeFragment.newInstance());
         fragments.add(MeFragment.newInstance());
         pagerViewAdapter = new PagerViewAdapter(getSupportFragmentManager(), fragments);

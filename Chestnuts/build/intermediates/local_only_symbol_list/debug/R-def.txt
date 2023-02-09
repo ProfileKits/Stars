@@ -30,17 +30,37 @@ attr? icon
 attr? iconHeight
 attr? iconWidth
 attr? loadingColor
+attr? number_text_size
 attr? pickerview_dividerColor
 attr? pickerview_gravity
 attr? pickerview_textColorCenter
 attr? pickerview_textColorOut
 attr? pickerview_textSize
+attr? progress_background_line_color
+attr? progress_background_line_width
+attr? progress_circle_line_color
+attr? progress_circle_line_width
 attr? radius
 attr? realtimeBlurRadius
 attr? realtimeDownsampleFactor
 attr? realtimeOverlayColor
 attr? roundedRectangleRadius
 attr? stopColor
+attr? text_color
+attr? unit
+attr? unit_text_size
+attr? verify_background_normal
+attr? verify_background_selected
+attr? verify_count
+attr? verify_height
+attr? verify_inputType
+attr? verify_keyboard
+attr? verify_margin
+attr? verify_password
+attr? verify_password_visible_time
+attr? verify_textColor
+attr? verify_textSize
+attr? verify_width
 bool pickerview_customTextSize
 color bgColor_overlay
 color black
@@ -63,6 +83,8 @@ dimen pickerview_topbar_height
 dimen pickerview_topbar_paddingleft
 dimen pickerview_topbar_paddingright
 dimen pickerview_topbar_title_textsize
+dimen scale_textSize
+drawable code_bg_gray
 drawable delete
 drawable delete_selector
 drawable edit_transparent
@@ -126,3 +148,5 @@ styleable RealtimeBlurView realtimeBlurRadius realtimeDownsampleFactor realtimeO
 styleable RoundedRectangleBlurView roundedRectangleRadius
 styleable cleanEditText icon focusIcon deleteIcon iconWidth iconHeight deleteIconWidth deleteIconHeight dividerColor dividerBonds focusDividerColor dividerMarginLeft dividerMarginRight focusTextColor background cursor
 styleable pickerview pickerview_gravity pickerview_textSize pickerview_textColorOut pickerview_textColorCenter pickerview_dividerColor
+styleable progress_circle text_color number_text_size unit_text_size progress_background_line_width progress_circle_line_width progress_background_line_color progress_circle_line_color unit
+styleable verify_EditText verify_count verify_width verify_height verify_margin verify_textSize verify_textColor verify_background_normal verify_background_selected verify_password verify_keyboard verify_password_visible_time verify_inputType

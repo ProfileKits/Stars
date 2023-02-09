@@ -3,10 +3,13 @@ package com.predictor.galaxy.app;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.util.Log;
 
 import com.predictor.galaxy.BuildConfig;
 import com.predictor.galaxy.net.RetrofitService;
 import com.predictor.library.base.CNBaseApp;
+import com.predictor.library.base.CNBaseInvoke;
+import com.predictor.library.utils.CNLogUtil;
 
 import java.security.MessageDigest;
 import java.util.Iterator;
@@ -14,8 +17,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class MyApplication extends CNBaseApp {
+    public static final boolean DEBUG_MODE = BuildConfig.DEBUG;//是否为Debug模式
     private static MyApplication myApplication;
-
     private static final Object LockThis = new Object();
 
     public synchronized static MyApplication getInstance() {
@@ -26,8 +29,6 @@ public class MyApplication extends CNBaseApp {
         }
         return myApplication;
     }
-
-    public static final boolean DEBUG_MODE = BuildConfig.DEBUG;//是否为Debug模式
 
     @Override
     public void onCreate() {
@@ -48,24 +49,27 @@ public class MyApplication extends CNBaseApp {
     @Override
     public String[] setBaseUrl() {
         //第一个地址是测试基地址，第二个是正式基地址
-        return new String[]{"https://zfljh.top/","https://zfljh.top/"};
+        return new String[]{"https://zfljh.top/", "https://zfljh.top/"};
     }
 
     //设置app的token
-    public void setToken(String token){
+    public void setToken(String token) {
         RetrofitService.getInstance().setHeader(token);
-
     }
 
+    //初始化APP
     private void initData() {
         //设置token
-        setToken("Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjNjODZhZmJiLTgyMjItNDM2ZC1iYzVmLTgwOGZiNjAwMGZiYiJ9.8U2NV9NrTLZN2maIholOTI_twisa1KAsTc9wjMFj1BTI5j9Y0M19jqUAUqkzXwkn17UTHpUTQCIDtxnMvSeW5w");
+        setToken("Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImYyNzU5ZGRkLTliZDEtNDkyZS1hYTkxLWYyNDE2MDA4ZmU4NiJ9.SCBukiv0xidtMZcqFriojQXNs-QcMz9uBgf5wdDKea2-qWGRu9XYOitGpLr2zbep763AbAkpJxdd7qGHevb5GA");
 
 //       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE);
 //        CNLogUtil.i("key:"+key);
-//        String realKey = getSha1Value(this);
-//        CNLogUtil.i("key:"+realKey);
+        String realKey = getSha1Value(this);
+        CNLogUtil.i("加密key:" + realKey);
+
+        Log.i("key:", CNBaseInvoke.getInstance().getSign(this));
     }
+
 
     private byte[] getSign(Context context) {
         PackageManager pm = context.getPackageManager();
@@ -101,5 +105,4 @@ public class MyApplication extends CNBaseApp {
         }
         return null;
     }
-
 }

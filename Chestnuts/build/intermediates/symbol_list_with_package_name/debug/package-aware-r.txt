@@ -711,6 +711,7 @@ attr nestedScrollFlags
 attr nestedScrollViewStyle
 attr nestedScrollable
 attr number
+attr number_text_size
 attr numericModifiers
 attr onCross
 attr onHide
@@ -764,6 +765,10 @@ attr preserveIconSpacing
 attr pressedTranslationZ
 attr progressBarPadding
 attr progressBarStyle
+attr progress_background_line_color
+attr progress_background_line_width
+attr progress_circle_line_color
+attr progress_circle_line_width
 attr queryBackground
 attr queryHint
 attr queryPatterns
@@ -922,6 +927,7 @@ attr textInputLayoutFocusedRectEnabled
 attr textInputStyle
 attr textLocale
 attr textStartPadding
+attr text_color
 attr theme
 attr themeLineHeight
 attr thickness
@@ -983,9 +989,23 @@ attr triggerId
 attr triggerReceiver
 attr triggerSlack
 attr ttcIndex
+attr unit
+attr unit_text_size
 attr useCompatPadding
 attr useMaterialThemeColors
 attr values
+attr verify_background_normal
+attr verify_background_selected
+attr verify_count
+attr verify_height
+attr verify_inputType
+attr verify_keyboard
+attr verify_margin
+attr verify_password
+attr verify_password_visible_time
+attr verify_textColor
+attr verify_textSize
+attr verify_width
 attr verticalOffset
 attr viewInflaterClass
 attr visibilityMode
@@ -1643,6 +1663,7 @@ dimen pickerview_topbar_height
 dimen pickerview_topbar_paddingleft
 dimen pickerview_topbar_paddingright
 dimen pickerview_topbar_title_textsize
+dimen scale_textSize
 dimen test_mtrl_calendar_day_cornerSize
 dimen test_navigation_bar_active_item_max_width
 dimen test_navigation_bar_active_item_min_width
@@ -1764,6 +1785,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable code_bg_gray
 drawable delete
 drawable delete_selector
 drawable design_fab_background
@@ -3361,6 +3383,8 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_inflatedId android_layout
 styleable cleanEditText background cursor deleteIcon deleteIconHeight deleteIconWidth dividerBonds dividerColor dividerMarginLeft dividerMarginRight focusDividerColor focusIcon focusTextColor icon iconHeight iconWidth
 styleable pickerview pickerview_dividerColor pickerview_gravity pickerview_textColorCenter pickerview_textColorOut pickerview_textSize
+styleable progress_circle number_text_size progress_background_line_color progress_background_line_width progress_circle_line_color progress_circle_line_width text_color unit unit_text_size
+styleable verify_EditText verify_background_normal verify_background_selected verify_count verify_height verify_inputType verify_keyboard verify_margin verify_password verify_password_visible_time verify_textColor verify_textSize verify_width
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

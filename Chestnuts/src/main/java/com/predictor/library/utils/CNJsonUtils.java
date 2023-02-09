@@ -1,6 +1,12 @@
 package com.predictor.library.utils;
 
+import android.util.Log;
+
+import com.alibaba.fastjson2.JSON;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 import com.predictor.library.base.AppLogMessageMgr;
 
 import org.json.JSONArray;
@@ -9,10 +15,15 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -32,6 +43,7 @@ public class CNJsonUtils {
 
     /**
      * 对象转json
+     *
      * @param obj
      * @return
      */
@@ -42,6 +54,7 @@ public class CNJsonUtils {
 
     /**
      * json转对象
+     *
      * @param str
      * @param type
      * @param <T>
@@ -54,6 +67,7 @@ public class CNJsonUtils {
 
     /**
      * Map转为JSONObject
+     *
      * @param data
      * @return
      */
@@ -77,6 +91,7 @@ public class CNJsonUtils {
 
     /**
      * 集合转换为JSONArray
+     *
      * @param data
      * @return
      */
@@ -91,7 +106,109 @@ public class CNJsonUtils {
     }
 
     /**
+     * 使用Gson字符串转Json
+     *
+     * @return
+     */
+    public static String objToJson(Object obj) {
+        String str = new Gson().toJson(obj);
+        return str;
+    }
+
+    /**
+     * 使用Gson object转map集合
+     * @param obj
+     * @return
+     */
+    public static Map<String, Object> objectToMap(Object obj) {
+        Gson gson = new Gson();
+        String json = gson.toJson(obj);
+        Type type = new TypeToken<Map<String, Object>>(){}.getType();
+        Map<String, Object> map = gson.fromJson(json, type);
+        return map;
+    }
+
+
+    /**
+     * 利用反射 实现map集合转Object对象
+     * @param map
+     * @param clazz
+     * @return
+     * @throws Exception
+     */
+    public static Object mapToObject(Map<String, Object> map, Class<?> clazz) throws Exception {
+        Object obj = clazz.newInstance();
+        Field[] fields = clazz.getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            field.set(obj, map.get(field.getName()));
+        }
+        return obj;
+    }
+
+
+    /**
+     * 使用fastjson Json转Obj对象
+     * @param jsonStr
+     * @param clazz
+     * @return
+     */
+    public static Object jsonToObj(String jsonStr, Class<?> clazz) {
+        Object object = JSON.parseObject(jsonStr, clazz);
+        return object;
+    }
+
+
+    /**
+     * @param content json字符串转Map集合
+     */
+    public static Map<String, Object> jsonToMap(String content) {
+        content = content.trim();
+        Map<String, Object> result = new HashMap<>();
+        try {
+            if (content.charAt(0) == '[') {
+
+                JSONArray jsonArray = new JSONArray(content);
+                for (int i = 0; i < jsonArray.length(); i++) {
+
+                    Object value = jsonArray.get(i);
+                    if (value instanceof JSONArray || value instanceof JSONObject) {
+
+                        result.put(i + "", jsonToMap(value.toString().trim()));
+                    } else {
+
+                        result.put(i + "", jsonArray.getString(i));
+                    }
+                }
+            } else if (content.charAt(0) == '{') {
+
+                JSONObject jsonObject = new JSONObject(content);
+                Iterator<String> iterator = jsonObject.keys();
+                while (iterator.hasNext()) {
+
+                    String key = iterator.next();
+                    Object value = jsonObject.get(key);
+                    if (value instanceof JSONArray || value instanceof JSONObject) {
+
+                        result.put(key, jsonToMap(value.toString().trim()));
+                    } else {
+
+                        result.put(key, value.toString().trim());
+                    }
+                }
+            } else {
+                Log.e("异常", "json2Map: 字符串格式错误");
+            }
+        } catch (JSONException e) {
+            Log.e("异常", "json2Map: ", e);
+            result = null;
+        }
+        return result;
+    }
+
+    /**
      * Object对象转换为JSONArray
+     *
      * @param data
      * @return
      * @throws JSONException
@@ -127,7 +244,7 @@ public class CNJsonUtils {
             }
 
             if (o instanceof Boolean || o instanceof Byte || o instanceof Character || o instanceof Double || o instanceof Float || o instanceof Integer || o instanceof Long
-                || o instanceof Short || o instanceof String) {
+                    || o instanceof Short || o instanceof String) {
                 return o;
             }
             if (o.getClass().getPackage().getName().startsWith("java.")) {
@@ -140,6 +257,7 @@ public class CNJsonUtils {
 
     /**
      * json字符串生成JSONObject对象
+     *
      * @param json
      * @return
      */
@@ -156,6 +274,7 @@ public class CNJsonUtils {
 
     /**
      * 对象转换为Json
+     *
      * @param obj
      * @return
      */
@@ -164,10 +283,10 @@ public class CNJsonUtils {
         if (obj == null) {
             json.append("\"\"");
         } else if (obj instanceof String || obj instanceof Integer
-            || obj instanceof Float || obj instanceof Boolean
-            || obj instanceof Short || obj instanceof Double
-            || obj instanceof Long || obj instanceof BigDecimal
-            || obj instanceof BigInteger || obj instanceof Byte) {
+                || obj instanceof Float || obj instanceof Boolean
+                || obj instanceof Short || obj instanceof Double
+                || obj instanceof Long || obj instanceof BigDecimal
+                || obj instanceof BigInteger || obj instanceof Byte) {
             json.append("\"").append(string2json(obj.toString())).append("\"");
         } else if (obj instanceof Object[]) {
             json.append(array2json((Object[]) obj));
@@ -183,6 +302,7 @@ public class CNJsonUtils {
 
     /**
      * List集合转换为Json
+     *
      * @param list
      * @return
      */
@@ -203,6 +323,7 @@ public class CNJsonUtils {
 
     /**
      * 对象数组转换为Json
+     *
      * @param array
      * @return
      */
@@ -221,8 +342,10 @@ public class CNJsonUtils {
         return json.toString();
     }
 
+
     /**
      * Map集合转换为Json
+     *
      * @param map
      * @return
      */
@@ -245,6 +368,7 @@ public class CNJsonUtils {
 
     /**
      * Set集合转为Json
+     *
      * @param set
      * @return
      */
@@ -265,6 +389,7 @@ public class CNJsonUtils {
 
     /**
      * 字符串转换为Json
+     *
      * @param s
      * @return
      */
@@ -316,11 +441,12 @@ public class CNJsonUtils {
     }
 
     /**
-     *字符数组转List集合
+     * 字符数组转List集合
+     *
      * @param array String[] array = new String[] {"zhu", "wen", "tao"};
-     * @return  List
+     * @return List
      */
-    public static List<String> array2List(String[] array){
+    public static List<String> array2List(String[] array) {
         // String数组转List集合
         List<String> mlist = Arrays.asList(array);
         // 输出List集合
@@ -331,18 +457,17 @@ public class CNJsonUtils {
     }
 
     /**
-     *
      * @param list ArrayList<String> list = new ArrayList<>();
      * @return String[]
      */
-    public static String[] list2Array(List<String> list){
+    public static String[] list2Array(List<String> list) {
         String[] array = list.toArray(new String[list.size()]);
-        System.out.println("列表长度为："+list.size());
+        System.out.println("列表长度为：" + list.size());
         System.out.println("将列表转化为数组：");
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]+"  ");
+            System.out.print(array[i] + "  ");
         }
-        return  array;
+        return array;
     }
 
 }

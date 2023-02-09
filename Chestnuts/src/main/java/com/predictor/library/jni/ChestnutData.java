@@ -11,7 +11,7 @@ public class ChestnutData {
 
     public static native boolean getPermission();
 
-//    public static native String getKey(Context context);
+    public static native String getKey(Context context);
 
     public static native String getStartCode();
 }
