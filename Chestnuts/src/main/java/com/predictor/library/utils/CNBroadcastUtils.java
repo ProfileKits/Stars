@@ -11,6 +11,10 @@ public class CNBroadcastUtils {
     public static final String BROADCAST_CMD_DELETE = "chestnut_cmd_delete_broadcast";
     public static final String BROADCAST_CMD_MODIFY = "chestnut_cmd_modify_broadcast";
 
+    public static final String BROADCAST_ACTION_DOWNLOAD = "chestnut_action_download_broadcast";
+    public static final String BROADCAST_CMD_DOWNLOAD_NOW = "chestnut_cmd_download_now_broadcast";
+
+
     //发送更新广播
     public static void sendUpdateCmd(Context context) {
         if (ChestnutData.getPermission()) {
@@ -38,6 +42,17 @@ public class CNBroadcastUtils {
             Intent intent = new Intent();
             intent.setAction(BROADCAST_ACTION);
             intent.putExtra(BROADCAST_CMD_MODIFY, true);
+            context.sendBroadcast(intent);
+        }
+    }
+
+
+    //发送下载广播
+    public static void sendDownloadCmd(Context context) {
+        if (ChestnutData.getPermission()) {
+            Intent intent = new Intent();
+            intent.setAction(BROADCAST_ACTION_DOWNLOAD);
+            intent.putExtra(BROADCAST_CMD_DOWNLOAD_NOW, true);
             context.sendBroadcast(intent);
         }
     }

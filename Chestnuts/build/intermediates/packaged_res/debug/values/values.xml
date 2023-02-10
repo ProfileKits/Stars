@@ -41,6 +41,16 @@
     <string name="tip_permission_storage">·存储权限，用于保存文件</string>
     <string name="tip_permission_voice">·录音权限，用于发送语音</string>
     <string name="tip_unkown_error_place_holder">未知异常，%s</string>
+    <style name="dialog_style">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
     <declare-styleable name="FlikerProgressBar">
         <attr format="color" name="loadingColor"/>
         <attr format="color" name="stopColor"/>
@@ -102,29 +112,29 @@
         <attr format="string" name="unit"/>
     </declare-styleable>
     <declare-styleable name="verify_EditText">
-        <!-- 验证码的个数 -->
+        
         <attr format="integer" name="verify_count"/>
-        <!--        TextView 的宽度-->
+        
         <attr format="dimension" name="verify_width"/>
-        <!--        TextView 的高度-->
+        
         <attr format="dimension" name="verify_height"/>
-        <!--        TextView 的间隔-->
+        
         <attr format="dimension" name="verify_margin"/>
-        <!--        TextView 的字体大小-->
+        
         <attr format="dimension" name="verify_textSize"/>
-        <!--        TextView 的字体颜色-->
+        
         <attr format="color" name="verify_textColor"/>
-        <!-- TextView 无值背景 -->
+        
         <attr format="reference" name="verify_background_normal"/>
-        <!-- TextView 有值背景 -->
+        
         <attr format="reference" name="verify_background_selected"/>
-        <!--        是否隐藏密码-->
+        
         <attr format="boolean" name="verify_password"/>
-        <!--        是否开始显示软键盘-->
+        
         <attr format="boolean" name="verify_keyboard"/>
-        <!--        密码显示时间ms-->
+        
         <attr format="integer" name="verify_password_visible_time"/>
-        <!--        editText的输入类型 -->
+        
         <attr name="verify_inputType">
             <flag name="none" value="0x00000000"/>
             <flag name="text" value="0x00000001"/>

@@ -5,6 +5,7 @@ anim item_scale_anim
 anim item_translate_bybottom
 anim item_translate_byleft
 anim item_translate_byright
+anim load_animation
 anim slide_in_bottom
 anim slide_out_bottom
 attr? background
@@ -94,13 +95,17 @@ drawable selector_pickerview_btn
 drawable shape_toast
 drawable sys_toast
 drawable toast_black_background
+drawable toast_ic_jzz
 drawable toast_white_background
 id btnCancel
 id btnSubmit
+id btn_confirm
 id center
 id content_container
 id day
+id dialog_view
 id hour
+id img
 id left
 id message
 id min
@@ -114,11 +119,16 @@ id outmost_container
 id right
 id sys_show_toast_txt
 id timepicker
+id tip_text_view
 id tvTitle
+id tv_msg
+id v_line
 id year
 integer animation_default_duration
 layout include_pickerview_topbar
 layout layout_basepickerview
+layout layout_dialog_loading
+layout layout_dialog_single_button
 layout layout_toast
 layout pickerview_options
 layout pickerview_time
@@ -142,6 +152,7 @@ string tip_permission_phone
 string tip_permission_storage
 string tip_permission_voice
 string tip_unkown_error_place_holder
+style dialog_style
 styleable FlikerProgressBar loadingColor stopColor finishColor radius borderWidth
 styleable FontTextView font_name has_use has_Relaxation font_size_before font_size_after
 styleable RealtimeBlurView realtimeBlurRadius realtimeDownsampleFactor realtimeOverlayColor

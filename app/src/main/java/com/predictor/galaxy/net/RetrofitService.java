@@ -14,7 +14,7 @@ import io.reactivex.Scheduler;
 
 import io.reactivex.schedulers.Schedulers;
 
-//Retrofit工具类
+//Retrofit 实例化工具类
 public class RetrofitService {
     private static volatile RetrofitService instance;
     protected RetrofitServiceInter mWebApi;

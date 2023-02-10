@@ -3,6 +3,8 @@ package com.predictor.galaxy.net;
 import android.content.Context;
 
 import com.predictor.galaxy.bean.RankingBean;
+import com.predictor.library.listener.RetrofitCallBack;
+import com.predictor.library.net.RetrofitHttpUpLoad;
 import com.predictor.library.net.RetrofitUtil;
 import com.predictor.library.rx.ApiResult;
 import com.predictor.library.rx.NormalSubscriber;
@@ -12,10 +14,12 @@ import com.predictor.library.utils.CNLogUtil;
 import com.predictor.library.utils.CNToast;
 
 
+import java.io.File;
 import java.util.Map;
 
 import io.reactivex.disposables.Disposable;
 import okhttp3.RequestBody;
+import retrofit2.Response;
 
 public class RetrofitNetwork {
 
@@ -54,7 +58,6 @@ public class RetrofitNetwork {
 //                    CNToast.show(context, "请求数据出错");
                 }
             };
-
 
             Disposable disposable = RetrofitService.getInstance().getWebApi().getRankingToDay(RetrofitService.getInstance().getHeader(), "3205")
                     .compose(RxTransformerHelper.applySchedulers())
@@ -107,6 +110,40 @@ public class RetrofitNetwork {
             CNToast.show(context, "请检查网络连接");
         }
     }
+
+
+
+    /**
+     * 上传文件/图片
+     * @param path 文件路径
+     * @param context
+     */
+    private void uploadFile(String path, Context context) {
+        RetrofitHttpUpLoad retrofitHttpUpLoad = RetrofitHttpUpLoad.getInstance();
+        retrofitHttpUpLoad.clear();
+        retrofitHttpUpLoad = retrofitHttpUpLoad.addParameter("file", new File(path));
+
+        Map<String, RequestBody> params = retrofitHttpUpLoad
+                .bulider();
+
+        retrofitHttpUpLoad.addToEnqueue(RetrofitService.getInstance().getWebApi().upLoadData(params),
+                new RetrofitCallBack() {
+                    @Override
+                    public <T> void onResponse(Response<T> response, int method) {
+                        String msg = response.body().toString();
+                        CNToast.show(context, "上传图片结果-成功:" + msg);
+                        CNLogUtil.i("上传图片结果-成功:" + msg);
+                    }
+
+                    @Override
+                    public <T> void onFailure(Response<T> response, int method) {
+                        String msg = response.message();
+                        CNToast.show(context, "上传图片结果-error:" + msg);
+                        CNLogUtil.i("上传图片结果-error:" + msg);
+                    }
+                }, 0);
+    }
+
 
 
     public interface NetResult {

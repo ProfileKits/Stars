@@ -32,6 +32,7 @@ int anim item_scale_anim 0x0
 int anim item_translate_bybottom 0x0
 int anim item_translate_byleft 0x0
 int anim item_translate_byright 0x0
+int anim load_animation 0x0
 int anim mtrl_bottom_sheet_slide_in 0x0
 int anim mtrl_bottom_sheet_slide_out 0x0
 int anim mtrl_card_lowers_interpolator 0x0
@@ -1840,6 +1841,7 @@ int drawable sys_toast 0x0
 int drawable test_custom_background 0x0
 int drawable test_level_drawable 0x0
 int drawable toast_black_background 0x0
+int drawable toast_ic_jzz 0x0
 int drawable toast_white_background 0x0
 int drawable tooltip_frame_dark 0x0
 int drawable tooltip_frame_light 0x0
@@ -1923,6 +1925,7 @@ int id bottom 0x0
 int id bounce 0x0
 int id btnCancel 0x0
 int id btnSubmit 0x0
+int id btn_confirm 0x0
 int id buttonPanel 0x0
 int id cancel_button 0x0
 int id center 0x0
@@ -1963,6 +1966,7 @@ int id design_menu_item_action_area_stub 0x0
 int id design_menu_item_text 0x0
 int id design_navigation_view 0x0
 int id dialog_button 0x0
+int id dialog_view 0x0
 int id disjoint 0x0
 int id dragDown 0x0
 int id dragEnd 0x0
@@ -2002,6 +2006,7 @@ int id icon_group 0x0
 int id ignore 0x0
 int id ignoreRequest 0x0
 int id image 0x0
+int id img 0x0
 int id immersion_fits_layout_overlap 0x0
 int id immersion_navigation_bar_view 0x0
 int id immersion_status_bar_view 0x0
@@ -2207,6 +2212,7 @@ int id textinput_prefix_text 0x0
 int id textinput_suffix_text 0x0
 int id time 0x0
 int id timepicker 0x0
+int id tip_text_view 0x0
 int id title 0x0
 int id titleDividerNoCustom 0x0
 int id title_template 0x0
@@ -2220,10 +2226,12 @@ int id transition_scene_layoutid_cache 0x0
 int id transition_transform 0x0
 int id triangle 0x0
 int id tvTitle 0x0
+int id tv_msg 0x0
 int id unchecked 0x0
 int id uniform 0x0
 int id unlabeled 0x0
 int id up 0x0
+int id v_line 0x0
 int id view_offset_helper 0x0
 int id view_tree_lifecycle_owner 0x0
 int id view_tree_saved_state_registry_owner 0x0
@@ -2321,6 +2329,8 @@ int layout design_text_input_end_icon 0x0
 int layout design_text_input_start_icon 0x0
 int layout include_pickerview_topbar 0x0
 int layout layout_basepickerview 0x0
+int layout layout_dialog_loading 0x0
+int layout layout_dialog_single_button 0x0
 int layout layout_toast 0x0
 int layout material_chip_input_combo 0x0
 int layout material_clock_display 0x0
@@ -3241,6 +3251,7 @@ int style Widget_MaterialComponents_Toolbar_PrimarySurface 0x0
 int style Widget_MaterialComponents_Toolbar_Surface 0x0
 int style Widget_MaterialComponents_Tooltip 0x0
 int style Widget_Support_CoordinatorLayout 0x0
+int style dialog_style 0x0
 int[] styleable ActionBar { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1

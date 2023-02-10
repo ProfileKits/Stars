@@ -26,9 +26,11 @@ public class MeFragment extends CNBaseFragment {
     private SwipSlidItemAdapterCN adapter;
     private ArrayList<String> arrayList = new ArrayList<>();
     private SwipItemHelper swipItemHelper;
+
     public static MeFragment newInstance() {
         return new MeFragment();
     }
+
     private static final String TAG = "MeFragment";
 
     @Override
@@ -62,6 +64,5 @@ public class MeFragment extends CNBaseFragment {
     protected void initListener() {
 
     }
-
 
 }

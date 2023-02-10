@@ -17,8 +17,6 @@ import android.os.StatFs;
 import android.text.format.Formatter;
 import android.util.Log;
 
-import com.predictor.library.base.DownloadService;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -1250,12 +1248,12 @@ public class CNFileUtils {
     }
 
     /**
-     * 通过APKURL升级应用
+     * 通过APK URL升级应用
      * @param context
      * @param fileurl
      */
     public static void upgradeApp(Context context, String fileurl) {
-        Intent intent = new Intent(context, DownloadService.class);
+        Intent intent = new Intent(context, CNApkDownloadUtil.class);
         intent.putExtra("fileurl", fileurl);
         context.startService(intent);
     }

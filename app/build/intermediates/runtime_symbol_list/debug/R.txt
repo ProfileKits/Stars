@@ -32,6 +32,7 @@ int anim item_scale_anim 0x7f01001e
 int anim item_translate_bybottom 0x7f01001f
 int anim item_translate_byleft 0x7f010020
 int anim item_translate_byright 0x7f010021
+int anim load_animation 0x7f010027
 int anim mtrl_bottom_sheet_slide_in 0x7f010022
 int anim mtrl_bottom_sheet_slide_out 0x7f010023
 int anim mtrl_card_lowers_interpolator 0x7f010024
@@ -1831,6 +1832,7 @@ int drawable shape_toast 0x7f070095
 int drawable sys_toast 0x7f070096
 int drawable test_custom_background 0x7f070097
 int drawable toast_black_background 0x7f070098
+int drawable toast_ic_jzz 0x7f07009d
 int drawable toast_white_background 0x7f070099
 int drawable tooltip_frame_dark 0x7f07009a
 int drawable tooltip_frame_light 0x7f07009b
@@ -1924,6 +1926,7 @@ int id bottom 0x7f080056
 int id bounce 0x7f080057
 int id btnCancel 0x7f080058
 int id btnSubmit 0x7f080059
+int id btn_confirm 0x7f0801ef
 int id btn_viewpage 0x7f08005a
 int id buttonPanel 0x7f08005b
 int id cache_measures 0x7f08005c
@@ -1975,6 +1978,7 @@ int id design_menu_item_action_area_stub 0x7f080087
 int id design_menu_item_text 0x7f080088
 int id design_navigation_view 0x7f080089
 int id dialog_button 0x7f08008a
+int id dialog_view 0x7f0801f0
 int id dimensions 0x7f08008b
 int id direct 0x7f08008c
 int id disableHome 0x7f08008d
@@ -2016,6 +2020,7 @@ int id forever 0x7f0800af
 int id fragment_container_view_tag 0x7f0800b0
 int id ghost_view 0x7f0800b1
 int id ghost_view_holder 0x7f0800b2
+int id glide_custom_view_target_tag 0x7f0801f5
 int id gone 0x7f0800b3
 int id graph 0x7f0800b4
 int id graph_wrap 0x7f0800b5
@@ -2036,6 +2041,7 @@ int id ifRoom 0x7f0800c3
 int id ignore 0x7f0800c4
 int id ignoreRequest 0x7f0800c5
 int id image 0x7f0800c6
+int id img 0x7f0801f1
 int id immersion_fits_layout_overlap 0x7f0800c7
 int id immersion_navigation_bar_view 0x7f0800c8
 int id immersion_status_bar_view 0x7f0800c9
@@ -2290,6 +2296,7 @@ int id textinput_prefix_text 0x7f0801a6
 int id textinput_suffix_text 0x7f0801a7
 int id time 0x7f0801a8
 int id timepicker 0x7f0801a9
+int id tip_text_view 0x7f0801f2
 int id title 0x7f0801aa
 int id titleDividerNoCustom 0x7f0801ab
 int id title_template 0x7f0801ac
@@ -2308,6 +2315,7 @@ int id triangle 0x7f0801b8
 int id tv 0x7f0801b9
 int id tv2 0x7f0801ba
 int id tvTitle 0x7f0801bb
+int id tv_msg 0x7f0801f3
 int id txt 0x7f0801bc
 int id txt_text 0x7f0801bd
 int id unchecked 0x7f0801be
@@ -2315,6 +2323,7 @@ int id uniform 0x7f0801bf
 int id unlabeled 0x7f0801c0
 int id up 0x7f0801c1
 int id useLogo 0x7f0801c2
+int id v_line 0x7f0801f4
 int id view_offset_helper 0x7f0801c3
 int id view_tree_lifecycle_owner 0x7f0801c4
 int id view_tree_saved_state_registry_owner 0x7f0801c5
@@ -2424,6 +2433,8 @@ int layout item_pull 0x7f0b0033
 int layout item_slide_bottom 0x7f0b0034
 int layout item_slide_with 0x7f0b0035
 int layout layout_basepickerview 0x7f0b0036
+int layout layout_dialog_loading 0x7f0b0084
+int layout layout_dialog_single_button 0x7f0b0085
 int layout layout_foot 0x7f0b0037
 int layout layout_head 0x7f0b0038
 int layout layout_toast 0x7f0b0039
@@ -3350,6 +3361,7 @@ int style Widget_MaterialComponents_Toolbar_PrimarySurface 0x7f1002cf
 int style Widget_MaterialComponents_Toolbar_Surface 0x7f1002d0
 int style Widget_MaterialComponents_Tooltip 0x7f1002d1
 int style Widget_Support_CoordinatorLayout 0x7f1002d2
+int style dialog_style 0x7f1002d3
 int[] styleable ActionBar { 0x7f03003c, 0x7f030043, 0x7f030044, 0x7f0300d3, 0x7f0300d4, 0x7f0300d5, 0x7f0300d6, 0x7f0300d7, 0x7f0300d8, 0x7f0300ff, 0x7f030112, 0x7f030113, 0x7f03012f, 0x7f03018f, 0x7f030196, 0x7f03019c, 0x7f03019d, 0x7f0301a0, 0x7f0301ad, 0x7f0301bf, 0x7f03022d, 0x7f03027b, 0x7f0302ae, 0x7f0302b5, 0x7f0302b6, 0x7f03030d, 0x7f030311, 0x7f03036c, 0x7f030378 }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1
@@ -5030,6 +5042,8 @@ int styleable verify_EditText_verify_textColor 8
 int styleable verify_EditText_verify_textSize 9
 int styleable verify_EditText_verify_width 10
 int styleable verify_EditText_verify_keyboard 11
+int xml file_paths 0x7f120005
+int xml mimetypes 0x7f120006
 int xml standalone_badge 0x7f120000
 int xml standalone_badge_gravity_bottom_end 0x7f120001
 int xml standalone_badge_gravity_bottom_start 0x7f120002

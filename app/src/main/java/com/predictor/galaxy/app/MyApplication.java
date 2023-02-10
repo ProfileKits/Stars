@@ -9,6 +9,7 @@ import com.predictor.galaxy.BuildConfig;
 import com.predictor.galaxy.net.RetrofitService;
 import com.predictor.library.base.CNBaseApp;
 import com.predictor.library.base.CNBaseInvoke;
+import com.predictor.library.net.HttpUrl;
 import com.predictor.library.utils.CNLogUtil;
 
 import java.security.MessageDigest;
@@ -66,7 +67,8 @@ public class MyApplication extends CNBaseApp {
 //        CNLogUtil.i("key:"+key);
         String realKey = getSha1Value(this);
         CNLogUtil.i("加密key:" + realKey);
-
+        HttpUrl.setDownloadUrl("");//设置下载地址
+        HttpUrl.setUploadUrl("");//设置上传地址
         Log.i("key:", CNBaseInvoke.getInstance().getSign(this));
     }
 

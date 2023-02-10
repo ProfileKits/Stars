@@ -29,7 +29,6 @@ public abstract class CNBaseApp extends Application {
         if(baseUrl!=null && ChestnutData.getPermission()){
             HttpUrl.setBaseUrl(baseUrl.length>0?baseUrl[0]:"",baseUrl.length>1?baseUrl[1]:"");
         }
-
     }
 
     private void initParams(boolean debugMode) {

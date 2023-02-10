@@ -1,6 +1,8 @@
 package com.predictor.galaxy.base;
 
 
+import android.os.Environment;
+
 import com.predictor.galaxy.BuildConfig;
 
 public class Constants {
@@ -21,5 +23,10 @@ public class Constants {
     public static final String KEY_SKIN_NAME = "KEY_SKIN_NAME";
     // 通知
     public static final String MSG_INFO = "msg_info";
+    //下载地址
+    public static final String DOWNLOAD_PATH =
+            Environment.getExternalStorageDirectory() + "/CHESTNUT/download";
+    //是否下载
+    public static final boolean DOWNLOAD = false;
 
 }

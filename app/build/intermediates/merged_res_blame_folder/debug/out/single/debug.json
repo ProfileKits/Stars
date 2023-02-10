@@ -4,6 +4,10 @@
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/layout_foot.xml"
     },
     {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/xml_mimetypes.xml.flat",
+        "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/xml/mimetypes.xml"
+    },
+    {
         "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/layout_fragment_me.xml.flat",
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/fragment_me.xml"
     },
@@ -28,6 +32,10 @@
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/xml_file_paths.xml.flat",
+        "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/xml/file_paths.xml"
+    },
+    {
         "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
@@ -40,12 +48,12 @@
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/item_notify.xml"
     },
     {
-        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/layout_item_pull.xml.flat",
         "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/layout/item_pull.xml"
+    },
+    {
+        "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/res/merged/debug/layout_item_slide_bottom.xml.flat",

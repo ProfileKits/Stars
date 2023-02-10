@@ -6,6 +6,7 @@
         <entry key="Chestnuts/src/main/res/drawable/code_bg_gray.xml" value="0.177" />
         <entry key="Chestnuts/src/main/res/drawable/shape_toast.xml" value="0.1855" />
         <entry key="Chestnuts/src/main/res/drawable/toast_white_background.xml" value="0.1855" />
+        <entry key="Chestnuts/src/main/res/layout/layout_dialog_single_button.xml" value="0.32760416666666664" />
         <entry key="Chestnuts/src/main/res/layout/layout_toast.xml" value="0.32760416666666664" />
         <entry key="Chestnuts/src/main/res/layout/shape_toast.xml" value="0.32760416666666664" />
         <entry key="Chestnuts/src/main/res/layout/sys_show_toast.xml" value="0.32760416666666664" />
@@ -21,6 +22,7 @@
         <entry key="app/src/main/res/layout/item_pull.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/item_slide_bottom.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/item_slide_with.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/layout_dialog_loading.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/layout_foot.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/layout_head.xml" value="0.32760416666666664" />
         <entry key="app/src/main/res/layout/row_report.xml" value="0.32760416666666664" />

@@ -33,6 +33,7 @@ anim item_scale_anim
 anim item_translate_bybottom
 anim item_translate_byleft
 anim item_translate_byright
+anim load_animation
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
@@ -1832,6 +1833,7 @@ drawable shape_toast
 drawable sys_toast
 drawable test_custom_background
 drawable toast_black_background
+drawable toast_ic_jzz
 drawable toast_white_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1925,6 +1927,7 @@ id bottom
 id bounce
 id btnCancel
 id btnSubmit
+id btn_confirm
 id btn_viewpage
 id buttonPanel
 id cache_measures
@@ -1976,6 +1979,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id dialog_button
+id dialog_view
 id dimensions
 id direct
 id disableHome
@@ -2017,6 +2021,7 @@ id forever
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -2037,6 +2042,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img
 id immersion_fits_layout_overlap
 id immersion_navigation_bar_view
 id immersion_status_bar_view
@@ -2291,6 +2297,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id time
 id timepicker
+id tip_text_view
 id title
 id titleDividerNoCustom
 id title_template
@@ -2309,6 +2316,7 @@ id triangle
 id tv
 id tv2
 id tvTitle
+id tv_msg
 id txt
 id txt_text
 id unchecked
@@ -2316,6 +2324,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id v_line
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2425,6 +2434,8 @@ layout item_pull
 layout item_slide_bottom
 layout item_slide_with
 layout layout_basepickerview
+layout layout_dialog_loading
+layout layout_dialog_single_button
 layout layout_foot
 layout layout_head
 layout layout_toast
@@ -3351,6 +3362,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style dialog_style
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -3494,6 +3506,8 @@ styleable cleanEditText background cursor deleteIcon deleteIconHeight deleteIcon
 styleable pickerview pickerview_dividerColor pickerview_gravity pickerview_textColorCenter pickerview_textColorOut pickerview_textSize
 styleable progress_circle number_text_size progress_background_line_color progress_background_line_width progress_circle_line_color progress_circle_line_width text_color unit unit_text_size
 styleable verify_EditText verify_background_normal verify_background_selected verify_count verify_height verify_inputType verify_margin verify_password verify_password_visible_time verify_textColor verify_textSize verify_width verify_keyboard
+xml file_paths
+xml mimetypes
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

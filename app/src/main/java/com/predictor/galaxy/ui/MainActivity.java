@@ -70,6 +70,7 @@ public class MainActivity extends CNBaseActivity {
     private Button btn_viewpage;
     private CNDoooArt.YoYoString rope;
     private CNCleanEditText et;
+    private CNProgressCircle circle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +86,7 @@ public class MainActivity extends CNBaseActivity {
         btn_viewpage = findViewById(R.id.btn_viewpage);
         et = findViewById(R.id.et);
 //        CNKeyboardUtil.disableKeyboard(this);
-        CNProgressCircle circle = findViewById(R.id.progress_circle);
+        circle = findViewById(R.id.progress_circle);
         circle.setMaxProgress(100);
         circle.setProgress(20);
         circle.setProgress(100, 9000);
@@ -275,6 +276,13 @@ public class MainActivity extends CNBaseActivity {
 
     @Override
     protected void initListener() {
+        circle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(SecondActivity.class);
+            }
+        });
+
         btn_viewpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
