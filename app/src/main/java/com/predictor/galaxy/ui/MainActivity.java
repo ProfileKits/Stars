@@ -1,9 +1,11 @@
 package com.predictor.galaxy.ui;
 
 import android.animation.Animator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Layout;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -27,7 +29,6 @@ import com.predictor.library.artanimation.library.Techniques;
 import com.predictor.library.base.CNBaseActivity;
 
 import com.predictor.library.base.CNBaseInvoke;
-import com.predictor.library.callback.CNCallbackback;
 import com.predictor.library.example.SetSelfWithPoint;
 import com.predictor.library.listener.OnChangeListener;
 import com.predictor.library.net.RetrofitUtil;
@@ -42,10 +43,13 @@ import com.predictor.library.utils.CNEditTextUtil;
 import com.predictor.library.utils.CNFastClickCheckUtil;
 import com.predictor.library.utils.CNHttpUtil;
 import com.predictor.library.utils.CNJsonUtils;
+import com.predictor.library.utils.CNLog;
 import com.predictor.library.utils.CNLogUtil;
+import com.predictor.library.utils.CNNumUtils;
 import com.predictor.library.utils.CNTextViewUtil;
 import com.predictor.library.utils.CNToast;
 import com.predictor.library.utils.CNToastCustom;
+import com.predictor.library.utils.CNValidatorUtil;
 import com.predictor.library.view.CNCleanEditText;
 import com.predictor.library.view.CNProgressCircle;
 import com.predictor.library.view.CNTextTool;
@@ -75,7 +79,76 @@ public class MainActivity extends CNBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //获取签名
         Log.i("KEYSGIN", CNBaseInvoke.getInstance().getSign(this));
+    }
+
+    private int pos = 0;
+    Handler handler = new Handler();
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            pos++;
+            if (pos <= 100) {
+                circle.setProgress(pos);
+                handler.postDelayed(this, 20);
+            }
+        }
+    };
+
+
+    /**
+     * circleView 进度控件
+     */
+    private void circleView() {
+        circle = findViewById(R.id.progress_circle);
+        circle.setMaxProgress(100);
+        handler.postDelayed(runnable, 200);
+//        circle.setProgress(20);
+//        circle.setProgress(100, 9000);
+    }
+
+
+    /**
+     * EditText 控件内容变化监听器
+     */
+    private void editTextChangeListener() {
+        CNEditTextUtil.setChangeListener(et, new OnChangeListener() {
+            @Override
+            public void change() {
+                customToast();
+            }
+        });
+    }
+
+
+    /**
+     * 测试bugly崩溃，以判断bugly是否集成成功
+     */
+    private void testBuglyCrash() {
+       CNBugly.testCrash();//测试Bugly Crash
+    }
+
+
+    /**
+     * 自定义Toast控件
+     */
+    private void customToast() {
+        String text = et.getText().toString();
+        if (!text.isEmpty()) {
+        //    CNToast.show(MainActivity.this,et.getText().toString());
+        //    CNCustomToast.ToastLongTopCenter(MainActivity.this,et.getText().toString());
+        //    CNToastCustom.showWhiteToast(MainActivity.this,"测试");
+        //    CNToastCustom.setCustom(MainActivity.this,et.getText().toString(),100,100,10,255,28,false);
+            CNToastCustom.showBlackToast(MainActivity.this, text);
+        }
+    }
+
+    /**
+     * 判断号码是否为手机号
+     */
+    private void isPhoneNumber(){
+       CNToast.show(mContext,"是否为手机号："+ CNValidatorUtil.isPhone("17022222222",true)+"");
     }
 
     @Override
@@ -85,29 +158,16 @@ public class MainActivity extends CNBaseActivity {
         textView2 = findViewById(R.id.tv2);
         btn_viewpage = findViewById(R.id.btn_viewpage);
         et = findViewById(R.id.et);
-//        CNKeyboardUtil.disableKeyboard(this);
-        circle = findViewById(R.id.progress_circle);
-        circle.setMaxProgress(100);
-        circle.setProgress(20);
-        circle.setProgress(100, 9000);
+        circleView();
 
-//       CNToast.show(mContext,"是否为手机号："+CNValidatorUtil.isPhone("17022222222",true)+"");
-
-        CNEditTextUtil.setChangeListener(et, new OnChangeListener() {
-            @Override
-            public void change() {
-//                CNBugly.testCrash();//测试Bugly Crash
-//                CNToast.show(MainActivity.this,et.getText().toString());
-//                CNCustomToast.ToastLongTopCenter(MainActivity.this,et.getText().toString());
-//                CNToastCustom.showWhiteToast(MainActivity.this,"测试");
-//                CNToastCustom.setCustom(MainActivity.this,et.getText().toString(),100,100,10,255,28,false);
-                CNToastCustom.showBlackToast(MainActivity.this, et.getText().toString());
-            }
-        });
         CNTextViewUtil.setTextLeftIcon(this, R.drawable.kaixin, textView2, 0);
         CNLogUtil.i("key22222222222:");
     }
 
+
+    /**
+     * 测试DES文本加密与解密
+     */
     private void testDES() {
         String key = "1fgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34tgerteegry44g45tge34t";
         try {
@@ -161,11 +221,31 @@ public class MainActivity extends CNBaseActivity {
 
         TestCallback testCallback = new TestCallback();
         CNLogUtil.i(testCallback.Go());
+//        testNetwork();
+        CNLog.PRINTDATA(textView.getText().toString());
+    }
 
+    private void testNetwork(){
+        RetrofitNetwork.getInstance().getAPIdata(this, new RetrofitNetwork.NetResult() {
+            @Override
+            public void success(Object result) {
+                RankingBean bean = (RankingBean) result;
+                CNLog.PRINTDATA(bean.getData());
+            }
+
+            @Override
+            public void error(String msg) {
+                CNLog.PRINTDATA(msg.toString());
+            }
+        });
     }
 
 
-    //数据转换
+    /**
+     * 数据转换
+     * 对象转Map集合
+     * Map集合转对象
+     */
     private void dataTodata() {
         Person person = new Person();
         person.setName("张三");
@@ -203,14 +283,25 @@ public class MainActivity extends CNBaseActivity {
         });
     }
 
+
+    /**
+     * 测试网络框架
+     */
     private void initNetwork() {
         if (CNHttpUtil.isNetConnected(this)) {
-            NormalSubscriber<ApiResult<RankingBean>> subscriber = new NormalSubscriber<ApiResult<RankingBean>>() {
+            NormalSubscriber<RankingBean> subscriber = new NormalSubscriber<RankingBean>() {
                 @Override
-                public void onNext(ApiResult<RankingBean> result) {
-                    if (result.code == 0) {//请求成功
-                        RankingBean RankingBean = result.data;
-                        CNToast.show(MainActivity.this, "请求数据成功:" + result.code);
+                public void onNext(RankingBean result) {
+                    if (result.getCode() == 0) {//请求成功
+                        RankingBean RankingBean = result;
+//                        Object object = result.data;
+//                        Gson gson = new Gson();
+//                        String json =gson.toJson(object,String.class);
+                        Intent intent = new Intent(mContext, MainActivity.class);
+                        intent.putExtra("fsdf","");
+                        intent.putExtra("电视上",3);
+                        CNLog.PRINTDATA(result);
+//                        CNToast.show(MainActivity.this, "请求数据成功:" + result.code +"-msg:"+result.msg +"-data:"+json);
                     } else {
                         //请求数据失败
                         CNToast.show(MainActivity.this, "请求数据失败");
@@ -219,13 +310,13 @@ public class MainActivity extends CNBaseActivity {
 
                 @Override
                 public void onError(Throwable e) {
-                    CNToast.show(MainActivity.this, "请求数据出错");
+                    CNToast.show(MainActivity.this, "请求数据出错" +e.getMessage());
                 }
             };
 
             Disposable disposable = RetrofitService.getInstance().getWebApi().getRankingToDay(RetrofitService.getInstance().getHeader(), "3205")
                     .compose(RxTransformerHelper.applySchedulers())
-                    .subscribe(data -> subscriber.onNext((ApiResult<RankingBean>) data), e -> subscriber.onError((Throwable) e));
+                    .subscribe(data -> subscriber.onNext((RankingBean) data), e -> subscriber.onError((Throwable) e));
             RetrofitUtil.addSubscription(disposable);
 
         } else {
@@ -239,6 +330,9 @@ public class MainActivity extends CNBaseActivity {
         RetrofitUtil.RetrofitRelease();
     }
 
+    /**
+     * 测试控件动画库
+     */
     private void testAnimation() {
         SetSelfWithPoint.with(true).repeat(200).setTimes(1000);
 
@@ -325,12 +419,14 @@ public class MainActivity extends CNBaseActivity {
     }
 
 
+    /**
+     * 设置是否全屏，状态栏和任务栏状态设置
+     * @return
+     */
     @Override
     protected boolean setFullScreen() {
         setStatusBar(0, true, false, false, true
                 , null, R.color.white, R.color.white, R.color.white, R.color.white);
         return true;
     }
-
-
 }

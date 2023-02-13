@@ -21,6 +21,7 @@ import com.predictor.library.net.DownloadService;
 import com.predictor.library.utils.CNDialog;
 import com.predictor.library.utils.CNFileUtils;
 import com.predictor.library.utils.CNLogUtil;
+import com.predictor.library.utils.CNViewUtils;
 
 import java.io.File;
 import java.util.Arrays;
@@ -28,7 +29,7 @@ import java.util.Arrays;
 public class SecondActivity extends CNBaseActivity {
     String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE};
     String url = "https://chesong.oss-cn-hangzhou.aliyuncs.com/chesong/multipart/form-data;charset=UTF-8/2023/02/11/d7a568fa-5b63-403b-aaf5-8f5eee28d36f1676046841089.jpg";
-    String path = getExternalCacheDir().getAbsolutePath() + File.separator + "image.jpg";
+
     ImageView img;
 
     @Override
@@ -49,7 +50,7 @@ public class SecondActivity extends CNBaseActivity {
 //            String file2 = CNFileUtils.getSaveDirectory("00");
         }
 
-
+        String path = getExternalCacheDir().getAbsolutePath() + File.separator + "image.jpg";
         RetrofitDownload.start(this, url, path, new DownloadService.DownloadCallback() {
             @Override
             public void progressNotify(int progress) {
@@ -66,7 +67,9 @@ public class SecondActivity extends CNBaseActivity {
                     if (dialog != null && dialog.isShowing()) {
                         dialog.dismiss();
                     }
+
                     CNDialog.showDialog(mContext, msg, null);
+                    //显示图片
                     Glide.with(mContext).load(filePath).into(img);
                 });
             }

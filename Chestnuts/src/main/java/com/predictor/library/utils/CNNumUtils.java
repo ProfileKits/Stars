@@ -60,7 +60,6 @@ public class CNNumUtils {
     }
 
 
-
     /**
      * 保留两位小数
      *
@@ -75,8 +74,6 @@ public class CNNumUtils {
     }
 
 
-
-
     /**
      * 四舍五入 float
      *
@@ -88,5 +85,14 @@ public class CNNumUtils {
     }
 
 
+    /**
+     * 字符串是double类型String 例如 "12.0" 转成12 int类型
+     * 注意：此方法会去掉小数点的转整型
+     * @param value
+     * @return
+     */
+    public static int StringToInt(String value) {
+        return Double.valueOf(value).intValue();
+    }
 
 }

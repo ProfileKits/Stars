@@ -10,6 +10,7 @@ import com.predictor.galaxy.net.RetrofitService;
 import com.predictor.library.base.CNBaseApp;
 import com.predictor.library.base.CNBaseInvoke;
 import com.predictor.library.net.HttpUrl;
+import com.predictor.library.utils.CNLog;
 import com.predictor.library.utils.CNLogUtil;
 
 import java.security.MessageDigest;
@@ -50,7 +51,7 @@ public class MyApplication extends CNBaseApp {
     @Override
     public String[] setBaseUrl() {
         //第一个地址是测试基地址，第二个是正式基地址
-        return new String[]{"https://zfljh.top/", "https://zfljh.top/"};
+        return new String[]{"https://www.chesong.top/", "https://zfljh.top/"};
     }
 
     //设置app的token
@@ -60,6 +61,7 @@ public class MyApplication extends CNBaseApp {
 
     //初始化APP
     private void initData() {
+        CNLog.setT(7);//设置Log的Thread层级
         //设置token
         setToken("Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImYyNzU5ZGRkLTliZDEtNDkyZS1hYTkxLWYyNDE2MDA4ZmU4NiJ9.SCBukiv0xidtMZcqFriojQXNs-QcMz9uBgf5wdDKea2-qWGRu9XYOitGpLr2zbep763AbAkpJxdd7qGHevb5GA");
 

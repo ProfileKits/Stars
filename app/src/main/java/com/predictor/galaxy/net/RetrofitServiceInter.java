@@ -20,7 +20,7 @@ import retrofit2.http.Query;
 //访问接口
 public interface RetrofitServiceInter {
     @GET("/prod-api/app/user/getRankingToDay")
-    Observable<ApiResult<RankingBean>> getRankingToDay(@HeaderMap Map<String, String> headers, @Query("cityId") String cityId);
+    Observable<RankingBean> getRankingToDay(@HeaderMap Map<String, String> headers, @Query("cityId") String cityId);
 
     @POST("/prod-api/order/submitTcExpressOrder")
     Observable<ApiResult> submitTcExpressOrder(@HeaderMap Map<String, String> headers, @Body RequestBody body);

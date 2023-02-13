@@ -10,6 +10,7 @@ import com.predictor.library.rx.ApiResult;
 import com.predictor.library.rx.NormalSubscriber;
 import com.predictor.library.rx.RxTransformerHelper;
 import com.predictor.library.utils.CNHttpUtil;
+import com.predictor.library.utils.CNLog;
 import com.predictor.library.utils.CNLogUtil;
 import com.predictor.library.utils.CNToast;
 
@@ -17,9 +18,11 @@ import com.predictor.library.utils.CNToast;
 import java.io.File;
 import java.util.Map;
 
+import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 import okhttp3.RequestBody;
 import retrofit2.Response;
+import rx.SingleSubscriber;
 
 public class RetrofitNetwork {
 
@@ -38,27 +41,7 @@ public class RetrofitNetwork {
     //测试方法
     public void testNetwork(Context context, NetResult callBack) {
         if (CNHttpUtil.isNetConnected(context)) {
-            NormalSubscriber<ApiResult<RankingBean>> subscriber = new NormalSubscriber<ApiResult<RankingBean>>() {
-                @Override
-                public void onNext(ApiResult<RankingBean> result) {
-                    if (result.code == 0) {//请求成功
-                        RankingBean RankingBean = result.data;
-                        callBack.success(result);
-//                        CNToast.show(context, "请求数据成功:" + result.code);
-                    } else {
-                        callBack.error(result.msg);
-                        //请求数据失败
-//                        CNToast.show(context, "请求数据失败");
-                    }
-                }
-
-                @Override
-                public void onError(Throwable e) {
-                    callBack.error("请求数据出错" + e.getMessage() + "-loc:" + e.getLocalizedMessage());
-//                    CNToast.show(context, "请求数据出错");
-                }
-            };
-
+            NormalSubscriber<ApiResult> subscriber = RetrofitSubscriber.get(callBack, 0);
             Disposable disposable = RetrofitService.getInstance().getWebApi().getRankingToDay(RetrofitService.getInstance().getHeader(), "3205")
                     .compose(RxTransformerHelper.applySchedulers())
                     .subscribe(data -> subscriber.onNext((ApiResult<RankingBean>) data), e -> subscriber.onError((Throwable) e));
@@ -71,37 +54,7 @@ public class RetrofitNetwork {
     //提交同城快递订单
     public void submitTcExpressOrder(Context context, RequestBody body, NetResult callBack) {
         if (CNHttpUtil.isNetConnected(context)) {
-            NormalSubscriber<ApiResult> subscriber = new NormalSubscriber<ApiResult>() {
-                @Override
-                public void onNext(ApiResult result) {
-                    if (result.code == 200) {//请求成功
-                        String object = (String) result.data;
-                        CNLogUtil.i("请求数据成功:" + result.msg + "-data:" + object);
-                        callBack.success(object);
-//                        CNToast.show(context, "请求数据成功:" + result.code);
-                    } else {
-                        String message = "请求数据失败:" + "code:" + result.code + "--msg:" + result.msg;
-                        callBack.error(message);
-                        CNLogUtil.i(message);
-                        //请求数据失败
-//                        CNToast.show(context, "请求数据失败");
-                    }
-                }
-
-                @Override
-                public void onError(Throwable e) {
-                    if(e.getMessage().equals("java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 34 path $.data")){
-                        callBack.error("请求数据出错:转数据模型错误");
-                        CNLogUtil.i("请求数据出错:转数据模型错误");
-                    }else{
-                        callBack.error("请求数据出错:" + e.getMessage());
-                        CNLogUtil.i("请求数据出错:" + e.getMessage());
-                    }
-
-//                    CNToast.show(context, "请求数据出错");
-                }
-            };
-
+            NormalSubscriber<ApiResult> subscriber = RetrofitSubscriber.get(callBack, 200);
             Disposable disposable = RetrofitService.getInstance().getWebApi().submitTcExpressOrder(RetrofitService.getInstance().getHeader(), body)
                     .compose(RxTransformerHelper.applySchedulers())
                     .subscribe(data -> subscriber.onNext((ApiResult) data), e -> subscriber.onError((Throwable) e));
@@ -112,10 +65,36 @@ public class RetrofitNetwork {
     }
 
 
+    public void getAPIdata(Context context, NetResult callBack) {
+        if (CNHttpUtil.isNetConnected(context)) {
+            RetrofitApi.getInstance().getRankingToDay(RetrofitService.getInstance().getHeader(), "3205")
+                    .subscribe(new SingleObserver() {
+                        @Override
+                        public void onSubscribe(Disposable d) {
+                            CNLog.PRINTDATA(d);
+                        }
+
+                        @Override
+                        public void onSuccess(Object o) {
+                            CNLog.PRINTDATA(o);
+                            callBack.success(o);
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+                            CNLog.PRINTDATA(e);
+                        }
+                    });
+        } else {
+            CNToast.show(context, "请检查网络连接");
+        }
+    }
+
 
     /**
      * 上传文件/图片
-     * @param path 文件路径
+     *
+     * @param path    文件路径
      * @param context
      */
     private void uploadFile(String path, Context context) {
@@ -145,12 +124,10 @@ public class RetrofitNetwork {
     }
 
 
-
     public interface NetResult {
         void success(Object result);
 
         void error(String msg);
-
     }
 
 }
