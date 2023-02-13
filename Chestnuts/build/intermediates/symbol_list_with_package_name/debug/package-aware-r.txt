@@ -2409,6 +2409,7 @@ layout toast_white
 menu example_menu
 menu example_menu2
 plurals mtrl_badge_content_description
+raw msg
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

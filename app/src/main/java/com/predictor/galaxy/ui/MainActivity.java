@@ -223,6 +223,20 @@ public class MainActivity extends CNBaseActivity {
         CNLogUtil.i(testCallback.Go());
 //        testNetwork();
         CNLog.PRINTDATA(textView.getText().toString());
+
+        RetrofitNetwork.getInstance().testNetwork(this, new RetrofitNetwork.NetResult() {
+            @Override
+            public void success(Object result) {
+                RankingBean bean = (RankingBean) result;
+                CNLog.PRINTDATA(bean.getData());
+            }
+
+            @Override
+            public void error(String msg) {
+
+                CNLog.PRINTDATA(msg);
+            }
+        });
     }
 
     private void testNetwork(){

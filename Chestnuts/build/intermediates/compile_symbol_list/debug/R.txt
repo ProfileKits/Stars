@@ -2408,6 +2408,7 @@ int layout toast_white 0x0
 int menu example_menu 0x0
 int menu example_menu2 0x0
 int plurals mtrl_badge_content_description 0x0
+int raw msg 0x0
 int string abc_action_bar_home_description 0x0
 int string abc_action_bar_up_description 0x0
 int string abc_action_menu_overflow_description 0x0

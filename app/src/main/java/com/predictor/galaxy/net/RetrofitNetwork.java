@@ -54,10 +54,10 @@ public class RetrofitNetwork {
     //提交同城快递订单
     public void submitTcExpressOrder(Context context, RequestBody body, NetResult callBack) {
         if (CNHttpUtil.isNetConnected(context)) {
-            NormalSubscriber<ApiResult> subscriber = RetrofitSubscriber.get(callBack, 200);
+            NormalSubscriber<ApiResult<RankingBean>> subscriber = RetrofitSubscriber.get(callBack, 200);
             Disposable disposable = RetrofitService.getInstance().getWebApi().submitTcExpressOrder(RetrofitService.getInstance().getHeader(), body)
                     .compose(RxTransformerHelper.applySchedulers())
-                    .subscribe(data -> subscriber.onNext((ApiResult) data), e -> subscriber.onError((Throwable) e));
+                    .subscribe(data -> subscriber.onNext((ApiResult<RankingBean>) data), e -> subscriber.onError((Throwable) e));
             RetrofitUtil.addSubscription(disposable);
         } else {
             CNToast.show(context, "请检查网络连接");
@@ -82,7 +82,7 @@ public class RetrofitNetwork {
 
                         @Override
                         public void onError(Throwable e) {
-                            CNLog.PRINTDATA(e);
+                            CNLog.PRINTDATA(e.getMessage());
                         }
                     });
         } else {

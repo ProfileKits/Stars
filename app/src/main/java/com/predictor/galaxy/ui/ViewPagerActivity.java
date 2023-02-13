@@ -18,6 +18,8 @@ import com.predictor.library.base.CNBaseActivity;
 import com.predictor.library.base.CNBaseFragment;
 import com.predictor.library.callback.CNCallbackback;
 import com.predictor.library.listener.OnDoIntListener;
+import com.predictor.library.utils.CNHttpURLConnectionUtils;
+import com.predictor.library.utils.CNNoticeVoicePlayer;
 import com.predictor.library.utils.CNToast;
 
 import java.lang.reflect.Field;
@@ -42,8 +44,13 @@ public class ViewPagerActivity extends CNBaseActivity {
         rb_me = findViewById(R.id.rb_me);
     }
 
+    //提示音加震动
+
+
     @Override
     protected void initData() {
+        CNNoticeVoicePlayer.getInstance(this).start();
+
         CNCallbackback callback = new CNCallbackback() {
             @Override
             public String Go() {

@@ -135,6 +135,7 @@ layout pickerview_time
 layout sys_show_toast
 layout toast_balck
 layout toast_white
+raw msg
 string data_exception
 string net_exception
 string pickerview_cancel

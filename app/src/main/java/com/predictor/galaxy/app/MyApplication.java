@@ -50,7 +50,7 @@ public class MyApplication extends CNBaseApp {
 
     @Override
     public String[] setBaseUrl() {
-        //第一个地址是测试基地址，第二个是正式基地址
+        //第一个地址是测试基地址，第二个是正式基地址https://zfljh.top/   https://www.chesong.top/
         return new String[]{"https://www.chesong.top/", "https://zfljh.top/"};
     }
 

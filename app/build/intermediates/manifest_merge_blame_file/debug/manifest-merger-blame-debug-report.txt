@@ -37,82 +37,85 @@
 19    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 19-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:13:5-81
 19-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:13:22-79
-20
-21    <application
-21-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:15:5-53:19
-22        android:name="com.predictor.galaxy.app.MyApplication"
-22-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:16:9-42
-23        android:allowBackup="true"
-23-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:17:9-35
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
-25        android:debuggable="true"
-26        android:icon="@mipmap/ic_launcher"
-26-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
-27        android:label="@string/app_name"
-27-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
-28        android:requestLegacyExternalStorage="true"
-28-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:21:9-52
-29        android:roundIcon="@mipmap/ic_launcher_round"
-29-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
-30        android:supportsRtl="true"
-30-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
-31        android:testOnly="true"
-32        android:theme="@style/Theme.NoTitleBar" >
-32-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
-33        <activity
-33-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
-34            android:name="com.predictor.galaxy.ui.ViewPagerActivity"
-34-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
-35            android:exported="false" />
-35-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
-36        <activity
-36-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
-37            android:name="com.predictor.galaxy.ui.SecondActivity"
-37-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
-38            android:exported="false" />
-38-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
-39        <activity
-39-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
-40            android:name="com.predictor.galaxy.ui.MainActivity"
-40-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
-41            android:exported="true" >
-41-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
-42            <intent-filter>
-42-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
-43-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
-45-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
-46            </intent-filter>
-47        </activity>
-48
-49        <service
-49-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
-50            android:name="com.predictor.library.net.DownloadService"
-50-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
-51            android:permission="android.permission.BIND_JOB_SERVICE" />
-51-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
-52
-53        <provider
-54            android:name="androidx.core.content.FileProvider"
-54-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
-55            android:authorities="com.predictor.library.fileProvider"
-55-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
-56            android:exported="false"
-56-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
-57            android:grantUriPermissions="true" >
-57-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
-58            <meta-data
-58-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
-59                android:name="android.support.FILE_PROVIDER_PATHS"
-59-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
-60                android:resource="@xml/file_paths" />
-60-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
-61        </provider>
-62    </application>
-63
-64</manifest>
+20    <uses-permission android:name="android.permission.VIBRATE" />
+20-->[:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-66
+20-->[:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-63
+21
+22    <application
+22-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:15:5-53:19
+23        android:name="com.predictor.galaxy.app.MyApplication"
+23-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:16:9-42
+24        android:allowBackup="true"
+24-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:17:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+26        android:debuggable="true"
+27        android:icon="@mipmap/ic_launcher"
+27-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
+28        android:label="@string/app_name"
+28-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
+29        android:requestLegacyExternalStorage="true"
+29-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:21:9-52
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
+31        android:supportsRtl="true"
+31-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
+32        android:testOnly="true"
+33        android:theme="@style/Theme.NoTitleBar" >
+33-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
+34        <activity
+34-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
+35            android:name="com.predictor.galaxy.ui.ViewPagerActivity"
+35-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
+36            android:exported="false" />
+36-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
+37        <activity
+37-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
+38            android:name="com.predictor.galaxy.ui.SecondActivity"
+38-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
+39            android:exported="false" />
+39-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
+40        <activity
+40-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
+41            android:name="com.predictor.galaxy.ui.MainActivity"
+41-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
+42            android:exported="true" >
+42-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
+43            <intent-filter>
+43-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
+44-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
+46-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
+47            </intent-filter>
+48        </activity>
+49
+50        <service
+50-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
+51            android:name="com.predictor.library.net.DownloadService"
+51-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
+52            android:permission="android.permission.BIND_JOB_SERVICE" />
+52-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
+53
+54        <provider
+55            android:name="androidx.core.content.FileProvider"
+55-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
+56            android:authorities="com.predictor.library.fileProvider"
+56-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
+57            android:exported="false"
+57-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
+58            android:grantUriPermissions="true" >
+58-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
+59            <meta-data
+59-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
+60                android:name="android.support.FILE_PROVIDER_PATHS"
+60-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
+61                android:resource="@xml/file_paths" />
+61-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
+62        </provider>
+63    </application>
+64
+65</manifest>
