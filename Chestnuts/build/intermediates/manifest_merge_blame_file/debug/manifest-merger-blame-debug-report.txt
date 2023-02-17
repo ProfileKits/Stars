@@ -4,12 +4,27 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="21"
-6-->/Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/src/main/AndroidManifest.xml
+6-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="30" />
-7-->/Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/src/main/AndroidManifest.xml
+7-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml
 8
-9    <uses-permission android:name="android.permission.VIBRATE" />
-9-->/Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:5:5-66
-9-->/Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:5:22-63
-10
-11</manifest>
+9    <uses-permission android:name="android.permission.INTERNET" />
+9-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:4:5-67
+9-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:4:22-64
+10    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+10-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:5:5-79
+10-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:5:22-76
+11    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+11-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:6:5-76
+11-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:6:22-73
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:7:5-81
+12-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:7:22-78
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:8:5-75
+13-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:8:22-72
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:9:5-66
+14-->/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/AndroidManifest.xml:9:22-63
+15
+16</manifest>

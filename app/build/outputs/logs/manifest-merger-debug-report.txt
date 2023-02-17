@@ -1,289 +1,423 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:44:9-52:20
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:44:9-52:20
 	android:grantUriPermissions
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
 	android:authorities
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
 	android:exported
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
 manifest
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-MERGED from [:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat:1.3.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a1dc4d22df24937b658dc58bee0e7357/transformed/appcompat-1.3.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
-MERGED from [com.tencent:mmkv:1.2.13] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a0d652cc95485e8bcfcb74e4eced2e3d/transformed/mmkv-1.2.13/AndroidManifest.xml:2:1-9:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/75bd897cb740605a34704739134d0cab/transformed/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/98474ab6ee09119404a52f1b3887fa26/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.3.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/3131ea2424a06f3c412288e87c091243/transformed/fragment-1.3.4/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/78f44a41bbe15c66ab7fe9854cb84e31/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/d64219bd8c9d7cf4df0c4d2edb0c096e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/9f22e07ed7a9dddc6f979dc0bace9709/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.2.3] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/123b8eaaa6dca1ff53f0a978e9cbc4a2/transformed/activity-1.2.3/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/281e263e73512752edd1e3bad8ede220/transformed/appcompat-resources-1.3.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/e2aeebe6f8a6e988db43588d53117fcb/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4aa6b9684401dde37424b6332beb0b62/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.transition:transition:1.2.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/530ec4561081687c75a6004fa3b496c9/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b8db3a8fdf50347285aeddfe4ed703e1/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/654138c15463c3c505189f896bd5303f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/30b01369e275b48e25a9d908ac49e904/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/bb25c4e6aedf04c1bbf19eb481bb0861/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/e1f712f7eed42b7db035fc63967dde70/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f3b27114627b63bb7ab13f79ba2b9ab4/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a005f91aa87e122b446cc9c7f0a79df9/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/fe7dc0f793a920226a348c0ffb28e0f1/transformed/savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/5ba9c569838be157bdcf4fa0893daf31/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f8a50a6533518751f45d0fefa4acc8c5/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/49ff21bffe328ab372dfb3025944234b/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/46fcec9ce7741c23f042e211ab8cee06/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/be1c55235e4f65e507d36a02f19de050/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/560cb5333436465a558cc2057b7d31e5/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/845a7e2af93d86eedbb9caa55a369870/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/10c605985f31f6ff91517bb03a4d0d68/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/bead6ac94894d5d17ce603e402aa3477/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/498fbe24df2f01edb0947b2918f66551/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/76f4be73976e59bd719c86e116c930f9/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/af95e439e8cac81b507a157bedb39f5e/transformed/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/703587da760558771ce8336e167477bb/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:15:1-20:12
-MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/immersionbar-3.2.2/AndroidManifest.xml:2:1-9:12
-MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:2:1-11:12
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/.gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.3.0] /Users/VIJOZ/.gradle/caches/transforms-3/a1dc4d22df24937b658dc58bee0e7357/transformed/appcompat-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
+MERGED from [com.tencent:mmkv:1.2.13] /Users/VIJOZ/.gradle/caches/transforms-3/a0d652cc95485e8bcfcb74e4eced2e3d/transformed/jetified-mmkv-1.2.13/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/75bd897cb740605a34704739134d0cab/transformed/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/98474ab6ee09119404a52f1b3887fa26/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.4] /Users/VIJOZ/.gradle/caches/transforms-3/3131ea2424a06f3c412288e87c091243/transformed/fragment-1.3.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/78f44a41bbe15c66ab7fe9854cb84e31/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/d64219bd8c9d7cf4df0c4d2edb0c096e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/9f22e07ed7a9dddc6f979dc0bace9709/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.2.3] /Users/VIJOZ/.gradle/caches/transforms-3/123b8eaaa6dca1ff53f0a978e9cbc4a2/transformed/jetified-activity-1.2.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /Users/VIJOZ/.gradle/caches/transforms-3/281e263e73512752edd1e3bad8ede220/transformed/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/e2aeebe6f8a6e988db43588d53117fcb/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/4aa6b9684401dde37424b6332beb0b62/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/VIJOZ/.gradle/caches/transforms-3/530ec4561081687c75a6004fa3b496c9/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/b8db3a8fdf50347285aeddfe4ed703e1/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/654138c15463c3c505189f896bd5303f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/30b01369e275b48e25a9d908ac49e904/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/bb25c4e6aedf04c1bbf19eb481bb0861/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/e1f712f7eed42b7db035fc63967dde70/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/.gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/f3b27114627b63bb7ab13f79ba2b9ab4/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/a005f91aa87e122b446cc9c7f0a79df9/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/fe7dc0f793a920226a348c0ffb28e0f1/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/5ba9c569838be157bdcf4fa0893daf31/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/f8a50a6533518751f45d0fefa4acc8c5/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/49ff21bffe328ab372dfb3025944234b/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/.gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/46fcec9ce7741c23f042e211ab8cee06/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/be1c55235e4f65e507d36a02f19de050/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/560cb5333436465a558cc2057b7d31e5/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/845a7e2af93d86eedbb9caa55a369870/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/10c605985f31f6ff91517bb03a4d0d68/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/bead6ac94894d5d17ce603e402aa3477/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/498fbe24df2f01edb0947b2918f66551/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/76f4be73976e59bd719c86e116c930f9/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/af95e439e8cac81b507a157bedb39f5e/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/703587da760558771ce8336e167477bb/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:15:1-20:12
+MERGED from [com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0] /Users/VIJOZ/.gradle/caches/transforms-3/a12d139d3bf2482aae9136cf8fcea934/transformed/jetified-wechat-sdk-android-without-mta-6.8.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:2:1-78:12
+MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/.gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/jetified-immersionbar-3.2.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/.gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:2:1-11:12
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
 	package
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:3:5-35
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:5:5-81
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:5:22-78
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:5:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:6:5-79
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:6:22-76
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:7:5-76
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:7:5-76
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-76
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-76
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:30:5-76
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:30:5-76
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:7:22-73
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:7:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:8:5-79
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:8:5-79
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-79
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-79
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:29:5-79
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:29:5-79
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:8:22-76
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:9:5-76
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:9:5-76
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:9:22-73
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:9:22-73
 uses-permission#android.permission.INTERNET
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:10:5-67
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:10:5-67
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:28:5-67
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:28:5-67
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:10:22-64
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:10:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:11:5-80
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:11:5-80
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:11:22-77
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:11:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:12:5-81
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:12:5-81
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-81
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:12:22-78
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:12:22-78
 uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:13:5-81
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:13:22-79
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:13:22-79
 application
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:15:5-53:19
-MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
-MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:15:5-53:19
+MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/.gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/.gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/.gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/.gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/.gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/.gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:32:5-76:19
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:32:5-76:19
 	android:requestLegacyExternalStorage
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:21:9-52
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:21:9-52
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.5.0] /Users/VIJOZ/.gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
 	android:roundIcon
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
 	android:icon
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:16:9-42
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:16:9-42
 activity#com.predictor.galaxy.ui.ViewPagerActivity
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
 	android:exported
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
 activity#com.predictor.galaxy.ui.SecondActivity
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
 	android:exported
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
 activity#com.predictor.galaxy.ui.MainActivity
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
 	android:exported
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
 action#android.intent.action.MAIN
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
 service#com.predictor.library.net.DownloadService
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
 	android:permission
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
 uses-sdk
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-MERGED from [:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat:1.3.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a1dc4d22df24937b658dc58bee0e7357/transformed/appcompat-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.3.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a1dc4d22df24937b658dc58bee0e7357/transformed/appcompat-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.tencent:mmkv:1.2.13] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a0d652cc95485e8bcfcb74e4eced2e3d/transformed/mmkv-1.2.13/AndroidManifest.xml:5:5-7:41
-MERGED from [com.tencent:mmkv:1.2.13] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a0d652cc95485e8bcfcb74e4eced2e3d/transformed/mmkv-1.2.13/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/75bd897cb740605a34704739134d0cab/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/75bd897cb740605a34704739134d0cab/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/98474ab6ee09119404a52f1b3887fa26/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/98474ab6ee09119404a52f1b3887fa26/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/3131ea2424a06f3c412288e87c091243/transformed/fragment-1.3.4/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.4] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/3131ea2424a06f3c412288e87c091243/transformed/fragment-1.3.4/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/78f44a41bbe15c66ab7fe9854cb84e31/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/78f44a41bbe15c66ab7fe9854cb84e31/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/d64219bd8c9d7cf4df0c4d2edb0c096e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/d64219bd8c9d7cf4df0c4d2edb0c096e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/9f22e07ed7a9dddc6f979dc0bace9709/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/9f22e07ed7a9dddc6f979dc0bace9709/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.2.3] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/123b8eaaa6dca1ff53f0a978e9cbc4a2/transformed/activity-1.2.3/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.2.3] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/123b8eaaa6dca1ff53f0a978e9cbc4a2/transformed/activity-1.2.3/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/281e263e73512752edd1e3bad8ede220/transformed/appcompat-resources-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/281e263e73512752edd1e3bad8ede220/transformed/appcompat-resources-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/e2aeebe6f8a6e988db43588d53117fcb/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/e2aeebe6f8a6e988db43588d53117fcb/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4aa6b9684401dde37424b6332beb0b62/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4aa6b9684401dde37424b6332beb0b62/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/530ec4561081687c75a6004fa3b496c9/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/530ec4561081687c75a6004fa3b496c9/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b8db3a8fdf50347285aeddfe4ed703e1/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/b8db3a8fdf50347285aeddfe4ed703e1/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/654138c15463c3c505189f896bd5303f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/654138c15463c3c505189f896bd5303f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/30b01369e275b48e25a9d908ac49e904/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/30b01369e275b48e25a9d908ac49e904/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/bb25c4e6aedf04c1bbf19eb481bb0861/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/bb25c4e6aedf04c1bbf19eb481bb0861/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/e1f712f7eed42b7db035fc63967dde70/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/e1f712f7eed42b7db035fc63967dde70/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f3b27114627b63bb7ab13f79ba2b9ab4/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f3b27114627b63bb7ab13f79ba2b9ab4/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a005f91aa87e122b446cc9c7f0a79df9/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a005f91aa87e122b446cc9c7f0a79df9/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/fe7dc0f793a920226a348c0ffb28e0f1/transformed/savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/fe7dc0f793a920226a348c0ffb28e0f1/transformed/savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/5ba9c569838be157bdcf4fa0893daf31/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/5ba9c569838be157bdcf4fa0893daf31/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f8a50a6533518751f45d0fefa4acc8c5/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/f8a50a6533518751f45d0fefa4acc8c5/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/49ff21bffe328ab372dfb3025944234b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/49ff21bffe328ab372dfb3025944234b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/46fcec9ce7741c23f042e211ab8cee06/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/46fcec9ce7741c23f042e211ab8cee06/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/be1c55235e4f65e507d36a02f19de050/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/be1c55235e4f65e507d36a02f19de050/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/560cb5333436465a558cc2057b7d31e5/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/560cb5333436465a558cc2057b7d31e5/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/845a7e2af93d86eedbb9caa55a369870/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/845a7e2af93d86eedbb9caa55a369870/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/10c605985f31f6ff91517bb03a4d0d68/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/10c605985f31f6ff91517bb03a4d0d68/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/bead6ac94894d5d17ce603e402aa3477/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/bead6ac94894d5d17ce603e402aa3477/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/498fbe24df2f01edb0947b2918f66551/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/498fbe24df2f01edb0947b2918f66551/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/76f4be73976e59bd719c86e116c930f9/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/76f4be73976e59bd719c86e116c930f9/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/af95e439e8cac81b507a157bedb39f5e/transformed/annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/af95e439e8cac81b507a157bedb39f5e/transformed/annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/703587da760558771ce8336e167477bb/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:18:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/703587da760558771ce8336e167477bb/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:18:5-43
-MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/immersionbar-3.2.2/AndroidManifest.xml:5:5-7:41
-MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/immersionbar-3.2.2/AndroidManifest.xml:5:5-7:41
-MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
-MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/.gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/.gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] /Users/VIJOZ/.gradle/caches/transforms-3/a1dc4d22df24937b658dc58bee0e7357/transformed/appcompat-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] /Users/VIJOZ/.gradle/caches/transforms-3/a1dc4d22df24937b658dc58bee0e7357/transformed/appcompat-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/863498319e5e942775fdbfbf2eb1c7f6/transformed/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.tencent:mmkv:1.2.13] /Users/VIJOZ/.gradle/caches/transforms-3/a0d652cc95485e8bcfcb74e4eced2e3d/transformed/jetified-mmkv-1.2.13/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent:mmkv:1.2.13] /Users/VIJOZ/.gradle/caches/transforms-3/a0d652cc95485e8bcfcb74e4eced2e3d/transformed/jetified-mmkv-1.2.13/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/VIJOZ/.gradle/caches/transforms-3/f198e12f5a692af5db1c3ad0a8b6c7a7/transformed/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/75bd897cb740605a34704739134d0cab/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/75bd897cb740605a34704739134d0cab/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/98474ab6ee09119404a52f1b3887fa26/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/98474ab6ee09119404a52f1b3887fa26/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] /Users/VIJOZ/.gradle/caches/transforms-3/3131ea2424a06f3c412288e87c091243/transformed/fragment-1.3.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] /Users/VIJOZ/.gradle/caches/transforms-3/3131ea2424a06f3c412288e87c091243/transformed/fragment-1.3.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/78f44a41bbe15c66ab7fe9854cb84e31/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/78f44a41bbe15c66ab7fe9854cb84e31/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/d64219bd8c9d7cf4df0c4d2edb0c096e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/d64219bd8c9d7cf4df0c4d2edb0c096e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/9f22e07ed7a9dddc6f979dc0bace9709/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/9f22e07ed7a9dddc6f979dc0bace9709/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.2.3] /Users/VIJOZ/.gradle/caches/transforms-3/123b8eaaa6dca1ff53f0a978e9cbc4a2/transformed/jetified-activity-1.2.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] /Users/VIJOZ/.gradle/caches/transforms-3/123b8eaaa6dca1ff53f0a978e9cbc4a2/transformed/jetified-activity-1.2.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /Users/VIJOZ/.gradle/caches/transforms-3/281e263e73512752edd1e3bad8ede220/transformed/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /Users/VIJOZ/.gradle/caches/transforms-3/281e263e73512752edd1e3bad8ede220/transformed/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/e2aeebe6f8a6e988db43588d53117fcb/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/e2aeebe6f8a6e988db43588d53117fcb/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/4aa6b9684401dde37424b6332beb0b62/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/4aa6b9684401dde37424b6332beb0b62/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/VIJOZ/.gradle/caches/transforms-3/530ec4561081687c75a6004fa3b496c9/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/VIJOZ/.gradle/caches/transforms-3/530ec4561081687c75a6004fa3b496c9/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/b8db3a8fdf50347285aeddfe4ed703e1/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/b8db3a8fdf50347285aeddfe4ed703e1/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/654138c15463c3c505189f896bd5303f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/654138c15463c3c505189f896bd5303f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/30b01369e275b48e25a9d908ac49e904/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/30b01369e275b48e25a9d908ac49e904/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/bb25c4e6aedf04c1bbf19eb481bb0861/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/bb25c4e6aedf04c1bbf19eb481bb0861/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/e1f712f7eed42b7db035fc63967dde70/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/e1f712f7eed42b7db035fc63967dde70/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/.gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] /Users/VIJOZ/.gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/f3b27114627b63bb7ab13f79ba2b9ab4/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/f3b27114627b63bb7ab13f79ba2b9ab4/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/a005f91aa87e122b446cc9c7f0a79df9/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/a005f91aa87e122b446cc9c7f0a79df9/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/fe7dc0f793a920226a348c0ffb28e0f1/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/fe7dc0f793a920226a348c0ffb28e0f1/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/5ba9c569838be157bdcf4fa0893daf31/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/5ba9c569838be157bdcf4fa0893daf31/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/f8a50a6533518751f45d0fefa4acc8c5/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/f8a50a6533518751f45d0fefa4acc8c5/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/49ff21bffe328ab372dfb3025944234b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/49ff21bffe328ab372dfb3025944234b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/.gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/VIJOZ/.gradle/caches/transforms-3/56c2402ee492dac3009b8036eeb2e153/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/46fcec9ce7741c23f042e211ab8cee06/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/46fcec9ce7741c23f042e211ab8cee06/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/be1c55235e4f65e507d36a02f19de050/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/be1c55235e4f65e507d36a02f19de050/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/560cb5333436465a558cc2057b7d31e5/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/VIJOZ/.gradle/caches/transforms-3/560cb5333436465a558cc2057b7d31e5/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/845a7e2af93d86eedbb9caa55a369870/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/845a7e2af93d86eedbb9caa55a369870/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/10c605985f31f6ff91517bb03a4d0d68/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/10c605985f31f6ff91517bb03a4d0d68/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/bead6ac94894d5d17ce603e402aa3477/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/bead6ac94894d5d17ce603e402aa3477/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/498fbe24df2f01edb0947b2918f66551/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/498fbe24df2f01edb0947b2918f66551/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/76f4be73976e59bd719c86e116c930f9/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/76f4be73976e59bd719c86e116c930f9/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/af95e439e8cac81b507a157bedb39f5e/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/VIJOZ/.gradle/caches/transforms-3/af95e439e8cac81b507a157bedb39f5e/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/703587da760558771ce8336e167477bb/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/VIJOZ/.gradle/caches/transforms-3/703587da760558771ce8336e167477bb/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0] /Users/VIJOZ/.gradle/caches/transforms-3/a12d139d3bf2482aae9136cf8fcea934/transformed/jetified-wechat-sdk-android-without-mta-6.8.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0] /Users/VIJOZ/.gradle/caches/transforms-3/a12d139d3bf2482aae9136cf8fcea934/transformed/jetified-wechat-sdk-android-without-mta-6.8.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:7:5-44
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:7:5-44
+MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/.gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/jetified-immersionbar-3.2.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/.gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/jetified-immersionbar-3.2.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/.gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/.gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
+ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
 	android:resource
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
 	android:name
-		ADDED from /Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-75
+	android:name
+		ADDED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-72
 uses-permission#android.permission.VIBRATE
-ADDED from [:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-66
+ADDED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:5-66
 	android:name
-		ADDED from [:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-63
+		ADDED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:22-63
+queries
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:9:5-19:15
+intent#action:name:*+data:scheme:tbopen
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:10:9-14:18
+action#*
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:11:13-40
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:11:21-37
+data
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:13:13-45
+	android:scheme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:13:19-42
+package#com.eg.android.AlipayGphone
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:16:9-63
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:16:18-60
+package#com.eg.android.AlipayGphoneRC
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:17:9-65
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:17:18-62
+package#hk.alipay.wallet
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:18:9-52
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:18:18-49
+supports-screens
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:21:5-26:39
+	android:largeScreens
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:23:9-36
+	android:smallScreens
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:26:9-36
+	android:normalScreens
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:24:9-37
+	android:resizeable
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:25:9-34
+	android:anyDensity
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:22:9-34
+uses-library#org.apache.http.legacy
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:34:13-50
+activity#com.alipay.sdk.app.H5PayActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:37:9-42:20
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:40:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:39:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:41:13-60
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:38:13-60
+activity#com.alipay.sdk.app.H5AuthActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:43:9-48:20
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:46:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:45:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:47:13-60
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:44:13-61
+activity#com.alipay.sdk.app.PayResultActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:49:9-55:20
+	android:launchMode
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:53:13-48
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:52:13-36
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:51:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:54:13-72
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:50:13-64
+activity#com.alipay.sdk.app.AlipayResultActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:56:9-62:20
+	android:launchMode
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:60:13-44
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:59:13-36
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:58:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:61:13-72
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:57:13-67
+activity#com.alipay.sdk.app.H5OpenAuthActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:63:9-69:20
+	android:screenOrientation
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:67:13-47
+	android:windowSoftInputMode
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:68:13-67
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:66:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:65:13-167
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:64:13-65
+activity#com.alipay.sdk.app.APayEntranceActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:70:9-75:20
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:73:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:72:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:74:13-72
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:71:13-67

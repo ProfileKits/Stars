@@ -22,6 +22,10 @@ int anim btn_radio_to_off_mtrl_ring_outer_path_animation 0x0
 int anim btn_radio_to_on_mtrl_dot_group_animation 0x0
 int anim btn_radio_to_on_mtrl_ring_outer_animation 0x0
 int anim btn_radio_to_on_mtrl_ring_outer_path_animation 0x0
+int anim common_part_left_in 0x0
+int anim common_part_right_out 0x0
+int anim common_whole_right_in 0x0
+int anim common_whole_right_out 0x0
 int anim design_bottom_sheet_slide_in 0x0
 int anim design_bottom_sheet_slide_out 0x0
 int anim design_snackbar_in 0x0
@@ -1254,6 +1258,7 @@ int color test_mtrl_calendar_day_selected 0x0
 int color tooltip_background_dark 0x0
 int color tooltip_background_light 0x0
 int color transparent 0x0
+int color transparent9 0x0
 int color white 0x0
 int dimen abc_action_bar_content_inset_material 0x0
 int dimen abc_action_bar_content_inset_with_nav 0x0
@@ -2312,6 +2317,7 @@ int layout abc_search_view 0x0
 int layout abc_select_dialog_material 0x0
 int layout abc_tooltip 0x0
 int layout custom_dialog 0x0
+int layout def_pay_activity_layout 0x0
 int layout design_bottom_navigation_item 0x0
 int layout design_bottom_sheet_dialog 0x0
 int layout design_layout_snackbar 0x0
@@ -3046,6 +3052,7 @@ int style Theme_MaterialComponents_Light_NoActionBar 0x0
 int style Theme_MaterialComponents_Light_NoActionBar_Bridge 0x0
 int style Theme_MaterialComponents_NoActionBar 0x0
 int style Theme_MaterialComponents_NoActionBar_Bridge 0x0
+int style Transparent 0x0
 int style Widget_AppCompat_ActionBar 0x0
 int style Widget_AppCompat_ActionBar_Solid 0x0
 int style Widget_AppCompat_ActionBar_TabBar 0x0

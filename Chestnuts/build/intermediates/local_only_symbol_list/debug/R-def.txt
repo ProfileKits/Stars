@@ -1,5 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+anim common_part_left_in
+anim common_part_right_out
+anim common_whole_right_in
+anim common_whole_right_out
 anim item_alpha_anim
 anim item_scale_anim
 anim item_translate_bybottom
@@ -77,6 +81,7 @@ color pickerview_wheelview_textcolor_out
 color teal_200
 color teal_700
 color transparent
+color transparent9
 color white
 dimen pickerview_textsize
 dimen pickerview_topbar_btn_textsize
@@ -125,6 +130,7 @@ id tv_msg
 id v_line
 id year
 integer animation_default_duration
+layout def_pay_activity_layout
 layout include_pickerview_topbar
 layout layout_basepickerview
 layout layout_dialog_loading
@@ -153,6 +159,7 @@ string tip_permission_phone
 string tip_permission_storage
 string tip_permission_voice
 string tip_unkown_error_place_holder
+style Transparent
 style dialog_style
 styleable FlikerProgressBar loadingColor stopColor finishColor radius borderWidth
 styleable FontTextView font_name has_use has_Relaxation font_size_before font_size_after

@@ -66,4 +66,18 @@ dependencies {
     api 'io.reactivex.rxjava2:rxjava:2.2.4'//可能会成为冲突问题
     implementation 'com.tencent.bugly:crashreport:latest.release'
     implementation 'com.alibaba:fastjson:1.2.8'
+    //微信与支付宝支付
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0'
+    api 'com.alipay.sdk:alipaysdk-android:15.8.11'
+}
+
+// 指定编码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+// 打包源码
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
 }

@@ -535,6 +535,8 @@
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
     <color name="transparent">#00000000</color>
+    <color name="transparent9">#09000000
+    </color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
@@ -4177,6 +4179,11 @@
     <style name="ThemeOverlayColorAccentRed" ns1:ignore="NewApi">
     <item name="android:colorAccent">#FFFF0000</item>
   </style>
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        　　<item name="android:windowIsTranslucent">true</item>　　
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>　　
+    </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">

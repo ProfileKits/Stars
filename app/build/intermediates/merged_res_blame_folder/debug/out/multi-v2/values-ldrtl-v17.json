@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/VIJOZ/Datum/App/Chestnuts/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "/Users/VIJOZ/Android/Chestnuts/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

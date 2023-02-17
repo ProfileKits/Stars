@@ -33,7 +33,6 @@ import com.predictor.library.example.SetSelfWithPoint;
 import com.predictor.library.listener.OnChangeListener;
 import com.predictor.library.net.RetrofitUtil;
 import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
-import com.predictor.library.rx.ApiResult;
 import com.predictor.library.rx.NormalSubscriber;
 import com.predictor.library.rx.RxTransformerHelper;
 import com.predictor.library.utils.CNAnimationUtils;
@@ -45,7 +44,6 @@ import com.predictor.library.utils.CNHttpUtil;
 import com.predictor.library.utils.CNJsonUtils;
 import com.predictor.library.utils.CNLog;
 import com.predictor.library.utils.CNLogUtil;
-import com.predictor.library.utils.CNNumUtils;
 import com.predictor.library.utils.CNTextViewUtil;
 import com.predictor.library.utils.CNToast;
 import com.predictor.library.utils.CNToastCustom;
@@ -79,7 +77,7 @@ public class MainActivity extends CNBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //获取签名
+        //获取签名key
         Log.i("KEYSGIN", CNBaseInvoke.getInstance().getSign(this));
     }
 
@@ -126,7 +124,7 @@ public class MainActivity extends CNBaseActivity {
      * 测试bugly崩溃，以判断bugly是否集成成功
      */
     private void testBuglyCrash() {
-       CNBugly.testCrash();//测试Bugly Crash
+        CNBugly.testCrash();//测试Bugly Crash
     }
 
 
@@ -136,10 +134,10 @@ public class MainActivity extends CNBaseActivity {
     private void customToast() {
         String text = et.getText().toString();
         if (!text.isEmpty()) {
-        //    CNToast.show(MainActivity.this,et.getText().toString());
-        //    CNCustomToast.ToastLongTopCenter(MainActivity.this,et.getText().toString());
-        //    CNToastCustom.showWhiteToast(MainActivity.this,"测试");
-        //    CNToastCustom.setCustom(MainActivity.this,et.getText().toString(),100,100,10,255,28,false);
+            //    CNToast.show(MainActivity.this,et.getText().toString());
+            //    CNCustomToast.ToastLongTopCenter(MainActivity.this,et.getText().toString());
+            //    CNToastCustom.showWhiteToast(MainActivity.this,"测试");
+            //    CNToastCustom.setCustom(MainActivity.this,et.getText().toString(),100,100,10,255,28,false);
             CNToastCustom.showBlackToast(MainActivity.this, text);
         }
     }
@@ -147,8 +145,8 @@ public class MainActivity extends CNBaseActivity {
     /**
      * 判断号码是否为手机号
      */
-    private void isPhoneNumber(){
-       CNToast.show(mContext,"是否为手机号："+ CNValidatorUtil.isPhone("17022222222",true)+"");
+    private void isPhoneNumber() {
+        CNToast.show(mContext, "是否为手机号：" + CNValidatorUtil.isPhone("17022222222", true) + "");
     }
 
     @Override
@@ -224,22 +222,22 @@ public class MainActivity extends CNBaseActivity {
 //        testNetwork();
         CNLog.PRINTDATA(textView.getText().toString());
 
-        RetrofitNetwork.getInstance().testNetwork(this, new RetrofitNetwork.NetResult() {
-            @Override
-            public void success(Object result) {
-                RankingBean bean = (RankingBean) result;
-                CNLog.PRINTDATA(bean.getData());
-            }
-
-            @Override
-            public void error(String msg) {
-
-                CNLog.PRINTDATA(msg);
-            }
-        });
+//        RetrofitNetwork.getInstance().testNetwork(this, new RetrofitNetwork.NetResult() {
+//            @Override
+//            public void success(Object result) {
+//                RankingBean bean = (RankingBean) result;
+//                CNLog.PRINTDATA(bean.getData());
+//            }
+//
+//            @Override
+//            public void error(String msg) {
+//
+//                CNLog.PRINTDATA(msg);
+//            }
+//        });
     }
 
-    private void testNetwork(){
+    private void testNetwork() {
         RetrofitNetwork.getInstance().getAPIdata(this, new RetrofitNetwork.NetResult() {
             @Override
             public void success(Object result) {
@@ -312,8 +310,8 @@ public class MainActivity extends CNBaseActivity {
 //                        Gson gson = new Gson();
 //                        String json =gson.toJson(object,String.class);
                         Intent intent = new Intent(mContext, MainActivity.class);
-                        intent.putExtra("fsdf","");
-                        intent.putExtra("电视上",3);
+                        intent.putExtra("fsdf", "");
+                        intent.putExtra("电视上", 3);
                         CNLog.PRINTDATA(result);
 //                        CNToast.show(MainActivity.this, "请求数据成功:" + result.code +"-msg:"+result.msg +"-data:"+json);
                     } else {
@@ -324,7 +322,7 @@ public class MainActivity extends CNBaseActivity {
 
                 @Override
                 public void onError(Throwable e) {
-                    CNToast.show(MainActivity.this, "请求数据出错" +e.getMessage());
+                    CNToast.show(MainActivity.this, "请求数据出错" + e.getMessage());
                 }
             };
 
@@ -435,6 +433,7 @@ public class MainActivity extends CNBaseActivity {
 
     /**
      * 设置是否全屏，状态栏和任务栏状态设置
+     *
      * @return
      */
     @Override

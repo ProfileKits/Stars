@@ -6,116 +6,236 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+8-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml
+9-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
-11-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:5:5-81
-11-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:5:22-78
+11-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:5:5-81
+11-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:5:22-78
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
-12-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:6:5-79
-12-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:6:22-76
+12-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:6:5-79
+12-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
-13-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:7:5-76
-13-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:7:22-73
+13-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:7:5-76
+13-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:7:22-73
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-14-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:8:5-79
-14-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:8:22-76
+14-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:8:5-79
+14-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:8:22-76
 15    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
-15-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:9:5-76
-15-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:9:22-73
+15-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:9:5-76
+15-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:9:22-73
 16    <uses-permission android:name="android.permission.INTERNET" />
-16-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:10:5-67
-16-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:10:22-64
+16-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:10:5-67
+16-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:10:22-64
 17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-17-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:11:5-80
-17-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:11:22-77
+17-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:11:5-80
+17-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:11:22-77
 18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-18-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:12:5-81
-18-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:12:22-78
+18-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:12:5-81
+18-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:12:22-78
 19    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-19-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:13:5-81
-19-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:13:22-79
-20    <uses-permission android:name="android.permission.VIBRATE" />
-20-->[:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-66
-20-->[:Chestnuts] /Users/VIJOZ/Datum/App/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-63
-21
-22    <application
-22-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:15:5-53:19
-23        android:name="com.predictor.galaxy.app.MyApplication"
-23-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:16:9-42
-24        android:allowBackup="true"
-24-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:17:9-35
-25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
-26        android:debuggable="true"
-27        android:icon="@mipmap/ic_launcher"
-27-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
-28        android:label="@string/app_name"
-28-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
-29        android:requestLegacyExternalStorage="true"
-29-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:21:9-52
-30        android:roundIcon="@mipmap/ic_launcher_round"
-30-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
-31        android:supportsRtl="true"
-31-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
-32        android:testOnly="true"
-33        android:theme="@style/Theme.NoTitleBar" >
-33-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
-34        <activity
-34-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
-35            android:name="com.predictor.galaxy.ui.ViewPagerActivity"
-35-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
-36            android:exported="false" />
-36-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
-37        <activity
-37-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
-38            android:name="com.predictor.galaxy.ui.SecondActivity"
-38-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
-39            android:exported="false" />
-39-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
-40        <activity
-40-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
-41            android:name="com.predictor.galaxy.ui.MainActivity"
-41-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
-42            android:exported="true" >
-42-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
-43            <intent-filter>
-43-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
-44                <action android:name="android.intent.action.MAIN" />
-44-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
-44-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-46-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
-46-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
-47            </intent-filter>
-48        </activity>
-49
-50        <service
-50-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
-51            android:name="com.predictor.library.net.DownloadService"
-51-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
-52            android:permission="android.permission.BIND_JOB_SERVICE" />
-52-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
-53
-54        <provider
-55            android:name="androidx.core.content.FileProvider"
-55-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
-56            android:authorities="com.predictor.library.fileProvider"
-56-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
-57            android:exported="false"
-57-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
-58            android:grantUriPermissions="true" >
-58-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
-59            <meta-data
-59-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
-60                android:name="android.support.FILE_PROVIDER_PATHS"
-60-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
-61                android:resource="@xml/file_paths" />
-61-->/Users/VIJOZ/Datum/App/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
-62        </provider>
-63    </application>
-64
-65</manifest>
+19-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:13:5-81
+19-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:13:22-79
+20    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+20-->[:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-75
+20-->[:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-72
+21    <uses-permission android:name="android.permission.VIBRATE" />
+21-->[:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:5-66
+21-->[:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:22-63
+22
+23    <queries>
+23-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:9:5-19:15
+24        <intent> <!-- H5 支持手淘登录 -->
+24-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:10:9-14:18
+25            <action android:name="*" />
+25-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:11:13-40
+25-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:11:21-37
+26
+27            <data android:scheme="tbopen" />
+27-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:13:13-45
+27-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:13:19-42
+28        </intent>
+29
+30        <package android:name="com.eg.android.AlipayGphone" /> <!-- 支付宝 app -->
+30-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:16:9-63
+30-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:16:18-60
+31        <package android:name="com.eg.android.AlipayGphoneRC" /> <!-- 沙箱支付宝 app -->
+31-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:17:9-65
+31-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:17:18-62
+32        <package android:name="hk.alipay.wallet" /> <!-- 香港版支付宝 app -->
+32-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:18:9-52
+32-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:18:18-49
+33    </queries>
+34
+35    <supports-screens
+35-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:21:5-26:39
+36        android:anyDensity="true"
+36-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:22:9-34
+37        android:largeScreens="true"
+37-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:23:9-36
+38        android:normalScreens="true"
+38-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:24:9-37
+39        android:resizeable="true"
+39-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:25:9-34
+40        android:smallScreens="true" />
+40-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:26:9-36
+41
+42    <application
+42-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:15:5-53:19
+43        android:name="com.predictor.galaxy.app.MyApplication"
+43-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:16:9-42
+44        android:allowBackup="true"
+44-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:17:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.5.0] /Users/VIJOZ/.gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+46        android:debuggable="true"
+47        android:icon="@mipmap/ic_launcher"
+47-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
+48        android:label="@string/app_name"
+48-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
+49        android:requestLegacyExternalStorage="true"
+49-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:21:9-52
+50        android:roundIcon="@mipmap/ic_launcher_round"
+50-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
+51        android:supportsRtl="true"
+51-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
+52        android:testOnly="true"
+53        android:theme="@style/Theme.NoTitleBar" >
+53-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
+54        <activity
+54-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
+55            android:name="com.predictor.galaxy.ui.ViewPagerActivity"
+55-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
+56            android:exported="false" />
+56-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
+57        <activity
+57-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
+58            android:name="com.predictor.galaxy.ui.SecondActivity"
+58-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
+59            android:exported="false" />
+59-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
+60        <activity
+60-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
+61            android:name="com.predictor.galaxy.ui.MainActivity"
+61-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
+62            android:exported="true" >
+62-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
+63            <intent-filter>
+63-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
+64-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
+66-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
+67            </intent-filter>
+68        </activity>
+69
+70        <service
+70-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
+71            android:name="com.predictor.library.net.DownloadService"
+71-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
+72            android:permission="android.permission.BIND_JOB_SERVICE" />
+72-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
+73
+74        <provider
+75            android:name="androidx.core.content.FileProvider"
+75-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
+76            android:authorities="com.predictor.library.fileProvider"
+76-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
+77            android:exported="false"
+77-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
+78            android:grantUriPermissions="true" >
+78-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
+79            <meta-data
+79-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
+80                android:name="android.support.FILE_PROVIDER_PATHS"
+80-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
+81                android:resource="@xml/file_paths" />
+81-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
+82        </provider>
+83
+84        <uses-library
+84-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:33:9-35:40
+85            android:name="org.apache.http.legacy"
+85-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:34:13-50
+86            android:required="false" />
+86-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:35:13-37
+87
+88        <activity
+88-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:37:9-42:20
+89            android:name="com.alipay.sdk.app.H5PayActivity"
+89-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:38:13-60
+90            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+90-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:39:13-167
+91            android:exported="false"
+91-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:40:13-37
+92            android:theme="@android:style/Theme.NoTitleBar" >
+92-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:41:13-60
+93        </activity>
+94        <activity
+94-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:43:9-48:20
+95            android:name="com.alipay.sdk.app.H5AuthActivity"
+95-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:44:13-61
+96            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+96-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:45:13-167
+97            android:exported="false"
+97-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:46:13-37
+98            android:theme="@android:style/Theme.NoTitleBar" >
+98-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:47:13-60
+99        </activity>
+100        <activity
+100-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:49:9-55:20
+101            android:name="com.alipay.sdk.app.PayResultActivity"
+101-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:50:13-64
+102            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+102-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:51:13-167
+103            android:exported="true"
+103-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:52:13-36
+104            android:launchMode="singleInstance"
+104-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:53:13-48
+105            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+105-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:54:13-72
+106        </activity>
+107        <activity
+107-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:56:9-62:20
+108            android:name="com.alipay.sdk.app.AlipayResultActivity"
+108-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:57:13-67
+109            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+109-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:58:13-167
+110            android:exported="true"
+110-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:59:13-36
+111            android:launchMode="singleTask"
+111-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:60:13-44
+112            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+112-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:61:13-72
+113        </activity>
+114        <activity
+114-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:63:9-69:20
+115            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
+115-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:64:13-65
+116            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+116-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:65:13-167
+117            android:exported="false"
+117-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:66:13-37
+118            android:screenOrientation="behind"
+118-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:67:13-47
+119            android:windowSoftInputMode="adjustResize|stateHidden" >
+119-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:68:13-67
+120        </activity>
+121        <activity
+121-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:70:9-75:20
+122            android:name="com.alipay.sdk.app.APayEntranceActivity"
+122-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:71:13-67
+123            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+123-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:72:13-167
+124            android:exported="false"
+124-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:73:13-37
+125            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+125-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/.gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:74:13-72
+126        </activity>
+127    </application>
+128
+129</manifest>

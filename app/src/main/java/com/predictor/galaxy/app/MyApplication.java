@@ -9,6 +9,7 @@ import com.predictor.galaxy.BuildConfig;
 import com.predictor.galaxy.net.RetrofitService;
 import com.predictor.library.base.CNBaseApp;
 import com.predictor.library.base.CNBaseInvoke;
+import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.net.HttpUrl;
 import com.predictor.library.utils.CNLog;
 import com.predictor.library.utils.CNLogUtil;
@@ -48,6 +49,7 @@ public class MyApplication extends CNBaseApp {
         return null;
     }
 
+
     @Override
     public String[] setBaseUrl() {
         //第一个地址是测试基地址，第二个是正式基地址https://zfljh.top/   https://www.chesong.top/
@@ -65,8 +67,8 @@ public class MyApplication extends CNBaseApp {
         //设置token
         setToken("Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImYyNzU5ZGRkLTliZDEtNDkyZS1hYTkxLWYyNDE2MDA4ZmU4NiJ9.SCBukiv0xidtMZcqFriojQXNs-QcMz9uBgf5wdDKea2-qWGRu9XYOitGpLr2zbep763AbAkpJxdd7qGHevb5GA");
 
-//       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE);
-//        CNLogUtil.i("key:"+key);
+       boolean key = CNBaseInvoke.getInstance().init(this, ChestnutData.getStartCode(),DEBUG_MODE,"");
+        CNLogUtil.i("key:"+key);
         String realKey = getSha1Value(this);
         CNLogUtil.i("加密key:" + realKey);
         HttpUrl.setDownloadUrl("");//设置下载地址
