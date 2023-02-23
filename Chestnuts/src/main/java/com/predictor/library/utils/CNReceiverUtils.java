@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
+import com.predictor.library.bean.BroadcastBean;
 import com.predictor.library.jni.ChestnutData;
 
 public class CNReceiverUtils {
@@ -12,6 +13,8 @@ public class CNReceiverUtils {
     private static final Object LockThis = new Object();
     private ReceiverListener mListener;
     private RegisterListener mRListener;
+    private RegisterStrListener mRSListener;
+    private RegisterObjectListener mObjectListener;
 
     public synchronized static CNReceiverUtils getInstance(Context context, R listener) {
         synchronized (LockThis) {
@@ -28,6 +31,10 @@ public class CNReceiverUtils {
                 mListener = (ReceiverListener) listener;
             } else if (listener instanceof RegisterListener) {
                 mRListener = (RegisterListener) listener;
+            } else if (listener instanceof RegisterStrListener) {
+                mRSListener = (RegisterStrListener) listener;
+            }else if (listener instanceof RegisterObjectListener) {
+                mObjectListener = (RegisterObjectListener) listener;
             }
             register(context);
         }
@@ -44,16 +51,31 @@ public class CNReceiverUtils {
                     if (mRListener != null) {
                         mRListener.update();
                     }
-                } else if (intent.getBooleanExtra(CNBroadcastUtils.BROADCAST_CMD_DELETE, false)) {
+                }
+                if (intent.getBooleanExtra(CNBroadcastUtils.BROADCAST_CMD_DELETE, false)) {
                     if (mListener != null) {
                         mListener.delete();
                     }
 
-                } else if (intent.getBooleanExtra(CNBroadcastUtils.BROADCAST_CMD_MODIFY, false)) {
+                }
+                if (intent.getBooleanExtra(CNBroadcastUtils.BROADCAST_CMD_MODIFY, false)) {
                     if (mListener != null) {
                         mListener.modify();
                     }
 
+                }
+                if (intent.getStringExtra(CNBroadcastUtils.BROADCAST_CMD_STRING)!=null && !intent.getStringExtra(CNBroadcastUtils.BROADCAST_CMD_STRING).isEmpty()) {
+                    if (mRSListener != null) {
+                        String str = intent.getStringExtra(CNBroadcastUtils.BROADCAST_CMD_STRING);
+                        mRSListener.receiver(str);
+                    }
+
+                }
+                if (intent.getSerializableExtra(CNBroadcastUtils.BROADCAST_CMD_OBJECT)!=null){
+                    if (mObjectListener != null) {
+                        BroadcastBean obj = (BroadcastBean) intent.getSerializableExtra(CNBroadcastUtils.BROADCAST_CMD_OBJECT);
+                        mObjectListener.receiver(obj);
+                    }
                 }
             }
         }
@@ -63,6 +85,14 @@ public class CNReceiverUtils {
     private void register(Context context) {
         IntentFilter intentFilter = new IntentFilter(CNBroadcastUtils.BROADCAST_ACTION);
         context.registerReceiver(receiver, intentFilter);
+    }
+
+
+
+    public void unRegister(Context context) {
+        if (receiver != null) {
+            context.unregisterReceiver(receiver);
+        }
     }
 
     public interface ReceiverListener extends R {
@@ -77,6 +107,13 @@ public class CNReceiverUtils {
         void update();
     }
 
+    public interface RegisterStrListener extends R {
+        void receiver(String data);
+    }
+
+    public interface RegisterObjectListener extends R {
+        void receiver(BroadcastBean bean);
+    }
 
     private interface R {
     }

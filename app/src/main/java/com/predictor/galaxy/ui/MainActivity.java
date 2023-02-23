@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.text.Layout;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -29,6 +30,7 @@ import com.predictor.library.artanimation.library.Techniques;
 import com.predictor.library.base.CNBaseActivity;
 
 import com.predictor.library.base.CNBaseInvoke;
+import com.predictor.library.bean.BroadcastBean;
 import com.predictor.library.example.SetSelfWithPoint;
 import com.predictor.library.listener.OnChangeListener;
 import com.predictor.library.net.RetrofitUtil;
@@ -36,6 +38,7 @@ import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.rx.NormalSubscriber;
 import com.predictor.library.rx.RxTransformerHelper;
 import com.predictor.library.utils.CNAnimationUtils;
+import com.predictor.library.utils.CNBroadcastUtils;
 import com.predictor.library.utils.CNBugly;
 import com.predictor.library.utils.CNDES;
 import com.predictor.library.utils.CNEditTextUtil;
@@ -44,6 +47,7 @@ import com.predictor.library.utils.CNHttpUtil;
 import com.predictor.library.utils.CNJsonUtils;
 import com.predictor.library.utils.CNLog;
 import com.predictor.library.utils.CNLogUtil;
+import com.predictor.library.utils.CNReceiverUtils;
 import com.predictor.library.utils.CNTextViewUtil;
 import com.predictor.library.utils.CNToast;
 import com.predictor.library.utils.CNToastCustom;
@@ -53,6 +57,7 @@ import com.predictor.library.view.CNProgressCircle;
 import com.predictor.library.view.CNTextTool;
 import com.predictor.galaxy.view.PickerView;
 
+import java.io.Serializable;
 import java.util.Map;
 
 import io.reactivex.disposables.Disposable;
@@ -73,13 +78,36 @@ public class MainActivity extends CNBaseActivity {
     private CNDoooArt.YoYoString rope;
     private CNCleanEditText et;
     private CNProgressCircle circle;
-
+    String sign ="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //获取签名key
         Log.i("KEYSGIN", CNBaseInvoke.getInstance().getSign(this));
+
+
+        CNReceiverUtils.getInstance(mContext, (CNReceiverUtils.RegisterStrListener)
+                data -> {
+            sign=data;
+        });
+        CNBroadcastUtils.sendStringCmd(mContext,"@*$(@*#)(@*");
+
+        CNReceiverUtils.getInstance(mContext, new CNReceiverUtils.RegisterObjectListener() {
+            @Override
+            public void receiver(BroadcastBean obj) {
+                CNToast.show(mContext, obj.getStr1()+"-"+obj.isBool1() +"-"+obj.isBool2());
+            }
+        });
+        BroadcastBean bean = new BroadcastBean();
+        bean.setStr1("广播发送数据了！！！！！！！"+sign);
+        bean.setBool2(false);
+        bean.setBool1(true);
+
+        CNBroadcastUtils.sendObjectCmd(mContext, bean);
+
+
     }
+
 
     private int pos = 0;
     Handler handler = new Handler();
