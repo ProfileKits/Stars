@@ -314,6 +314,7 @@ int attr counterOverflowTextColor 0x7f0300f2
 int attr counterTextAppearance 0x7f0300f3
 int attr counterTextColor 0x7f0300f4
 int attr crossfade 0x7f0300f5
+int attr currentProgress 0x7f0303bd
 int attr currentState 0x7f0300f6
 int attr cursor 0x7f0300f7
 int attr curveFit 0x7f0300f8
@@ -606,8 +607,12 @@ int attr layout_scrollInterpolator 0x7f030216
 int attr liftOnScroll 0x7f030217
 int attr liftOnScrollTargetViewId 0x7f030218
 int attr limitBoundsTo 0x7f030219
+int attr lineColorBg 0x7f0303be
+int attr lineColorProgress 0x7f0303bf
 int attr lineHeight 0x7f03021a
+int attr lineSize 0x7f0303c0
 int attr lineSpacing 0x7f03021b
+int attr lineStyle 0x7f0303c1
 int attr linearProgressIndicatorStyle 0x7f03021c
 int attr listChoiceBackgroundIndicator 0x7f03021d
 int attr listChoiceIndicatorMultipleAnimated 0x7f03021e
@@ -662,6 +667,7 @@ int attr maxCharacterCount 0x7f03024e
 int attr maxHeight 0x7f03024f
 int attr maxImageSize 0x7f030250
 int attr maxLines 0x7f030251
+int attr maxProgress 0x7f0303c2
 int attr maxVelocity 0x7f030252
 int attr maxWidth 0x7f030253
 int attr measureWithLargestChild 0x7f030254
@@ -1771,6 +1777,11 @@ int drawable abc_textfield_search_material 0x7f070054
 int drawable abc_vector_test 0x7f070055
 int drawable avd_hide_password 0x7f070056
 int drawable avd_show_password 0x7f070057
+int drawable bg_btn_cancle 0x7f07009e
+int drawable bg_btn_cancle_dark 0x7f0700a1
+int drawable bg_btn_ok 0x7f07009f
+int drawable bg_dark 0x7f0700a2
+int drawable bg_white 0x7f0700a0
 int drawable btn_checkbox_checked_mtrl 0x7f070058
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f070059
 int drawable btn_checkbox_unchecked_mtrl 0x7f07005a
@@ -1790,6 +1801,8 @@ int drawable design_snackbar_background 0x7f070067
 int drawable edit_transparent 0x7f070068
 int drawable editview_bg 0x7f070069
 int drawable ic_clock_black_24dp 0x7f07006a
+int drawable ic_close_light 0x7f0700a3
+int drawable ic_close_night 0x7f0700a4
 int drawable ic_keyboard_black_24dp 0x7f07006b
 int drawable ic_launcher_background 0x7f07006c
 int drawable ic_launcher_foreground 0x7f07006d
@@ -1848,10 +1861,12 @@ int id CTRL 0x7f080003
 int id FUNCTION 0x7f080004
 int id META 0x7f080005
 int id NO_DEBUG 0x7f080006
+int id PROGRESS 0x7f0801f9
 int id SHIFT 0x7f080007
 int id SHOW_ALL 0x7f080008
 int id SHOW_PATH 0x7f080009
 int id SHOW_PROGRESS 0x7f08000a
+int id SLIDE 0x7f0801fa
 int id SYM 0x7f08000b
 int id TOP_END 0x7f08000c
 int id TOP_START 0x7f08000d
@@ -1935,6 +1950,7 @@ int id btn_confirm 0x7f08005a
 int id btn_viewpage 0x7f08005b
 int id buttonPanel 0x7f08005c
 int id cache_measures 0x7f08005d
+int id cancel 0x7f0801f6
 int id cancel_button 0x7f08005e
 int id center 0x7f08005f
 int id center_horizontal 0x7f080060
@@ -1955,6 +1971,7 @@ int id clip_horizontal 0x7f08006e
 int id clip_vertical 0x7f08006f
 int id clockwise 0x7f080070
 int id collapseActionView 0x7f080071
+int id confirm 0x7f0801f7
 int id confirm_button 0x7f080072
 int id container 0x7f080073
 int id content 0x7f080074
@@ -2055,6 +2072,7 @@ int id invisible 0x7f0800d2
 int id inward 0x7f0800d3
 int id italic 0x7f0800d4
 int id item_touch_helper_previous_elevation 0x7f0800d5
+int id iv_close 0x7f0801fd
 int id jumpToEnd 0x7f0800d6
 int id jumpToStart 0x7f0800d7
 int id labeled 0x7f0800d8
@@ -2067,6 +2085,7 @@ int id line3 0x7f0800de
 int id linear 0x7f0800df
 int id listMode 0x7f0800e0
 int id list_item 0x7f0800e1
+int id ll_bg_dialog 0x7f0801f8
 int id ll_layout 0x7f0800e2
 int id masked 0x7f0800e3
 int id material_clock_display 0x7f0800e4
@@ -2205,6 +2224,8 @@ int id search_mag_icon 0x7f080168
 int id search_plate 0x7f080169
 int id search_src_text 0x7f08016a
 int id search_voice_btn 0x7f08016b
+int id seek_bar_hor 0x7f0801fb
+int id seek_bar_ver 0x7f0801fc
 int id select_dialog_listview 0x7f08016c
 int id selected 0x7f08016d
 int id selection_type 0x7f08016e
@@ -2431,6 +2452,7 @@ int layout design_navigation_menu 0x7f0b002b
 int layout design_navigation_menu_item 0x7f0b002c
 int layout design_text_input_end_icon 0x7f0b002d
 int layout design_text_input_start_icon 0x7f0b002e
+int layout dialog_view 0x7f0b0087
 int layout fragment_home 0x7f0b002f
 int layout fragment_me 0x7f0b0030
 int layout include_pickerview_topbar 0x7f0b0031
@@ -2647,6 +2669,7 @@ int string tip_permission_voice 0x7f100078
 int string tip_unkown_error_place_holder 0x7f100079
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
+int style AlertDialogStyle 0x7f1102d5
 int style AndroidThemeColorAccentYellow 0x7f110002
 int style Animation_AppCompat_Dialog 0x7f110003
 int style Animation_AppCompat_DropDownUp 0x7f110004
@@ -4589,6 +4612,13 @@ int[] styleable MotionTelltales { 0x7f030336, 0x7f030337, 0x7f030338 }
 int styleable MotionTelltales_telltales_tailColor 0
 int styleable MotionTelltales_telltales_tailScale 1
 int styleable MotionTelltales_telltales_velocityMode 2
+int[] styleable MySeekBar { 0x7f0303bd, 0x7f0303be, 0x7f0303bf, 0x7f0303c0, 0x7f0303c1, 0x7f0303c2 }
+int styleable MySeekBar_currentProgress 0
+int styleable MySeekBar_lineColorBg 1
+int styleable MySeekBar_lineColorProgress 2
+int styleable MySeekBar_lineSize 3
+int styleable MySeekBar_lineStyle 4
+int styleable MySeekBar_maxProgress 5
 int[] styleable NavigationBarView { 0x7f030045, 0x7f03012f, 0x7f0301b7, 0x7f0301bc, 0x7f0301bd, 0x7f0301c0, 0x7f0301cc, 0x7f0301cd, 0x7f0301ce, 0x7f0301d4, 0x7f030255 }
 int styleable NavigationBarView_backgroundTint 0
 int styleable NavigationBarView_elevation 1

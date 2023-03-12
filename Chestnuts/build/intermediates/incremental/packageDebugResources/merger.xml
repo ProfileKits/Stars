@@ -13,6 +13,14 @@
         <item name="android:windowBackground">@color/transparent</item>
         　　<item name="android:windowIsTranslucent">true</item>　　
         <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>　　
+    </style><style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style></file><file path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/values/strings.xml" qualifiers=""><string name="tip_permission_header">请允许APP获得以下权限</string><string name="tip_permission_camera">·照相权限，用于拍摄功能</string><string name="tip_permission_voice">·录音权限，用于发送语音</string><string name="tip_permission_phone">·手机状态权限，仅获取设备的状态，不监控通话记录</string><string name="tip_permission_storage">·存储权限，用于保存文件</string><string name="tip_permission_location">·定位权限，用于发送位置</string><string name="tip_unkown_error_place_holder">未知异常，%s</string><string name="data_exception">数据异常，请稍后重试</string><string name="net_exception">网络异常，请稍后重试</string><string name="pickerview_cancel">取消</string><string name="pickerview_submit">确认</string><string name="pickerview_year">年</string><string name="pickerview_month">月</string><string name="pickerview_day">日</string><string name="pickerview_hours">时</string><string name="pickerview_minutes">分</string><string name="pickerview_seconds">秒</string></file><file path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/values/attrs.xml" qualifiers=""><declare-styleable name="cleanEditText">
         <attr format="reference" name="icon"/>
         <attr format="reference" name="focusIcon"/>
@@ -124,7 +132,23 @@
             <flag name="date" value="0x00000014"/>
             <flag name="time" value="0x00000024"/>
         </attr>
-    </declare-styleable></file><file path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/values/integers.xml" qualifiers=""><integer name="animation_default_duration">300</integer></file><file name="msg" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/raw/msg.mp3" qualifiers="" type="raw"/><file name="common_whole_right_in" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_whole_right_in.xml" qualifiers="" type="anim"/><file name="common_whole_right_out" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_whole_right_out.xml" qualifiers="" type="anim"/><file name="def_pay_activity_layout" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/layout/def_pay_activity_layout.xml" qualifiers="" type="layout"/><file name="common_part_right_out" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_part_right_out.xml" qualifiers="" type="anim"/><file name="common_part_left_in" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_part_left_in.xml" qualifiers="" type="anim"/></source><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/build/generated/res/rs/debug"/><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="verify_EditText">
+    </declare-styleable><declare-styleable name="MySeekBar">
+        
+        <attr format="integer" name="lineSize"/>
+        
+        <attr format="color" name="lineColorBg"/>
+        
+        <attr format="color" name="lineColorProgress"/>
+        
+        <attr format="enum" name="lineStyle">
+            <enum name="PROGRESS" value="0"/>
+            <enum name="SLIDE" value="1"/>
+        </attr>
+        
+        <attr format="integer" name="currentProgress"/>
+        
+        <attr format="integer" name="maxProgress"/>
+    </declare-styleable></file><file path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/values/integers.xml" qualifiers=""><integer name="animation_default_duration">300</integer></file><file name="msg" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/raw/msg.mp3" qualifiers="" type="raw"/><file name="common_whole_right_in" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_whole_right_in.xml" qualifiers="" type="anim"/><file name="common_whole_right_out" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_whole_right_out.xml" qualifiers="" type="anim"/><file name="def_pay_activity_layout" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/layout/def_pay_activity_layout.xml" qualifiers="" type="layout"/><file name="common_part_right_out" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_part_right_out.xml" qualifiers="" type="anim"/><file name="common_part_left_in" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/anim/common_part_left_in.xml" qualifiers="" type="anim"/><file name="dialog_view" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/layout/dialog_view.xml" qualifiers="" type="layout"/><file name="bg_btn_ok" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/drawable/bg_btn_ok.xml" qualifiers="" type="drawable"/><file name="bg_white" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/drawable/bg_white.xml" qualifiers="" type="drawable"/><file name="bg_btn_cancle" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/drawable/bg_btn_cancle.xml" qualifiers="" type="drawable"/><file name="bg_btn_cancle_dark" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/drawable/bg_btn_cancle_dark.xml" qualifiers="" type="drawable"/><file name="bg_dark" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/drawable/bg_dark.xml" qualifiers="" type="drawable"/><file name="ic_close_night" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/drawable/ic_close_night.png" qualifiers="" type="drawable"/><file name="ic_close_light" path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/main/res/drawable/ic_close_light.png" qualifiers="" type="drawable"/></source><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/build/generated/res/rs/debug"/><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/VIJOZ/Android/Chestnuts/Chestnuts/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="verify_EditText">
         
         <attr format="integer" name="verify_count"/>
         
@@ -233,6 +257,22 @@
         <attr format="color" name="progress_background_line_color"/>
         <attr format="color" name="progress_circle_line_color"/>
         <attr format="string" name="unit"/>
+    </declare-styleable><declare-styleable name="MySeekBar">
+        
+        <attr format="integer" name="lineSize"/>
+        
+        <attr format="color" name="lineColorBg"/>
+        
+        <attr format="color" name="lineColorProgress"/>
+        
+        <attr format="enum" name="lineStyle">
+            <enum name="PROGRESS" value="0"/>
+            <enum name="SLIDE" value="1"/>
+        </attr>
+        
+        <attr format="integer" name="currentProgress"/>
+        
+        <attr format="integer" name="maxProgress"/>
     </declare-styleable><declare-styleable name="RoundedRectangleBlurView">
         <attr format="dimension" name="roundedRectangleRadius"/>
     </declare-styleable></configuration></mergedItems></merger>

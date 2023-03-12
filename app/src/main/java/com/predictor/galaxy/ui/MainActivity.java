@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Parcelable;
 import android.text.Layout;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -19,9 +18,11 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
+import com.flycode.data.constant.Setting;
 import com.predictor.galaxy.R;
 import com.predictor.galaxy.bean.Person;
 import com.predictor.galaxy.bean.RankingBean;
+import com.predictor.galaxy.config.Config;
 import com.predictor.galaxy.module.TestCallback;
 import com.predictor.galaxy.net.RetrofitNetwork;
 import com.predictor.galaxy.net.RetrofitService;
@@ -31,9 +32,12 @@ import com.predictor.library.base.CNBaseActivity;
 
 import com.predictor.library.base.CNBaseInvoke;
 import com.predictor.library.bean.BroadcastBean;
+import com.predictor.library.bean.CNDialogInfo;
 import com.predictor.library.example.SetSelfWithPoint;
 import com.predictor.library.listener.OnChangeListener;
 import com.predictor.library.net.RetrofitUtil;
+import com.predictor.library.oknet.CNttp;
+import com.predictor.library.oknet.callback.HttpCallback;
 import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.rx.NormalSubscriber;
 import com.predictor.library.rx.RxTransformerHelper;
@@ -53,16 +57,21 @@ import com.predictor.library.utils.CNToast;
 import com.predictor.library.utils.CNToastCustom;
 import com.predictor.library.utils.CNValidatorUtil;
 import com.predictor.library.view.CNCleanEditText;
+import com.predictor.library.view.CNDialog;
 import com.predictor.library.view.CNProgressCircle;
 import com.predictor.library.view.CNTextTool;
 import com.predictor.galaxy.view.PickerView;
 
-import java.io.Serializable;
+import java.io.IOException;
 import java.util.Map;
 
 import io.reactivex.disposables.Disposable;
+import okhttp3.Call;
 import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import okhttp3.RequestBody;
+import okhttp3.Response;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -78,34 +87,35 @@ public class MainActivity extends CNBaseActivity {
     private CNDoooArt.YoYoString rope;
     private CNCleanEditText et;
     private CNProgressCircle circle;
-    String sign ="";
+    String sign = "";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //获取签名key
         Log.i("KEYSGIN", CNBaseInvoke.getInstance().getSign(this));
-
+        //2023-3-3晚11点替换的
+        CNLog.PRINTDATA(new Setting().getTESTVALUE());//测试覆盖Library会不会更新数据，如果更新成功这个值会变成人工智能4个字
 
         CNReceiverUtils.getInstance(mContext, (CNReceiverUtils.RegisterStrListener)
                 data -> {
-            sign=data;
-        });
-        CNBroadcastUtils.sendStringCmd(mContext,"@*$(@*#)(@*");
+                    sign = data;
+                });
+        CNBroadcastUtils.sendStringCmd(mContext, "@*$(@*#)(@*");
 
         CNReceiverUtils.getInstance(mContext, new CNReceiverUtils.RegisterObjectListener() {
             @Override
             public void receiver(BroadcastBean obj) {
-                CNToast.show(mContext, obj.getStr1()+"-"+obj.isBool1() +"-"+obj.isBool2());
+                CNToast.show(mContext, obj.getStr1() + "-" + obj.isBool1() + "-" + obj.isBool2());
             }
         });
         BroadcastBean bean = new BroadcastBean();
-        bean.setStr1("广播发送数据了！！！！！！！"+sign);
+        bean.setStr1("广播发送数据了！！！！！！！" + sign);
         bean.setBool2(false);
         bean.setBool1(true);
 
         CNBroadcastUtils.sendObjectCmd(mContext, bean);
-
-
     }
 
 
@@ -185,11 +195,27 @@ public class MainActivity extends CNBaseActivity {
         btn_viewpage = findViewById(R.id.btn_viewpage);
         et = findViewById(R.id.et);
         circleView();
-
         CNTextViewUtil.setTextLeftIcon(this, R.drawable.kaixin, textView2, 0);
+
         CNLogUtil.i("key22222222222:");
+
+
     }
 
+
+    private void showDialog() {
+        CNDialogInfo info = new CNDialogInfo();
+        info.setTitle("确定删除吗？");
+        info.setContent("删除数据会引起业务问题");
+//        info.setOkButtonColor(getResources().getColor(R.color.green));
+//        info.setDarkTheme(true);
+        info.setOutsideTouch(true);
+        CNDialog.show(this, info, (isOk, v) -> {
+            if (isOk) {
+
+            }
+        });
+    }
 
     /**
      * 测试DES文本加密与解密
@@ -234,35 +260,40 @@ public class MainActivity extends CNBaseActivity {
                 .append("红色的").setTypefaceHND().setForegroundColor(Color.parseColor("#ee3313")).setNoBold()
                 .into(textView);
 
-//        CNToast.show(this,"Hello World");
+
 //        CNSnackbar.show(this,"Hello World",textView);
         //自定义Toast
 //        CNCustomToast.ToastLongCenter(MainActivity.this, "自定义Toast");
 
         //旋转动画
-        CNAnimationUtils.startWith(textView, CNAnimationUtils.IN_ROTATE360, 1000);
-//        initNetwork();
-
+//        CNAnimationUtils.startWith(textView, CNAnimationUtils.IN_ROTATE360, 1000);
+        CNAnimationUtils.startWith(textView, CNAnimationUtils.IN_ROTATE360, 5000, 1000, -1);
+//      initNetwork();
 //      submitOrder();
 
         TestCallback testCallback = new TestCallback();
         CNLogUtil.i(testCallback.Go());
-//        testNetwork();
+//      testNetwork();
         CNLog.PRINTDATA(textView.getText().toString());
 
-//        RetrofitNetwork.getInstance().testNetwork(this, new RetrofitNetwork.NetResult() {
-//            @Override
-//            public void success(Object result) {
-//                RankingBean bean = (RankingBean) result;
-//                CNLog.PRINTDATA(bean.getData());
-//            }
-//
-//            @Override
-//            public void error(String msg) {
-//
-//                CNLog.PRINTDATA(msg);
-//            }
-//        });
+        testNetwork();
+//      okNetwork();
+    }
+
+    private void test2Network() {
+        RetrofitNetwork.getInstance().testNetwork(this, new RetrofitNetwork.NetResult() {
+            @Override
+            public void success(Object result) {
+                RankingBean bean = (RankingBean) result;
+                CNLog.PRINTDATA(bean.getData());
+            }
+
+            @Override
+            public void error(String msg) {
+
+                CNLog.PRINTDATA(msg);
+            }
+        });
     }
 
     private void testNetwork() {
@@ -278,6 +309,22 @@ public class MainActivity extends CNBaseActivity {
                 CNLog.PRINTDATA(msg.toString());
             }
         });
+    }
+
+
+    private void okNetwork() {
+        CNttp.get().url(Config.testUrl2)
+                .build().execute(new HttpCallback() {
+                    @Override
+                    public void onSuccess(Object data, int id) {
+                        CNLog.PRINTDATA("网络访问1" + data.toString());
+                    }
+
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        CNLog.PRINTDATA("网络访问2" + e.toString());
+                    }
+                });
     }
 
 
@@ -470,4 +517,47 @@ public class MainActivity extends CNBaseActivity {
                 , null, R.color.white, R.color.white, R.color.white, R.color.white);
         return true;
     }
+
+
+    //soapXml访问示例
+    private void httpForSoap(String username, String password) {
+        OkHttpClient client = new OkHttpClient();
+        // 构造SOAP请求消息
+        String soapXml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+                "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
+                "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" " +
+                "xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">" +
+                "<soap:Body>" +
+                "<SomeSoapMethod xmlns=\"http://tempuri.org/\">" +
+                "<user1>" + username + "</user1>" +
+                "<psw>" + password + "</psw>" +
+                "</SomeSoapMethod>" +
+                "</soap:Body>" +
+                "</soap:Envelope>";
+
+        // 构造HTTP请求
+        Request request = new Request.Builder()
+                .url("http://yourwebservice.com/yourmethod.asmx")
+                .addHeader("Content-Type", "text/xml; charset=utf-8")
+                .addHeader("SOAPAction", "http://tempuri.org/SomeSoapMethod")
+                .post(RequestBody.create(MediaType.parse("text/xml; charset=utf-8"), soapXml))
+                .build();
+
+        // 发送请求
+        Response response = null;
+        try {
+            response = client.newCall(request).execute();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // 处理响应
+        if (response.isSuccessful()) {
+            String responseBody = response.body().toString();
+            // 解析SOAP响应消息
+        } else {
+            // 处理请求失败的情况
+        }
+    }
+
 }

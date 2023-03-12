@@ -17,18 +17,18 @@ android {
     }
 
     buildTypes {
-        sourceSets {
-            main {
-                jni.srcDirs = []
-                jniLibs.srcDirs = ['src/main/libs']
-            }
-        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['src/main/libs']
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

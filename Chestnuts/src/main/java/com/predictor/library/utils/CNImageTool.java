@@ -39,6 +39,9 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
@@ -524,6 +527,18 @@ public class CNImageTool {
         return BitmapFactory.decodeStream(is, null, options);
     }
 
+
+    /**
+     * Bitmap转成圆形的Drawable VIJOZ ImageView.setImageDrawable可使用处理结果
+     * @param context
+     * @param bitmap
+     * @return
+     */
+    public static RoundedBitmapDrawable getBitmap2RoundDrawable(Context context, Bitmap bitmap) {
+        RoundedBitmapDrawable bitmapDrawable = RoundedBitmapDrawableFactory.create(context.getResources(), bitmap);
+        bitmapDrawable.setCircular(true);
+        return bitmapDrawable;
+    }
     /**
      * 获取bitmap
      *

@@ -14,6 +14,7 @@ anim slide_in_bottom
 anim slide_out_bottom
 attr? background
 attr? borderWidth
+attr? currentProgress
 attr? cursor
 attr? deleteIcon
 attr? deleteIconHeight
@@ -34,7 +35,12 @@ attr? has_use
 attr? icon
 attr? iconHeight
 attr? iconWidth
+attr? lineColorBg
+attr? lineColorProgress
+attr? lineSize
+attr? lineStyle
 attr? loadingColor
+attr? maxProgress
 attr? number_text_size
 attr? pickerview_dividerColor
 attr? pickerview_gravity
@@ -90,11 +96,18 @@ dimen pickerview_topbar_paddingleft
 dimen pickerview_topbar_paddingright
 dimen pickerview_topbar_title_textsize
 dimen scale_textSize
+drawable bg_btn_cancle
+drawable bg_btn_cancle_dark
+drawable bg_btn_ok
+drawable bg_dark
+drawable bg_white
 drawable code_bg_gray
 drawable delete
 drawable delete_selector
 drawable edit_transparent
 drawable editview_bg
+drawable ic_close_light
+drawable ic_close_night
 drawable kaixin
 drawable selector_pickerview_btn
 drawable shape_toast
@@ -102,16 +115,22 @@ drawable sys_toast
 drawable toast_black_background
 drawable toast_ic_jzz
 drawable toast_white_background
+id PROGRESS
+id SLIDE
 id btnCancel
 id btnSubmit
 id btn_confirm
+id cancel
 id center
+id confirm
 id content_container
 id day
 id dialog_view
 id hour
 id img
+id iv_close
 id left
+id ll_bg_dialog
 id message
 id min
 id month
@@ -125,12 +144,14 @@ id right
 id sys_show_toast_txt
 id timepicker
 id tip_text_view
+id title
 id tvTitle
 id tv_msg
 id v_line
 id year
 integer animation_default_duration
 layout def_pay_activity_layout
+layout dialog_view
 layout include_pickerview_topbar
 layout layout_basepickerview
 layout layout_dialog_loading
@@ -159,10 +180,12 @@ string tip_permission_phone
 string tip_permission_storage
 string tip_permission_voice
 string tip_unkown_error_place_holder
+style AlertDialogStyle
 style Transparent
 style dialog_style
 styleable FlikerProgressBar loadingColor stopColor finishColor radius borderWidth
 styleable FontTextView font_name has_use has_Relaxation font_size_before font_size_after
+styleable MySeekBar lineSize lineColorBg lineColorProgress lineStyle currentProgress maxProgress
 styleable RealtimeBlurView realtimeBlurRadius realtimeDownsampleFactor realtimeOverlayColor
 styleable RoundedRectangleBlurView roundedRectangleRadius
 styleable cleanEditText icon focusIcon deleteIcon iconWidth iconHeight deleteIconWidth deleteIconHeight dividerColor dividerBonds focusDividerColor dividerMarginLeft dividerMarginRight focusTextColor background cursor

@@ -43,6 +43,15 @@
     <string name="tip_permission_storage">·存储权限，用于保存文件</string>
     <string name="tip_permission_voice">·录音权限，用于发送语音</string>
     <string name="tip_unkown_error_place_holder">未知异常，%s</string>
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
     <style name="Transparent">
         <item name="android:windowBackground">@color/transparent</item>
         　　<item name="android:windowIsTranslucent">true</item>　　
@@ -71,6 +80,23 @@
         <attr format="boolean" name="has_Relaxation"/>
         <attr format="dimension" name="font_size_before"/>
         <attr format="dimension" name="font_size_after"/>
+    </declare-styleable>
+    <declare-styleable name="MySeekBar">
+        <!--线条的宽度-->
+        <attr format="integer" name="lineSize"/>
+        <!--背景线条的颜色-->
+        <attr format="color" name="lineColorBg"/>
+        <!--进度线条的颜色-->
+        <attr format="color" name="lineColorProgress"/>
+        <!--进度的样式-->
+        <attr format="enum" name="lineStyle">
+            <enum name="PROGRESS" value="0"/>
+            <enum name="SLIDE" value="1"/>
+        </attr>
+        <!--当前的进度-->
+        <attr format="integer" name="currentProgress"/>
+        <!--最大的进度-->
+        <attr format="integer" name="maxProgress"/>
     </declare-styleable>
     <declare-styleable name="RealtimeBlurView">
         <attr format="dimension" name="realtimeBlurRadius"/>
@@ -119,29 +145,29 @@
         <attr format="string" name="unit"/>
     </declare-styleable>
     <declare-styleable name="verify_EditText">
-        
+        <!-- 验证码的个数 -->
         <attr format="integer" name="verify_count"/>
-        
+        <!--        TextView 的宽度-->
         <attr format="dimension" name="verify_width"/>
-        
+        <!--        TextView 的高度-->
         <attr format="dimension" name="verify_height"/>
-        
+        <!--        TextView 的间隔-->
         <attr format="dimension" name="verify_margin"/>
-        
+        <!--        TextView 的字体大小-->
         <attr format="dimension" name="verify_textSize"/>
-        
+        <!--        TextView 的字体颜色-->
         <attr format="color" name="verify_textColor"/>
-        
+        <!-- TextView 无值背景 -->
         <attr format="reference" name="verify_background_normal"/>
-        
+        <!-- TextView 有值背景 -->
         <attr format="reference" name="verify_background_selected"/>
-        
+        <!--        是否隐藏密码-->
         <attr format="boolean" name="verify_password"/>
-        
+        <!--        是否开始显示软键盘-->
         <attr format="boolean" name="verify_keyboard"/>
-        
+        <!--        密码显示时间ms-->
         <attr format="integer" name="verify_password_visible_time"/>
-        
+        <!--        editText的输入类型 -->
         <attr name="verify_inputType">
             <flag name="none" value="0x00000000"/>
             <flag name="text" value="0x00000001"/>

@@ -16,6 +16,7 @@ INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
 MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.ProfileKits:data:v1.0] /Users/VIJOZ/.gradle/caches/transforms-3/0e75e30f610b1279437f28390db01759/transformed/jetified-data-v1.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/.gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.0] /Users/VIJOZ/.gradle/caches/transforms-3/a1dc4d22df24937b658dc58bee0e7357/transformed/appcompat-1.3.0/AndroidManifest.xml:17:1-24:12
@@ -201,6 +202,8 @@ INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:Chestnuts] /Users/VIJOZ/Android/Chestnuts/Chestnuts/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.ProfileKits:data:v1.0] /Users/VIJOZ/.gradle/caches/transforms-3/0e75e30f610b1279437f28390db01759/transformed/jetified-data-v1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.ProfileKits:data:v1.0] /Users/VIJOZ/.gradle/caches/transforms-3/0e75e30f610b1279437f28390db01759/transformed/jetified-data-v1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.4.0] /Users/VIJOZ/.gradle/caches/transforms-3/74edfac071a4e681e6e168818367d2b5/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/VIJOZ/.gradle/caches/transforms-3/b7b6aa3384986f14ff3ed30a24a4c28d/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41

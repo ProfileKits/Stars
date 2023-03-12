@@ -317,6 +317,7 @@ int attr counterOverflowTextColor 0x0
 int attr counterTextAppearance 0x0
 int attr counterTextColor 0x0
 int attr crossfade 0x0
+int attr currentProgress 0x0
 int attr currentState 0x0
 int attr cursor 0x0
 int attr curveFit 0x0
@@ -611,8 +612,12 @@ int attr layout_scrollInterpolator 0x0
 int attr liftOnScroll 0x0
 int attr liftOnScrollTargetViewId 0x0
 int attr limitBoundsTo 0x0
+int attr lineColorBg 0x0
+int attr lineColorProgress 0x0
 int attr lineHeight 0x0
+int attr lineSize 0x0
 int attr lineSpacing 0x0
+int attr lineStyle 0x0
 int attr linearProgressIndicatorStyle 0x0
 int attr listChoiceBackgroundIndicator 0x0
 int attr listChoiceIndicatorMultipleAnimated 0x0
@@ -667,6 +672,7 @@ int attr maxCharacterCount 0x0
 int attr maxHeight 0x0
 int attr maxImageSize 0x0
 int attr maxLines 0x0
+int attr maxProgress 0x0
 int attr maxVelocity 0x0
 int attr maxWidth 0x0
 int attr measureWithLargestChild 0x0
@@ -1782,6 +1788,11 @@ int drawable abc_textfield_search_material 0x0
 int drawable abc_vector_test 0x0
 int drawable avd_hide_password 0x0
 int drawable avd_show_password 0x0
+int drawable bg_btn_cancle 0x0
+int drawable bg_btn_cancle_dark 0x0
+int drawable bg_btn_ok 0x0
+int drawable bg_dark 0x0
+int drawable bg_white 0x0
 int drawable btn_checkbox_checked_mtrl 0x0
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x0
 int drawable btn_checkbox_unchecked_mtrl 0x0
@@ -1801,6 +1812,8 @@ int drawable design_snackbar_background 0x0
 int drawable edit_transparent 0x0
 int drawable editview_bg 0x0
 int drawable ic_clock_black_24dp 0x0
+int drawable ic_close_light 0x0
+int drawable ic_close_night 0x0
 int drawable ic_keyboard_black_24dp 0x0
 int drawable ic_mtrl_checked_circle 0x0
 int drawable ic_mtrl_chip_checked_black 0x0
@@ -1853,9 +1866,11 @@ int drawable tooltip_frame_light 0x0
 int id BOTTOM_END 0x0
 int id BOTTOM_START 0x0
 int id NO_DEBUG 0x0
+int id PROGRESS 0x0
 int id SHOW_ALL 0x0
 int id SHOW_PATH 0x0
 int id SHOW_PROGRESS 0x0
+int id SLIDE 0x0
 int id TOP_END 0x0
 int id TOP_START 0x0
 int id accelerate 0x0
@@ -1932,6 +1947,7 @@ int id btnCancel 0x0
 int id btnSubmit 0x0
 int id btn_confirm 0x0
 int id buttonPanel 0x0
+int id cancel 0x0
 int id cancel_button 0x0
 int id center 0x0
 int id chain 0x0
@@ -1946,6 +1962,7 @@ int id chronometer 0x0
 int id circle_center 0x0
 int id clear_text 0x0
 int id clockwise 0x0
+int id confirm 0x0
 int id confirm_button 0x0
 int id container 0x0
 int id content 0x0
@@ -2024,6 +2041,7 @@ int id item2 0x0
 int id item3 0x0
 int id item4 0x0
 int id item_touch_helper_previous_elevation 0x0
+int id iv_close 0x0
 int id jumpToEnd 0x0
 int id jumpToStart 0x0
 int id labeled 0x0
@@ -2035,6 +2053,7 @@ int id line3 0x0
 int id linear 0x0
 int id listMode 0x0
 int id list_item 0x0
+int id ll_bg_dialog 0x0
 int id masked 0x0
 int id material_clock_display 0x0
 int id material_clock_face 0x0
@@ -2333,6 +2352,7 @@ int layout design_navigation_menu 0x0
 int layout design_navigation_menu_item 0x0
 int layout design_text_input_end_icon 0x0
 int layout design_text_input_start_icon 0x0
+int layout dialog_view 0x0
 int layout include_pickerview_topbar 0x0
 int layout layout_basepickerview 0x0
 int layout layout_dialog_loading 0x0
@@ -2537,6 +2557,7 @@ int string tip_permission_phone 0x0
 int string tip_permission_storage 0x0
 int string tip_permission_voice 0x0
 int string tip_unkown_error_place_holder 0x0
+int style AlertDialogStyle 0x0
 int style AlertDialog_AppCompat 0x0
 int style AlertDialog_AppCompat_Light 0x0
 int style AndroidThemeColorAccentYellow 0x0
@@ -4488,6 +4509,13 @@ int[] styleable MotionTelltales { 0x0, 0x0, 0x0 }
 int styleable MotionTelltales_telltales_tailColor 0
 int styleable MotionTelltales_telltales_tailScale 1
 int styleable MotionTelltales_telltales_velocityMode 2
+int[] styleable MySeekBar { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable MySeekBar_currentProgress 0
+int styleable MySeekBar_lineColorBg 1
+int styleable MySeekBar_lineColorProgress 2
+int styleable MySeekBar_lineSize 3
+int styleable MySeekBar_lineStyle 4
+int styleable MySeekBar_maxProgress 5
 int[] styleable NavigationBarView { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable NavigationBarView_backgroundTint 0
 int styleable NavigationBarView_elevation 1

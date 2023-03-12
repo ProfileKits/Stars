@@ -1,5 +1,7 @@
 package com.predictor.library.utils;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Build;
 import android.text.Html;
@@ -69,6 +71,20 @@ public class CNStringUtils {
         return mat.matches();
 */
     }
+
+
+    //拷贝字符串到剪贴板
+    public static void copyToClipboard(Context mContext, String text,boolean showTips,String tipsStr) {
+        String s = replaceSpecialChar(text);
+        CharSequence charSequence = s;
+        // 获得剪切板管理者,复制文本内容
+        ClipboardManager cmb = (ClipboardManager) mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+        cmb.setPrimaryClip(ClipData.newPlainText("auto_copy_text", charSequence));
+        if(showTips){
+            CNToast.show(mContext,tipsStr.isEmpty()?"复制成功":tipsStr);
+        }
+    }
+
 
     /* 检测之前，最好检测是否为空。检测是否是正确的昵称格式 */
     public static boolean isNickName(String nickName) {

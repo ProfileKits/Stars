@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity="center"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".ui.SecondActivity">
 
     <ImageView
@@ -13,5 +13,44 @@
         android:layout_height="match_parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.predictor.library.view.CNSeekBar
+            android:id="@+id/seek_bar_hor"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="30dp"
+            android:background="#00999999"
+            app:currentProgress="40"
+            app:lineColorBg="#6f6f6f"
+            app:lineColorProgress="#008800"
+            app:lineStyle="SLIDE"
+            app:maxProgress="100" />
+
+        <!-- 竖着的seekbar-->
+        <com.predictor.library.view.CNSeekBar
+            android:id="@+id/seek_bar_ver"
+            android:layout_width="30dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="100dp"
+            android:background="#00999999"
+            android:visibility="gone"
+            app:currentProgress="80"
+            app:lineColorBg="#ffffff"
+            app:lineColorProgress="#000066"
+            app:lineStyle="SLIDE"
+            app:maxProgress="100" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

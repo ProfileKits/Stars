@@ -1,5 +1,7 @@
 package com.predictor.library.pay.sdk;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.util.Map;
 
 /**
@@ -10,7 +12,7 @@ import java.util.Map;
  */
 public class AlipayResultV2 extends CommonAlipayResult {
     public AlipayResultV2(Map<String,String> alipayResultMap) {
-        if (alipayResultMap != null && !alipayResultMap.isEmpty()) {
+        if (alipayResultMap != null && !alipayResultMap.isEmpty() && ChestnutData.getPermission()) {
             resultStatus = alipayResultMap.get(KEY_RESULT_STATUS);
             result = alipayResultMap.get(KEY_RESULT);
             memo = alipayResultMap.get(KEY_MEMO);

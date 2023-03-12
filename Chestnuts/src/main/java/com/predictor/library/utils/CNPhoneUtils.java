@@ -210,31 +210,32 @@ public class CNPhoneUtils {
         return true;
     }
 
-//    /**
-//     * 拨打电话
-//     *
-//     * @param context
-//     * @param phoneNum
-//     */
-//    public void call(Context context, String phoneNum) throws Exception {
-//        if (phoneNum != null && !phoneNum.equals("")) {
-//            Uri uri = Uri.parse("tel:" + phoneNum);
-//            Intent intent = new Intent(Intent.ACTION_DIAL, uri);
-//            context.startActivity(intent);
-//        }
-//    }
+    /**
+     * 拨打电话
+     *
+     * @param context
+     * @param phoneNum
+     */
+    public void call(Context context, String phoneNum) throws Exception {
+        if (phoneNum != null && !phoneNum.equals("")) {
+            Uri uri = Uri.parse("tel:" + phoneNum);
+            Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+            context.startActivity(intent);
+        }
+    }
 
-//    /**
-//     * 打开网页
-//     */
-//    public void openWeb(Context context, String url) {
-//        try {
-//            Uri uri = Uri.parse(url);
-//            context.startActivity(new Intent(Intent.ACTION_VIEW, uri));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+
+    /**
+     * 打开网页
+     */
+    public void openWeb(Context context, String url) {
+        try {
+            Uri uri = Uri.parse(url);
+            context.startActivity(new Intent(Intent.ACTION_VIEW, uri));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * 获取应用权限 名称列表
@@ -311,15 +312,7 @@ public class CNPhoneUtils {
         context.startActivity(intent);
     }
 
-//    /**
-//     * 手机号判断
-//     */
-//    public static boolean isMobileNO(String mobile) {
-//        Pattern p = Pattern
-//            .compile("^((145|147)|(15[^4])|(17[0-9])|((13|18)[0-9]))\\d{8}$");
-//        Matcher m = p.matcher(mobile);
-//        return m.matches();
-//    }
+
 
     /**
      * 直接呼叫指定的号码(需要<uses-permission

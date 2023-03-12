@@ -728,7 +728,7 @@ public abstract class CNValidatorUtil {
         String strMonth = Ai.substring(10, 12);
         //日
         String strDay = Ai.substring(12, 14);
-        if (CNDateFormatUtil.getDateIsTrue(strYear, strMonth, strDay) == false) {
+        if (CNDateUtils.getDateIsTrue(strYear, strMonth, strDay) == false) {
             errmsg = "身份证生日无效";
             AppLogMessageMgr.e("AppValidationMgr-->>isIDCard", errmsg);
             return false;

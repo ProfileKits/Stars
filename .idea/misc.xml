@@ -3,12 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="Chestnuts/src/main/res/drawable/bg_btn_cancle.xml" value="0.2055" />
+        <entry key="Chestnuts/src/main/res/drawable/bg_btn_cancle_dark.xml" value="0.2055" />
+        <entry key="Chestnuts/src/main/res/drawable/bg_btn_ok.xml" value="0.2055" />
+        <entry key="Chestnuts/src/main/res/drawable/bg_dark.xml" value="0.2055" />
+        <entry key="Chestnuts/src/main/res/drawable/bg_white.xml" value="0.2055" />
         <entry key="Chestnuts/src/main/res/drawable/code_bg_gray.xml" value="0.177" />
+        <entry key="Chestnuts/src/main/res/drawable/delete_selector.xml" value="0.2055" />
+        <entry key="Chestnuts/src/main/res/drawable/editview_bg.xml" value="0.2055" />
+        <entry key="Chestnuts/src/main/res/drawable/selector_pickerview_btn.xml" value="0.2055" />
         <entry key="Chestnuts/src/main/res/drawable/shape_toast.xml" value="0.1855" />
+        <entry key="Chestnuts/src/main/res/drawable/toast_black_background.xml" value="0.2055" />
         <entry key="Chestnuts/src/main/res/drawable/toast_white_background.xml" value="0.1855" />
         <entry key="Chestnuts/src/main/res/layout/def_pay_activity_layout.xml" value="0.3078125" />
+        <entry key="Chestnuts/src/main/res/layout/dialog_view.xml" value="0.3255208333333333" />
+        <entry key="Chestnuts/src/main/res/layout/layout_dialog_loading.xml" value="0.32760416666666664" />
         <entry key="Chestnuts/src/main/res/layout/layout_dialog_single_button.xml" value="0.32760416666666664" />
         <entry key="Chestnuts/src/main/res/layout/layout_toast.xml" value="0.32760416666666664" />
+        <entry key="Chestnuts/src/main/res/layout/pickerview_options.xml" value="0.35052083333333334" />
         <entry key="Chestnuts/src/main/res/layout/shape_toast.xml" value="0.32760416666666664" />
         <entry key="Chestnuts/src/main/res/layout/sys_show_toast.xml" value="0.32760416666666664" />
         <entry key="Chestnuts/src/main/res/layout/toast_balck.xml" value="0.32760416666666664" />

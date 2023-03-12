@@ -2,6 +2,8 @@ package com.predictor.library.pay.sdk;
 
 import android.text.TextUtils;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.util.HashMap;
 
 /**
@@ -14,28 +16,31 @@ import java.util.HashMap;
 public class AlipayResult extends CommonAlipayResult {
     private HashMap<String,String> paramsValues;
     public AlipayResult(String rawResult) {
-        if (TextUtils.isEmpty(rawResult))
-            return;
+        if (ChestnutData.getPermission()) {
+            if (TextUtils.isEmpty(rawResult))
+                return;
 
-        String[] resultParams = rawResult.split(";");
-        for (String resultParam : resultParams) {
-            if (resultParam.startsWith(KEY_RESULT_STATUS)) {
-                resultStatus = gatValue(resultParam, KEY_RESULT_STATUS);
-            }
-            if (resultParam.startsWith(KEY_RESULT)) {
-                result = gatValue(resultParam, KEY_RESULT);
-                if (!TextUtils.isEmpty(result)) {
+            String[] resultParams = rawResult.split(";");
+            for (String resultParam : resultParams) {
+                if (resultParam.startsWith(KEY_RESULT_STATUS)) {
+                    resultStatus = gatValue(resultParam, KEY_RESULT_STATUS);
+                }
+                if (resultParam.startsWith(KEY_RESULT)) {
+                    result = gatValue(resultParam, KEY_RESULT);
+                    if (!TextUtils.isEmpty(result)) {
 //                    String[] paramsInResultStr = resultStr.split("&");
-                    //[partner="2088101568358171"] [success="true"]
+                        //[partner="2088101568358171"] [success="true"]
 //                    for (String curParam : paramsInResultStr) {
 //
 //                    }
+                    }
+                }
+                if (resultParam.startsWith(KEY_MEMO)) {
+                    memo = gatValue(resultParam, KEY_MEMO);
                 }
             }
-            if (resultParam.startsWith(KEY_MEMO)) {
-                memo = gatValue(resultParam, KEY_MEMO);
-            }
         }
+
     }
     private String gatValue(String content, String key) {
         String prefix = key + "={";

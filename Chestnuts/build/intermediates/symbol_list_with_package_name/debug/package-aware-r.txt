@@ -318,6 +318,7 @@ attr counterOverflowTextColor
 attr counterTextAppearance
 attr counterTextColor
 attr crossfade
+attr currentProgress
 attr currentState
 attr cursor
 attr curveFit
@@ -612,8 +613,12 @@ attr layout_scrollInterpolator
 attr liftOnScroll
 attr liftOnScrollTargetViewId
 attr limitBoundsTo
+attr lineColorBg
+attr lineColorProgress
 attr lineHeight
+attr lineSize
 attr lineSpacing
+attr lineStyle
 attr linearProgressIndicatorStyle
 attr listChoiceBackgroundIndicator
 attr listChoiceIndicatorMultipleAnimated
@@ -668,6 +673,7 @@ attr maxCharacterCount
 attr maxHeight
 attr maxImageSize
 attr maxLines
+attr maxProgress
 attr maxVelocity
 attr maxWidth
 attr measureWithLargestChild
@@ -1783,6 +1789,11 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_btn_cancle
+drawable bg_btn_cancle_dark
+drawable bg_btn_ok
+drawable bg_dark
+drawable bg_white
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1802,6 +1813,8 @@ drawable design_snackbar_background
 drawable edit_transparent
 drawable editview_bg
 drawable ic_clock_black_24dp
+drawable ic_close_light
+drawable ic_close_night
 drawable ic_keyboard_black_24dp
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
@@ -1854,9 +1867,11 @@ drawable tooltip_frame_light
 id BOTTOM_END
 id BOTTOM_START
 id NO_DEBUG
+id PROGRESS
 id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
+id SLIDE
 id TOP_END
 id TOP_START
 id accelerate
@@ -1933,6 +1948,7 @@ id btnCancel
 id btnSubmit
 id btn_confirm
 id buttonPanel
+id cancel
 id cancel_button
 id center
 id chain
@@ -1947,6 +1963,7 @@ id chronometer
 id circle_center
 id clear_text
 id clockwise
+id confirm
 id confirm_button
 id container
 id content
@@ -2025,6 +2042,7 @@ id item2
 id item3
 id item4
 id item_touch_helper_previous_elevation
+id iv_close
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2036,6 +2054,7 @@ id line3
 id linear
 id listMode
 id list_item
+id ll_bg_dialog
 id masked
 id material_clock_display
 id material_clock_face
@@ -2334,6 +2353,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_view
 layout include_pickerview_topbar
 layout layout_basepickerview
 layout layout_dialog_loading
@@ -2538,6 +2558,7 @@ string tip_permission_phone
 string tip_permission_storage
 string tip_permission_voice
 string tip_unkown_error_place_holder
+style AlertDialogStyle
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -3356,6 +3377,7 @@ styleable MotionHelper onHide onShow
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
+styleable MySeekBar currentProgress lineColorBg lineColorProgress lineSize lineStyle maxProgress
 styleable NavigationBarView backgroundTint elevation itemBackground itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable NavigationRailView headerLayout menuGravity
 styleable NavigationView android_background android_fitsSystemWindows android_maxWidth elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor menu shapeAppearance shapeAppearanceOverlay

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.predictor.library.R;
+import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.pay.sdk.utils.IProxyCallback;
 import com.predictor.library.pay.sdk.utils.UIHintAgent;
 import com.predictor.library.pay.sdk.utils.Util;
@@ -41,6 +42,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         if(LIFE_CIRCLE_DEBUG){
             i(TAG,"---> onCreate()");
         }
