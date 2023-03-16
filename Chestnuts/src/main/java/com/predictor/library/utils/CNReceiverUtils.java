@@ -82,6 +82,7 @@ public class CNReceiverUtils {
     };
 
 
+
     private void register(Context context) {
         IntentFilter intentFilter = new IntentFilter(CNBroadcastUtils.BROADCAST_ACTION);
         context.registerReceiver(receiver, intentFilter);

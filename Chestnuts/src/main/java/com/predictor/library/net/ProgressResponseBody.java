@@ -5,6 +5,7 @@ package com.predictor.library.net;
 import android.os.RecoverySystem;
 
 import com.predictor.library.interfaces.ProgressListener;
+import com.predictor.library.jni.ChestnutData;
 
 import java.io.IOException;
 
@@ -24,9 +25,11 @@ public class ProgressResponseBody extends ResponseBody {
     private String name;
 
     public ProgressResponseBody(ResponseBody responseBody, ProgressListener progressListener, String name) {
-        this.responseBody = responseBody;
-        this.progressListener = progressListener;
-        this.name = name;
+        if (ChestnutData.getPermission()) {
+            this.responseBody = responseBody;
+            this.progressListener = progressListener;
+            this.name = name;
+        }
     }
 
     @Override public MediaType contentType() {

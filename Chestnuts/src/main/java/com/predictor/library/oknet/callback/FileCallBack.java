@@ -1,6 +1,6 @@
 package com.predictor.library.oknet.callback;
 
-import com.predictor.library.oknet.CNttp;
+import com.predictor.library.oknet.CNHttp;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -50,7 +50,7 @@ public abstract class FileCallBack extends BaseCallback<File> {
                 sum += len;
                 fos.write(buf, 0, len);
                 final long finalSum = sum;
-                CNttp.getInstance().getDelivery().execute(new Runnable() {
+                CNHttp.getInstance().getDelivery().execute(new Runnable() {
                     @Override
                     public void run() {
                         inProgress(finalSum * 1.0f / total, total, id);

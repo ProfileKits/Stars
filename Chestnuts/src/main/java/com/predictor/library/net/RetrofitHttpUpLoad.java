@@ -1,5 +1,6 @@
 package com.predictor.library.net;
 
+import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.listener.RetrofitCallBack;
 
 import java.io.File;
@@ -37,7 +38,7 @@ public class RetrofitHttpUpLoad {
     }
 
     public static RetrofitHttpUpLoad getInstance() {
-        if (mInstance == null) {
+        if (mInstance == null && ChestnutData.getPermission()) {
             synchronized (RetrofitHttpUpLoad.class) {
                 if (mInstance == null)
                     mInstance = new RetrofitHttpUpLoad();

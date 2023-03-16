@@ -31,6 +31,7 @@ import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import com.predictor.library.bean.CNDialogInfo;
 import com.predictor.library.interfaces.DialogCallBack;
+import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.view.CNDialog;
 
 import java.io.BufferedOutputStream;
@@ -57,6 +58,9 @@ public class CNPhotoUtil {
     private Uri outPutUri;
 
     public void showDialog(Activity activity, CNDialogInfo info) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         CNDialog.show(activity, info, new DialogCallBack() {
             @Override
             public void onClick(boolean isOk, Dialog v) {
@@ -167,7 +171,7 @@ public class CNPhotoUtil {
     }
 
     public void takePhotoCropImage(Activity context) {
-        if (TextUtils.isEmpty(photoPath)) {
+        if (TextUtils.isEmpty(photoPath) || !ChestnutData.getPermission()) {
             return;
         }
         Log.d("裁剪的Url", "cropRawPhoto: " + photoURI.toString());
@@ -225,6 +229,9 @@ public class CNPhotoUtil {
      */
     @RequiresApi(api = Build.VERSION_CODES.Q)
     private String uriToFileApiQ(Context context, Uri uri) {
+        if(!ChestnutData.getPermission()){
+            return "";
+        }
         File file = null;
         //android10以上转换
         if (uri.getScheme().equals(ContentResolver.SCHEME_FILE)) {
@@ -260,6 +267,9 @@ public class CNPhotoUtil {
      * @param activity
      */
     public void takePhoto(Activity activity) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         try {
             File photoFile = null;
@@ -294,6 +304,9 @@ public class CNPhotoUtil {
      * 调用选择照片
      */
     public void selectPicture(Activity activity) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         Log.i(TAG, "选择照片");
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
@@ -309,6 +322,9 @@ public class CNPhotoUtil {
      * @return
      */
     public String parseApiImagePath(Context context, Intent intent) {
+        if(!ChestnutData.getPermission()){
+            return "";
+        }
         String result = "";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             result = handleImageOnKitkat(context, intent);
@@ -380,6 +396,9 @@ public class CNPhotoUtil {
      */
     public void selectPhotoCropImage(Activity activity, String imagePath, Uri outputFileUri, int requestCode, int aspectX, int aspectY, int outputX,
                                      int outputY) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         Uri originalFileUri = getUriForFile(activity, new File(imagePath));
         if (originalFileUri == null) {
             return;
@@ -457,7 +476,7 @@ public class CNPhotoUtil {
      * @return true 成功 false 失败
      */
     public boolean save(Bitmap src, File file, Bitmap.CompressFormat format, boolean recycle) {
-        if (src == null)
+        if (src == null || !ChestnutData.getPermission())
             return false;
 
         OutputStream os;

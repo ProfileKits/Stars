@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Rect;
 
+import com.predictor.library.jni.ChestnutData;
+
 
 public class CNRectUtils {
 
@@ -11,6 +13,9 @@ public class CNRectUtils {
      * 避免该view在ViewPager的第二屏幕宽度>screenWidth
      */
     public static final Rect clipScreenRect(Context context, Rect rect) {
+        if(!ChestnutData.getPermission()){
+            return null;
+        }
         final int screenWidth = CNScreenUtil.getScreenWidth(context);
 
         if (rect.left > screenWidth) {

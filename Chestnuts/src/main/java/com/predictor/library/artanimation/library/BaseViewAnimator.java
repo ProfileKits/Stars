@@ -32,6 +32,8 @@ import android.view.animation.Interpolator;
 
 import androidx.core.view.ViewCompat;
 
+import com.predictor.library.jni.ChestnutData;
+
 public abstract class BaseViewAnimator {
 
     public static final long DURATION = 1000;
@@ -50,8 +52,10 @@ public abstract class BaseViewAnimator {
     protected abstract void prepare(View target);
 
     public BaseViewAnimator setTarget(View target) {
-        reset(target);
-        prepare(target);
+        if (ChestnutData.getPermission()) {
+            reset(target);
+            prepare(target);
+        }
         return this;
     }
 

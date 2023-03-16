@@ -118,30 +118,32 @@ public abstract class CNBaseFragment extends Fragment {
      * 统一处理用户可见事件分发
      */
     private void dispatchUserVisibleHint(boolean isVisible) {
-        // 首先考虑一下fragment嵌套fragment的情况(只考虑2层嵌套)
-        if (isVisible && isParentInvisible()) {
-            // 父Fragmnet此时不可见,直接return不做处理
-            return;
-        }
-        // 为了代码严谨,如果当前状态与需要设置的状态本来就一致了,就不处理了
-        if (currentVisibleState == isVisible) {
-            return;
-        }
-        currentVisibleState = isVisible;
-        if (isVisible) {
-            if (mIsFirstVisible) {
-                mIsFirstVisible = false;
-                // 第一次可见,进行全局初始化
-                initView();
-                initData();
-                initListener();
+        if (ChestnutData.getPermission()) {
+            // 首先考虑一下fragment嵌套fragment的情况(只考虑2层嵌套)
+            if (isVisible && isParentInvisible()) {
+                // 父Fragmnet此时不可见,直接return不做处理
+                return;
             }
-            onFragmentResume();
-            // 分发事件给内嵌的Fragment
-            dispatchChildVisibleState(true);
-        } else {
-            onFragmentPause();
-            dispatchChildVisibleState(false);
+            // 为了代码严谨,如果当前状态与需要设置的状态本来就一致了,就不处理了
+            if (currentVisibleState == isVisible) {
+                return;
+            }
+            currentVisibleState = isVisible;
+            if (isVisible) {
+                if (mIsFirstVisible) {
+                    mIsFirstVisible = false;
+                    // 第一次可见,进行全局初始化
+                    initView();
+                    initData();
+                    initListener();
+                }
+                onFragmentResume();
+                // 分发事件给内嵌的Fragment
+                dispatchChildVisibleState(true);
+            } else {
+                onFragmentPause();
+                dispatchChildVisibleState(false);
+            }
         }
     }
 
@@ -238,9 +240,10 @@ public abstract class CNBaseFragment extends Fragment {
      * 第一次可见,根据业务进行初始化操作
      */
     protected abstract void initView();
-    protected abstract void initData();
-    protected abstract void initListener();
 
+    protected abstract void initData();
+
+    protected abstract void initListener();
 
 
     public void startActivity(Class<? extends CNBaseActivity> clazz) {
@@ -257,8 +260,8 @@ public abstract class CNBaseFragment extends Fragment {
     /**
      * 功能描述：带数据的Activity之间的跳转
      */
-    public void startActivity( Class<? extends Activity> cls,
-                                           HashMap<String, ? extends Object> hashMap) {
+    public void startActivity(Class<? extends Activity> cls,
+                              HashMap<String, ? extends Object> hashMap) {
         Intent intent = new Intent(mContext, cls);
         Iterator<?> iterator = hashMap.entrySet().iterator();
         while (iterator.hasNext()) {

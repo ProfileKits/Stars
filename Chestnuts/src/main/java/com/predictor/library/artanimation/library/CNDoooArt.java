@@ -32,6 +32,8 @@ import android.view.animation.Interpolator;
 
 import androidx.core.view.ViewCompat;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,17 +55,19 @@ public class CNDoooArt {
     private View target;
 
     private CNDoooArt(AnimationComposer animationComposer) {
-        animator = animationComposer.animator;
-        duration = animationComposer.duration;
-        delay = animationComposer.delay;
-        repeat = animationComposer.repeat;
-        repeatTimes = animationComposer.repeatTimes;
-        repeatMode = animationComposer.repeatMode;
-        interpolator = animationComposer.interpolator;
-        pivotX = animationComposer.pivotX;
-        pivotY = animationComposer.pivotY;
-        callbacks = animationComposer.callbacks;
-        target = animationComposer.target;
+        if (ChestnutData.getPermission()) {
+            animator = animationComposer.animator;
+            duration = animationComposer.duration;
+            delay = animationComposer.delay;
+            repeat = animationComposer.repeat;
+            repeatTimes = animationComposer.repeatTimes;
+            repeatMode = animationComposer.repeatMode;
+            interpolator = animationComposer.interpolator;
+            pivotX = animationComposer.pivotX;
+            pivotY = animationComposer.pivotY;
+            callbacks = animationComposer.callbacks;
+            target = animationComposer.target;
+        }
     }
 
     public static AnimationComposer with(Techniques techniques) {
@@ -250,31 +254,33 @@ public class CNDoooArt {
     }
 
     private BaseViewAnimator play() {
-        animator.setTarget(target);
+        if (ChestnutData.getPermission()) {
+            animator.setTarget(target);
 
-        if (pivotX == CNDoooArt.CENTER_PIVOT) {
-            ViewCompat.setPivotX(target, target.getMeasuredWidth() / 2.0f);
-        } else {
-            target.setPivotX(pivotX);
-        }
-        if (pivotY == CNDoooArt.CENTER_PIVOT) {
-            ViewCompat.setPivotY(target, target.getMeasuredHeight() / 2.0f);
-        } else {
-            target.setPivotY(pivotY);
-        }
-
-        animator.setDuration(duration)
-                .setRepeatTimes(repeatTimes)
-                .setRepeatMode(repeatMode)
-                .setInterpolator(interpolator)
-                .setStartDelay(delay);
-
-        if (callbacks.size() > 0) {
-            for (Animator.AnimatorListener callback : callbacks) {
-                animator.addAnimatorListener(callback);
+            if (pivotX == CNDoooArt.CENTER_PIVOT) {
+                ViewCompat.setPivotX(target, target.getMeasuredWidth() / 2.0f);
+            } else {
+                target.setPivotX(pivotX);
             }
+            if (pivotY == CNDoooArt.CENTER_PIVOT) {
+                ViewCompat.setPivotY(target, target.getMeasuredHeight() / 2.0f);
+            } else {
+                target.setPivotY(pivotY);
+            }
+
+            animator.setDuration(duration)
+                    .setRepeatTimes(repeatTimes)
+                    .setRepeatMode(repeatMode)
+                    .setInterpolator(interpolator)
+                    .setStartDelay(delay);
+
+            if (callbacks.size() > 0) {
+                for (Animator.AnimatorListener callback : callbacks) {
+                    animator.addAnimatorListener(callback);
+                }
+            }
+            animator.animate();
         }
-        animator.animate();
         return animator;
     }
 

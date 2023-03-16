@@ -54,7 +54,7 @@ public class RetrofitUtil {
 
 
     public Retrofit getInstance() throws NoSuchAlgorithmException {
-        if (sInstance == null) {
+        if (sInstance == null && ChestnutData.getPermission()) {
             synchronized (RetrofitUtil.class) {
                 OkHttpClient.Builder httpClient = getOkHttp();
                 sInstance = new Retrofit.Builder()

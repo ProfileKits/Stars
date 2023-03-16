@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.collection.SimpleArrayMap;
 
+import com.predictor.library.jni.ChestnutData;
+
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -19,6 +21,9 @@ public final class CNSPUtils {
     private static Context context;
 
     private static void init(Context mcontext){
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         context = mcontext;
     }
 

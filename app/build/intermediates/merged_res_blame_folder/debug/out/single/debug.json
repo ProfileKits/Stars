@@ -20,12 +20,12 @@
         "source": "/Users/VIJOZ/Android/Chestnuts/app/src/main/res/layout/activity_view_pager.xml"
     },
     {
-        "merged": "/Users/VIJOZ/Android/Chestnuts/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/VIJOZ/Android/Chestnuts/app/src/main/res/drawable/ic_launcher_background.xml"
-    },
-    {
         "merged": "/Users/VIJOZ/Android/Chestnuts/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Users/VIJOZ/Android/Chestnuts/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/VIJOZ/Android/Chestnuts/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/VIJOZ/Android/Chestnuts/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
         "merged": "/Users/VIJOZ/Android/Chestnuts/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",

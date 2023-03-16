@@ -36,7 +36,7 @@ import com.predictor.library.bean.CNDialogInfo;
 import com.predictor.library.example.SetSelfWithPoint;
 import com.predictor.library.listener.OnChangeListener;
 import com.predictor.library.net.RetrofitUtil;
-import com.predictor.library.oknet.CNttp;
+import com.predictor.library.oknet.CNHttp;
 import com.predictor.library.oknet.callback.HttpCallback;
 import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.rx.NormalSubscriber;
@@ -313,7 +313,7 @@ public class MainActivity extends CNBaseActivity {
 
 
     private void okNetwork() {
-        CNttp.get().url(Config.testUrl2)
+        CNHttp.get().url(Config.testUrl2)
                 .build().execute(new HttpCallback() {
                     @Override
                     public void onSuccess(Object data, int id) {

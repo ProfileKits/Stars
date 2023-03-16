@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Vibrator;
 
 import com.predictor.library.R;
+import com.predictor.library.jni.ChestnutData;
 
 
 /**
@@ -28,7 +29,7 @@ public class CNNoticeVoicePlayer {
 
 
     public static CNNoticeVoicePlayer getInstance(Context context) {
-        if (instance == null) {
+        if (instance == null && ChestnutData.getPermission()) {
             instance = new CNNoticeVoicePlayer(context, null);
         }
         return instance;
@@ -40,7 +41,7 @@ public class CNNoticeVoicePlayer {
      * @return
      */
     public static CNNoticeVoicePlayer getInstance(Context context, Uri ringTone) {
-        if (instance == null) {
+        if (instance == null && ChestnutData.getPermission()) {
             instance = new CNNoticeVoicePlayer(context, ringTone);
         }
         return instance;

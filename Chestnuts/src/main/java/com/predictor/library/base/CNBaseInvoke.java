@@ -32,10 +32,6 @@ public class CNBaseInvoke {
         if (k) {
             CrashReport.initCrashReport(context, buglyKey, isDebug);
         }
-
-//        String realKey = ChestnutData.getKey(context);
-//        boolean permission = ChestnutData.getPermission();
-//        CNLogUtil.i("realKey:"+realKey+ "--permission:"+permission);
         return k;
     }
 
@@ -43,9 +39,6 @@ public class CNBaseInvoke {
         this.context = context;
         CNBaseTools.init(context);
         boolean k = ChestnutData.getToken(context, key, isDebug);
-//        String realKey = ChestnutData.getKey(context);
-//        boolean permission = ChestnutData.getPermission();
-//        CNLogUtil.i("realKey:"+realKey+ "--permission:"+permission);
         return k;
     }
 

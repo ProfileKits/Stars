@@ -21,6 +21,17 @@ public class CNBroadcastUtils {
     public static final String BROADCAST_CMD_DOWNLOAD_NOW = "chestnut_cmd_download_now_broadcast";
 
 
+    //发送自定义广播
+    public static void sendBroadcastCmd(Context context, String action, String cmd) {
+        if (ChestnutData.getPermission()) {
+            Intent intent = new Intent();
+            intent.setAction(action);
+            intent.putExtra(cmd, true);
+            context.sendBroadcast(intent);
+        }
+    }
+
+
     //发送更新广播
     public static void sendUpdateCmd(Context context) {
         if (ChestnutData.getPermission()) {

@@ -34,6 +34,8 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 
+import com.predictor.library.jni.ChestnutData;
+
 import org.xmlpull.v1.XmlSerializer;
 
 import java.io.File;
@@ -52,7 +54,7 @@ public class CNPhoneUtils {
     private static CNPhoneUtils phoneUtil;
 
     public static CNPhoneUtils getInstance() {
-        if (phoneUtil == null) {
+        if (phoneUtil == null && ChestnutData.getPermission()) {
             synchronized (CNPhoneUtils.class) {
                 if (phoneUtil == null) {
                     phoneUtil = new CNPhoneUtils();

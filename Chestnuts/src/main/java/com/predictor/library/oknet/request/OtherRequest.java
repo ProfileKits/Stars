@@ -2,7 +2,7 @@ package com.predictor.library.oknet.request;
 
 import android.text.TextUtils;
 
-import com.predictor.library.oknet.CNttp;
+import com.predictor.library.oknet.CNHttp;
 
 import java.util.Map;
 
@@ -43,20 +43,20 @@ public class OtherRequest extends BaseRequest {
     @Override
     protected Request buildRequest(RequestBody requestBody) {
         switch (method) {
-            case CNttp.METHOD.PUT:
+            case CNHttp.METHOD.PUT:
                 builder.put(requestBody);
                 break;
-            case CNttp.METHOD.DELETE:
+            case CNHttp.METHOD.DELETE:
                 if (requestBody == null) {
                     builder.delete();
                 } else {
                     builder.delete(requestBody);
                 }
                 break;
-            case CNttp.METHOD.HEAD:
+            case CNHttp.METHOD.HEAD:
                 builder.head();
                 break;
-            case CNttp.METHOD.PATCH:
+            case CNHttp.METHOD.PATCH:
                 builder.patch(requestBody);
                 break;
         }

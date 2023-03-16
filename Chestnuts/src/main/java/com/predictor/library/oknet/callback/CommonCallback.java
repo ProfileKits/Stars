@@ -2,7 +2,7 @@ package com.predictor.library.oknet.callback;
 
 import com.google.gson.Gson;
 import com.google.gson.internal.$Gson$Types;
-import com.predictor.library.oknet.CNttp;
+import com.predictor.library.oknet.CNHttp;
 
 import org.json.JSONObject;
 
@@ -36,7 +36,7 @@ public abstract class CommonCallback<T> extends BaseCallback<T> {
             } else {
                 String tData = obj.getString("msg");
                 // 发送到UI线程
-                CNttp.getInstance().getDelivery().execute(new Runnable() {
+                CNHttp.getInstance().getDelivery().execute(new Runnable() {
                     @Override
                     public void run() {
                         onFail(code, tData);

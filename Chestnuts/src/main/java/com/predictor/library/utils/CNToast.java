@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 
 import com.predictor.library.R;
+import com.predictor.library.jni.ChestnutData;
 
 import java.lang.reflect.Field;
 
@@ -22,6 +23,9 @@ public class CNToast {
     }
 
     public static void show(Context context, int res) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         if (context == null) {
             return;
         }
@@ -29,6 +33,9 @@ public class CNToast {
     }
 
     public static void showErrorData(Context context) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         if (context == null) {
             return;
         }
@@ -37,6 +44,9 @@ public class CNToast {
 
 
     public static void showNetError(Context context) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         if (context == null) {
             return;
         }
@@ -44,6 +54,9 @@ public class CNToast {
     }
 
     public static void show(Context context, String message) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         if (context == null) {
             return;
         }
@@ -51,6 +64,9 @@ public class CNToast {
     }
 
     public static void showLong(Context context, String message) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         if (context == null) {
             return;
         }
@@ -58,6 +74,9 @@ public class CNToast {
     }
 
     public static void showLong(Context context, int res) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         if (context == null) {
             return;
         }
@@ -65,6 +84,9 @@ public class CNToast {
     }
 
     public static void showUnkownError(Context ctx, Throwable t) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         String message = "null";
         if (t != null) {
             message = t.getMessage();
@@ -73,6 +95,9 @@ public class CNToast {
     }
 
     private static void realShow(Context context, int res, int duration) {
+        if(!ChestnutData.getPermission()){
+            return;
+        }
         realShow(context, context.getString(res), duration);
     }
 

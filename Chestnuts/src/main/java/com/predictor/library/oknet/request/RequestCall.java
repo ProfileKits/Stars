@@ -1,6 +1,6 @@
 package com.predictor.library.oknet.request;
 
-import com.predictor.library.oknet.CNttp;
+import com.predictor.library.oknet.CNHttp;
 import com.predictor.library.oknet.callback.BaseCallback;
 
 import java.io.IOException;
@@ -43,17 +43,17 @@ public class RequestCall {
     public Call buildCall(BaseCallback baseCallback) {
         request = generateRequest(baseCallback);
         if (readTimeOut > 0 || writeTimeOut > 0 || connTimeOut > 0) {
-            readTimeOut = readTimeOut > 0 ? readTimeOut : CNttp.DEFAULT_MILLISECONDS;
-            writeTimeOut = writeTimeOut > 0 ? writeTimeOut : CNttp.DEFAULT_MILLISECONDS;
-            connTimeOut = connTimeOut > 0 ? connTimeOut : CNttp.DEFAULT_MILLISECONDS;
-            OkHttpClient client = CNttp.getInstance().getOkHttpClient().newBuilder()
+            readTimeOut = readTimeOut > 0 ? readTimeOut : CNHttp.DEFAULT_MILLISECONDS;
+            writeTimeOut = writeTimeOut > 0 ? writeTimeOut : CNHttp.DEFAULT_MILLISECONDS;
+            connTimeOut = connTimeOut > 0 ? connTimeOut : CNHttp.DEFAULT_MILLISECONDS;
+            OkHttpClient client = CNHttp.getInstance().getOkHttpClient().newBuilder()
                     .readTimeout(readTimeOut, TimeUnit.MILLISECONDS)
                     .writeTimeout(writeTimeOut, TimeUnit.MILLISECONDS)
                     .connectTimeout(connTimeOut, TimeUnit.MILLISECONDS)
                     .build();
             call = client.newCall(request);
         } else {
-            call = CNttp.getInstance().getOkHttpClient().newCall(request);
+            call = CNHttp.getInstance().getOkHttpClient().newCall(request);
         }
         return call;
     }
@@ -67,7 +67,7 @@ public class RequestCall {
         if (baseCallback != null) {
             baseCallback.onBefore(request, getOkHttpRequest().getId());
         }
-        CNttp.getInstance().execute(this, baseCallback);
+        CNHttp.getInstance().execute(this, baseCallback);
     }
 
     public Call getCall() {

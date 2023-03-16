@@ -116,6 +116,20 @@ public class CNJsonUtils {
         return str;
     }
 
+
+    /**
+     * json转List对象
+     * @param json
+     * @param clazz
+     * @param <T>
+     * @return
+     */
+    public static List<Object> json2List(String json, Object obj) {
+        Type type = new TypeToken<ArrayList<Object>>(){}.getType();
+        List<Object> data = new Gson().fromJson(json,type);
+        return data;
+    }
+
     /**
      * 使用Gson object转map集合
      * @param obj

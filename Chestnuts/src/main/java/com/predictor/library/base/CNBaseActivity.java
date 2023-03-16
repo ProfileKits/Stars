@@ -19,6 +19,7 @@ import androidx.core.content.PermissionChecker;
 
 import com.gyf.immersionbar.ImmersionBar;
 import com.predictor.library.jni.ChestnutData;
+import com.predictor.library.utils.CNLog;
 
 import java.io.BufferedReader;
 import java.io.IOException;

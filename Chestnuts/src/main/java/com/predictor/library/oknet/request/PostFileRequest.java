@@ -1,6 +1,6 @@
 package com.predictor.library.oknet.request;
 
-import com.predictor.library.oknet.CNttp;
+import com.predictor.library.oknet.CNHttp;
 import com.predictor.library.oknet.callback.BaseCallback;
 
 import java.io.File;
@@ -43,7 +43,7 @@ public class PostFileRequest extends BaseRequest {
         return new ProgressRequestBody(requestBody, new ProgressRequestBody.Listener() {
             @Override
             public void onRequestProgress(final long bytesWritten, final long contentLength) {
-                CNttp.getInstance().getDelivery().execute(new Runnable() {
+                CNHttp.getInstance().getDelivery().execute(new Runnable() {
                     @Override
                     public void run() {
                         baseCallback.inProgress(bytesWritten * 1.0f / contentLength, contentLength, id);
