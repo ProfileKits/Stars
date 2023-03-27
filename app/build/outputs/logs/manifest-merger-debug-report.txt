@@ -60,7 +60,7 @@ MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/VIJOZ/Downloads/ITrave
 MERGED from [com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a12d139d3bf2482aae9136cf8fcea934/transformed/jetified-wechat-sdk-android-without-mta-6.8.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:2:1-78:12
 MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/jetified-immersionbar-3.2.2/AndroidManifest.xml:2:1-9:12
-MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:2:1-11:12
+MERGED from [com.tencent.bugly:crashreport:4.1.9.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7dafeefcab17a5e618cd5c9bf3c34e35/transformed/jetified-crashreport-4.1.9.1/AndroidManifest.xml:2:1-11:12
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:2:1-55:12
@@ -290,8 +290,8 @@ MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/IT
 MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:7:5-44
 MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/jetified-immersionbar-3.2.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.geyifeng.immersionbar:immersionbar:3.2.2] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/a24692c295c18dc74426d86513283254/transformed/jetified-immersionbar-3.2.2/AndroidManifest.xml:5:5-7:41
-MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
-MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/4a3826d2ab721e0491eb1e4a80d51251/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.bugly:crashreport:4.1.9.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7dafeefcab17a5e618cd5c9bf3c34e35/transformed/jetified-crashreport-4.1.9.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.bugly:crashreport:4.1.9.1] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7dafeefcab17a5e618cd5c9bf3c34e35/transformed/jetified-crashreport-4.1.9.1/AndroidManifest.xml:7:5-9:41
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 INJECTED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

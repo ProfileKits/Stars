@@ -100,142 +100,141 @@
 50-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:20:9-44
 51        android:supportsRtl="true"
 51-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
-52        android:testOnly="true"
-53        android:theme="@style/Theme.NoTitleBar" >
-53-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
-54        <activity
-54-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
-55            android:name="com.predictor.galaxy.ui.ViewPagerActivity"
-55-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
-56            android:exported="false" />
-56-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
-57        <activity
-57-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
-58            android:name="com.predictor.galaxy.ui.SecondActivity"
-58-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
-59            android:exported="false" />
-59-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
-60        <activity
-60-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
-61            android:name="com.predictor.galaxy.ui.MainActivity"
-61-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
-62            android:exported="true" >
-62-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
-63            <intent-filter>
-63-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
-64                <action android:name="android.intent.action.MAIN" />
-64-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
-64-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
-65
-66                <category android:name="android.intent.category.LAUNCHER" />
-66-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
-66-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
-67            </intent-filter>
-68        </activity>
-69
-70        <service
-70-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
-71            android:name="com.predictor.library.net.DownloadService"
-71-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
-72            android:permission="android.permission.BIND_JOB_SERVICE" />
-72-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
-73
-74        <provider
-75            android:name="androidx.core.content.FileProvider"
-75-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
-76            android:authorities="com.predictor.library.fileProvider"
-76-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
-77            android:exported="false"
-77-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
-78            android:grantUriPermissions="true" >
-78-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
-79            <meta-data
-79-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
-80                android:name="android.support.FILE_PROVIDER_PATHS"
-80-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
-81                android:resource="@xml/file_paths" />
-81-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
-82        </provider>
-83
-84        <uses-library
-84-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:33:9-35:40
-85            android:name="org.apache.http.legacy"
-85-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:34:13-50
-86            android:required="false" />
-86-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:35:13-37
-87
-88        <activity
-88-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:37:9-42:20
-89            android:name="com.alipay.sdk.app.H5PayActivity"
-89-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:38:13-60
-90            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
-90-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:39:13-167
-91            android:exported="false"
-91-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:40:13-37
-92            android:theme="@android:style/Theme.NoTitleBar" >
-92-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:41:13-60
-93        </activity>
-94        <activity
-94-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:43:9-48:20
-95            android:name="com.alipay.sdk.app.H5AuthActivity"
-95-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:44:13-61
-96            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
-96-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:45:13-167
-97            android:exported="false"
-97-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:46:13-37
-98            android:theme="@android:style/Theme.NoTitleBar" >
-98-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:47:13-60
-99        </activity>
-100        <activity
-100-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:49:9-55:20
-101            android:name="com.alipay.sdk.app.PayResultActivity"
-101-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:50:13-64
-102            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
-102-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:51:13-167
-103            android:exported="true"
-103-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:52:13-36
-104            android:launchMode="singleInstance"
-104-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:53:13-48
-105            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-105-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:54:13-72
-106        </activity>
-107        <activity
-107-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:56:9-62:20
-108            android:name="com.alipay.sdk.app.AlipayResultActivity"
-108-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:57:13-67
-109            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
-109-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:58:13-167
-110            android:exported="true"
-110-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:59:13-36
-111            android:launchMode="singleTask"
-111-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:60:13-44
-112            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-112-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:61:13-72
-113        </activity>
-114        <activity
-114-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:63:9-69:20
-115            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
-115-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:64:13-65
-116            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
-116-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:65:13-167
-117            android:exported="false"
-117-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:66:13-37
-118            android:screenOrientation="behind"
-118-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:67:13-47
-119            android:windowSoftInputMode="adjustResize|stateHidden" >
-119-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:68:13-67
-120        </activity>
-121        <activity
-121-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:70:9-75:20
-122            android:name="com.alipay.sdk.app.APayEntranceActivity"
-122-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:71:13-67
-123            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
-123-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:72:13-167
-124            android:exported="false"
-124-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:73:13-37
-125            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-125-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:74:13-72
-126        </activity>
-127    </application>
-128
-129</manifest>
+52        android:theme="@style/Theme.NoTitleBar" >
+52-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:23:9-48
+53        <activity
+53-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:24:9-26:40
+54            android:name="com.predictor.galaxy.ui.ViewPagerActivity"
+54-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:25:13-49
+55            android:exported="false" />
+55-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:26:13-37
+56        <activity
+56-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:27:9-29:40
+57            android:name="com.predictor.galaxy.ui.SecondActivity"
+57-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:28:13-46
+58            android:exported="false" />
+58-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:29:13-37
+59        <activity
+59-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:30:9-38:20
+60            android:name="com.predictor.galaxy.ui.MainActivity"
+60-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:31:13-44
+61            android:exported="true" >
+61-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:32:13-36
+62            <intent-filter>
+62-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:33:13-37:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:17-69
+63-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:34:25-66
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:17-77
+65-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:36:27-74
+66            </intent-filter>
+67        </activity>
+68
+69        <service
+69-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:40:9-42:72
+70            android:name="com.predictor.library.net.DownloadService"
+70-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:41:13-69
+71            android:permission="android.permission.BIND_JOB_SERVICE" />
+71-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:42:13-69
+72
+73        <provider
+74            android:name="androidx.core.content.FileProvider"
+74-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:45:13-62
+75            android:authorities="com.predictor.library.fileProvider"
+75-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:46:13-57
+76            android:exported="false"
+76-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:47:13-37
+77            android:grantUriPermissions="true" >
+77-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:48:13-47
+78            <meta-data
+78-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:49:13-51:54
+79                android:name="android.support.FILE_PROVIDER_PATHS"
+79-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:50:17-67
+80                android:resource="@xml/file_paths" />
+80-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:51:17-51
+81        </provider>
+82
+83        <uses-library
+83-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:33:9-35:40
+84            android:name="org.apache.http.legacy"
+84-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:34:13-50
+85            android:required="false" />
+85-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:35:13-37
+86
+87        <activity
+87-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:37:9-42:20
+88            android:name="com.alipay.sdk.app.H5PayActivity"
+88-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:38:13-60
+89            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+89-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:39:13-167
+90            android:exported="false"
+90-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:40:13-37
+91            android:theme="@android:style/Theme.NoTitleBar" >
+91-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:41:13-60
+92        </activity>
+93        <activity
+93-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:43:9-48:20
+94            android:name="com.alipay.sdk.app.H5AuthActivity"
+94-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:44:13-61
+95            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+95-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:45:13-167
+96            android:exported="false"
+96-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:46:13-37
+97            android:theme="@android:style/Theme.NoTitleBar" >
+97-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:47:13-60
+98        </activity>
+99        <activity
+99-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:49:9-55:20
+100            android:name="com.alipay.sdk.app.PayResultActivity"
+100-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:50:13-64
+101            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+101-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:51:13-167
+102            android:exported="true"
+102-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:52:13-36
+103            android:launchMode="singleInstance"
+103-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:53:13-48
+104            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+104-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:54:13-72
+105        </activity>
+106        <activity
+106-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:56:9-62:20
+107            android:name="com.alipay.sdk.app.AlipayResultActivity"
+107-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:57:13-67
+108            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+108-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:58:13-167
+109            android:exported="true"
+109-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:59:13-36
+110            android:launchMode="singleTask"
+110-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:60:13-44
+111            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+111-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:61:13-72
+112        </activity>
+113        <activity
+113-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:63:9-69:20
+114            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
+114-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:64:13-65
+115            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+115-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:65:13-167
+116            android:exported="false"
+116-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:66:13-37
+117            android:screenOrientation="behind"
+117-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:67:13-47
+118            android:windowSoftInputMode="adjustResize|stateHidden" >
+118-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:68:13-67
+119        </activity>
+120        <activity
+120-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:70:9-75:20
+121            android:name="com.alipay.sdk.app.APayEntranceActivity"
+121-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:71:13-67
+122            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+122-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:72:13-167
+123            android:exported="false"
+123-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:73:13-37
+124            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+124-->[com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/7acc4e9c99ee38e7ff418bb13f8bfb98/transformed/jetified-alipaysdk-android-15.8.11/AndroidManifest.xml:74:13-72
+125        </activity>
+126    </application>
+127
+128</manifest>

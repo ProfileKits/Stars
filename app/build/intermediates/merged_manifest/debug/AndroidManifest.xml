@@ -49,7 +49,6 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_icon"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.NoTitleBar" >
         <activity
             android:name="com.predictor.galaxy.ui.ViewPagerActivity"
