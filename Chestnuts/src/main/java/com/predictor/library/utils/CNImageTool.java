@@ -907,6 +907,53 @@ public class CNImageTool {
         return r;
     }
 
+    private static final int CIRCLEDEGREE = 360;
+
+    /**
+     * 这段代码是一个旋转二维平面上某个点的方法。
+     *
+     * 具体解释如下：
+     *
+     * 参数说明：
+     *
+     * point：要旋转的点坐标，是一个float数组，长度为2，分别表示x坐标和y坐标。
+     * coodinate：旋转的中心坐标，是一个float数组，长度为2，分别表示x坐标和y坐标。
+     * degree：旋转的角度，单位为度。
+     * 返回值说明：
+     *
+     * 返回值为一个float数组，长度为2，分别表示旋转后的点的x坐标和y坐标。
+     * 方法说明：
+     *
+     * radioX和radioY表示旋转中心的坐标；
+     * x和y表示要旋转的点的坐标；
+     * r表示旋转中心和要旋转的点之间的距离；
+     * nowDegree表示旋转中心和要旋转的点形成的线段和x轴正方向之间的夹角；
+     * endDegree表示旋转后点和x轴正方向之间的夹角；
+     * CIRCLEDEGREE为常量，值为360，表示一圆的角度为360度；
+     * end[0]表示旋转后的点的x坐标；
+     * end[1]表示旋转后的点的y坐标。
+     * 在方法实现中，首先根据旋转中心和要旋转的点的坐标，求出两点之间的距离r和旋转前点和x轴正方向之间的夹角
+     * nowDegree。接下来，根据旋转角度和nowDegree，计算出旋转后点和x轴正方向之间的夹角endDegree。
+     * 最后，根据endDegree和r，计算出旋转后点的坐标并返回。
+     * @param point
+     * @param coodinate
+     * @param degree
+     * @return
+     */
+    public float[] rotatePoint(float[] point, float[] coodinate, int degree) {
+        float radioX = coodinate[0];
+        float radioY = coodinate[1];
+        float x = point[0];
+        float y = point[1];
+        float r = (float) Math.sqrt((radioX - x) * (radioX - x) + (radioY - y) * (radioY - y));
+        float nowDegree = (float) Math.atan((y - radioY) / (x - radioX)) * 360;
+        float[] end = new float[2];
+        float endDegree = nowDegree + degree;
+        end[0] = (float) (r * Math.sin(endDegree / CIRCLEDEGREE));
+        end[1] = (float) (r * Math.cos(endDegree / CIRCLEDEGREE));
+        return end;
+    }
+
 
 
     /**

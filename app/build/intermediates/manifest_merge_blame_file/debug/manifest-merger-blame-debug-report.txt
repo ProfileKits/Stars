@@ -90,14 +90,14 @@
 45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 45-->[androidx.core:core:1.5.0] /Users/VIJOZ/Downloads/ITravel-master/gradle/caches/transforms-3/0c40b79363fb5ed70f345fa97b27abbb/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 46        android:debuggable="true"
-47        android:icon="@mipmap/ic_launcher"
-47-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
+47        android:icon="@mipmap/ic_icon"
+47-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:18:9-39
 48        android:label="@string/app_name"
 48-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
 49        android:requestLegacyExternalStorage="true"
 49-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:21:9-52
-50        android:roundIcon="@mipmap/ic_launcher_round"
-50-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
+50        android:roundIcon="@mipmap/ic_icon"
+50-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:20:9-44
 51        android:supportsRtl="true"
 51-->/Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:22:9-35
 52        android:testOnly="true"

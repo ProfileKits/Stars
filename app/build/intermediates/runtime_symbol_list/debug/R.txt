@@ -2073,6 +2073,7 @@ int id inward 0x7f0800d7
 int id italic 0x7f0800d8
 int id item_touch_helper_previous_elevation 0x7f0800d9
 int id iv_close 0x7f0800da
+int id iv_loading 0x7f0801fe
 int id jumpToEnd 0x7f0800db
 int id jumpToStart 0x7f0800dc
 int id labeled 0x7f0800dd
@@ -2278,6 +2279,7 @@ int id tag_transition_group 0x7f0801a4
 int id tag_unhandled_key_event_manager 0x7f0801a5
 int id tag_unhandled_key_listeners 0x7f0801a6
 int id tag_window_insets_animation_callback 0x7f0801a7
+int id taiji 0x7f0801ff
 int id test_checkbox_android_button_tint 0x7f0801a8
 int id test_checkbox_app_button_tint 0x7f0801a9
 int id test_radiobutton_android_button_tint 0x7f0801aa
@@ -2541,8 +2543,10 @@ int layout text_view_without_line_height 0x7f0b0085
 int layout toast_balck 0x7f0b0086
 int layout toast_white 0x7f0b0087
 int menu menu_drag_swip 0x7f0c0000
+int mipmap ic_icon 0x7f0d0003
 int mipmap ic_launcher 0x7f0d0000
 int mipmap ic_launcher_round 0x7f0d0001
+int mipmap loading 0x7f0d0002
 int plurals mtrl_badge_content_description 0x7f0e0000
 int raw msg 0x7f0f0000
 int string abc_action_bar_home_description 0x7f100000

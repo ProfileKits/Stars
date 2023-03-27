@@ -2074,6 +2074,7 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_close
+id iv_loading
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2279,6 +2280,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id taiji
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2542,8 +2544,10 @@ layout text_view_without_line_height
 layout toast_balck
 layout toast_white
 menu menu_drag_swip
+mipmap ic_icon
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap loading
 plurals mtrl_badge_content_description
 raw msg
 string abc_action_bar_home_description

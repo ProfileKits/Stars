@@ -95,4 +95,16 @@ public class CNDES {
         byte[] plainBytes = cipher.doFinal(data);
         return plainBytes;
     }
+
+
+    //byte[]转成String
+    public static String byte2String(byte[] bytes) {
+        String str = "";
+        try {
+            str = new String(bytes, "UTF-8"); // 使用 UTF-8 编码将 byte[] 转换为 String
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
 }

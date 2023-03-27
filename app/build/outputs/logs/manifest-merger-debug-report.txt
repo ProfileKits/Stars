@@ -153,9 +153,9 @@ MERGED from [com.alipay.sdk:alipaysdk-android:15.8.11] /Users/VIJOZ/Downloads/IT
 	android:label
 		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:19:9-41
 	android:roundIcon
-		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:20:9-54
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:20:9-44
 	android:icon
-		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:18:9-39
 	android:allowBackup
 		ADDED from /Users/VIJOZ/Android/Chestnuts/app/src/main/AndroidManifest.xml:17:9-35
 	android:theme

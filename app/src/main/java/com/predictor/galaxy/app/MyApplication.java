@@ -11,6 +11,7 @@ import com.predictor.library.base.CNBaseApp;
 import com.predictor.library.base.CNBaseInvoke;
 import com.predictor.library.jni.ChestnutData;
 import com.predictor.library.net.HttpUrl;
+import com.predictor.library.net.lib.CNetStateWatcher;
 import com.predictor.library.utils.CNLog;
 import com.predictor.library.utils.CNLogUtil;
 

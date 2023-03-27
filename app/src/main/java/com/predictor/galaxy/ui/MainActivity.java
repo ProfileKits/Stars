@@ -1,5 +1,12 @@
 package com.predictor.galaxy.ui;
 
+import static com.predictor.library.net.lib.annotation.constant.NetworkTypeEnum.NETWORK_2G;
+import static com.predictor.library.net.lib.annotation.constant.NetworkTypeEnum.NETWORK_3G;
+import static com.predictor.library.net.lib.annotation.constant.NetworkTypeEnum.NETWORK_4G;
+import static com.predictor.library.net.lib.annotation.constant.NetworkTypeEnum.NETWORK_NO;
+import static com.predictor.library.net.lib.annotation.constant.NetworkTypeEnum.NETWORK_WIFI;
+import static com.predictor.library.utils.CNAnimationUtils.IN_ROTATE360;
+
 import android.animation.Animator;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +19,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +31,7 @@ import com.predictor.galaxy.R;
 import com.predictor.galaxy.bean.Person;
 import com.predictor.galaxy.bean.RankingBean;
 import com.predictor.galaxy.config.Config;
+import com.predictor.galaxy.entity.EventKey;
 import com.predictor.galaxy.module.TestCallback;
 import com.predictor.galaxy.net.RetrofitNetwork;
 import com.predictor.galaxy.net.RetrofitService;
@@ -36,14 +45,25 @@ import com.predictor.library.bean.CNDialogInfo;
 import com.predictor.library.example.SetSelfWithPoint;
 import com.predictor.library.listener.OnChangeListener;
 import com.predictor.library.net.RetrofitUtil;
+import com.predictor.library.net.lib.CNetStateWatcher;
+import com.predictor.library.net.lib.annotation.NetworkStateChanged;
 import com.predictor.library.oknet.CNHttp;
 import com.predictor.library.oknet.callback.HttpCallback;
 import com.predictor.library.pickerview.interfaces.SelectTimeCallBack;
 import com.predictor.library.rx.NormalSubscriber;
 import com.predictor.library.rx.RxTransformerHelper;
+import com.predictor.library.rx.rxutil.lifecycle.RxLifecycle;
+import com.predictor.library.rx.rxutil.rxbus.RxEvent;
+import com.predictor.library.rx.rxutil.rxjava.RxJavaUtils;
+import com.predictor.library.rx.rxutil.rxjava.task.RxIOTask;
+import com.predictor.library.rx.rxutil.rxjava.task.RxUITask;
+import com.predictor.library.rx.rxutil.subsciber.AppExecutors;
+import com.predictor.library.rx.rxutil.subsciber.ProgressDialogLoader;
+import com.predictor.library.rx.rxutil.subsciber.impl.IProgressLoader;
 import com.predictor.library.utils.CNAnimationUtils;
 import com.predictor.library.utils.CNBroadcastUtils;
 import com.predictor.library.utils.CNBugly;
+import com.predictor.library.utils.CNBus;
 import com.predictor.library.utils.CNDES;
 import com.predictor.library.utils.CNEditTextUtil;
 import com.predictor.library.utils.CNFastClickCheckUtil;
@@ -59,6 +79,7 @@ import com.predictor.library.utils.CNValidatorUtil;
 import com.predictor.library.view.CNCleanEditText;
 import com.predictor.library.view.CNDialog;
 import com.predictor.library.view.CNProgressCircle;
+import com.predictor.library.view.CNTaiJiView;
 import com.predictor.library.view.CNTextTool;
 import com.predictor.galaxy.view.PickerView;
 
@@ -66,6 +87,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import okhttp3.Call;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -84,6 +106,7 @@ public class MainActivity extends CNBaseActivity {
     private TextView textView, textView2;
     private PickerView pickerView;
     private Button btn_viewpage;
+    private ImageView imageView;
     private CNDoooArt.YoYoString rope;
     private CNCleanEditText et;
     private CNProgressCircle circle;
@@ -187,11 +210,13 @@ public class MainActivity extends CNBaseActivity {
         CNToast.show(mContext, "是否为手机号：" + CNValidatorUtil.isPhone("17022222222", true) + "");
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void initView() {
         ll_layout = findViewById(R.id.ll_layout);
         textView = findViewById(R.id.tv);
         textView2 = findViewById(R.id.tv2);
+        imageView = findViewById(R.id.iv_loading);
         btn_viewpage = findViewById(R.id.btn_viewpage);
         et = findViewById(R.id.et);
         circleView();
@@ -199,8 +224,21 @@ public class MainActivity extends CNBaseActivity {
 
         CNLogUtil.i("key22222222222:");
 
-
+        //太极图
+        taiJiView = findViewById(R.id.taiji);
+        taiJiView.setColor(Color.parseColor("#f0f0f0"),Color.parseColor("#0f0f0f"));
+        taiJiView.setVelocity(5000);
+        handlerTaiji.post(runnableTaiji);
     }
+
+    private CNTaiJiView taiJiView;
+    Handler handlerTaiji = new Handler();
+    Runnable runnableTaiji = new Runnable() {
+        @Override
+        public void run() {
+            taiJiView.startLoad();
+        }
+    };
 
 
     private void showDialog() {
@@ -267,7 +305,7 @@ public class MainActivity extends CNBaseActivity {
 
         //旋转动画
 //        CNAnimationUtils.startWith(textView, CNAnimationUtils.IN_ROTATE360, 1000);
-        CNAnimationUtils.startWith(textView, CNAnimationUtils.IN_ROTATE360, 5000, 1000, -1);
+        CNAnimationUtils.startWith(textView, IN_ROTATE360, 5000, 1000, -1);
 //      initNetwork();
 //      submitOrder();
 
@@ -278,6 +316,138 @@ public class MainActivity extends CNBaseActivity {
 
         testNetwork();
 //      okNetwork();
+        mProgressLoader = new ProgressDialogLoader(this, "正在加载数据，请稍后...");
+        testBusTools();
+        loadingAnimation();
+//        run5();
+//        mainThreadAndChildThread();
+    }
+
+
+
+    //线程切换
+    private void mainThreadAndChildThread() {
+        //UI线程
+        RxJavaUtils.doInUIThread(new RxUITask<String>("我是入参456") {
+            @Override
+            public void doInUIThread(String s) {
+
+            }
+        });
+        //IO线程
+        RxJavaUtils.doInIOThread(new RxIOTask<String>("我是入参123") {
+            @Override
+            public Void doInIOThread(String s) {
+
+                return null;
+            }
+        });
+        //回到IO线程
+        AppExecutors.get().poolIO().execute(new Runnable() {
+            @Override
+            public void run() {
+//                CNBus.init().post(EventKey.EVENT_BACK_MAINTHREAD);
+            }
+        });
+        //回到主线程
+        AppExecutors.get().mainThread().execute(new Runnable() {
+            @Override
+            public void run() {
+//                CNBus.init().post(EventKey.EVENT_BACK_NORMAL);
+            }
+        });
+        //子线程
+        AppExecutors.get().singleIO().execute(new Runnable() {
+            @Override
+            public void run() {
+//                CNBus.init().post(EventKey.EVENT_BACK_NORMAL);
+            }
+        });
+    }
+
+    //旋转动画
+    private void loadingAnimation() {
+        CNAnimationUtils.startWith(imageView, IN_ROTATE360, 1000);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // 注册网络状态监听
+        CNetStateWatcher.getInstance().register(mContext);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // 注销网络状态监听
+        CNetStateWatcher.getInstance().unRegister(mContext);
+    }
+
+
+    /**
+     * 网络发生变化
+     *
+     * @param type 网络类型
+     */
+    @NetworkStateChanged(notifyOnAppStart = false)
+    void onNetworkStateChanged(int type) {
+        switch (type) {
+            case NETWORK_2G:
+            case NETWORK_3G:
+            case NETWORK_4G:
+                Toast.makeText(this, "网络状态改变了>>>手机网络", Toast.LENGTH_SHORT).show();
+                break;
+            case NETWORK_WIFI:
+                Toast.makeText(this, "网络状态改变了>>>WIFI", Toast.LENGTH_SHORT).show();
+                break;
+            case NETWORK_NO:
+                Toast.makeText(this, "网络状态改变了>>>无网络", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    //每隔5秒执行一次
+    private void run5() {
+        RxJavaUtils.polling(5)
+                .compose(RxLifecycle.with(this).<Long>bindToLifecycle())
+                .subscribe(new Consumer<Long>() {
+                    @Override
+                    public void accept(Long o) throws Exception {
+                        CNToast.show(mContext, "12121212121" + o);
+                    }
+                });
+    }
+
+
+    private IProgressLoader mProgressLoader;
+
+    //测试订阅工具
+    private void testBusTools() {
+        //第一种方式，使用send方法发送通用式RxEvent消息
+        CNBus.init().obtain(EventKey.EVENT_SEND, new Consumer<RxEvent>() {
+            @Override
+            public void accept(RxEvent rxEvent) throws Exception {
+                CNToast.show(mContext, "BUS订阅收到消息");
+            }
+        });
+        CNBus.init().send(EventKey.EVENT_SEND);
+
+        //第二种方式，使用post方法发送自定义消息
+//        CNBus.init().obtain(EventKey.EVENT_HAVE_DATA, Event.class, new Consumer<Event>() {
+//            @Override
+//            public void accept(Event event) throws Exception {
+//                CNToast.show(mContext, event.getEventName() + event.getContent());
+//            }
+//        });
+//        //5秒后执行
+//        RxJavaUtils.delay("加载完毕！", 5, TimeUnit.SECONDS, new ProgressLoadingSubscriber<String>(mProgressLoader) {
+//            @Override
+//            public void onSuccess(String s) {
+//                CNBus.init().post(EventKey.EVENT_HAVE_DATA, new Event("BUS-POST订阅", "收到消息！"));
+//            }
+//        });
     }
 
     private void test2Network() {
@@ -313,6 +483,7 @@ public class MainActivity extends CNBaseActivity {
 
 
     private void okNetwork() {
+        //直接使用就可以
         CNHttp.get().url(Config.testUrl2)
                 .build().execute(new HttpCallback() {
                     @Override
@@ -415,6 +586,10 @@ public class MainActivity extends CNBaseActivity {
     protected void onDestroy() {
         super.onDestroy();
         RetrofitUtil.RetrofitRelease();
+        // 在app主界面/栈中最后一个Activity停止网络监听
+        CNetStateWatcher.getInstance().stopWatch();
+        CNBus.init().unregisterAll(EventKey.EVENT_HAVE_DATA);
+        CNBus.init().unregisterAll(EventKey.EVENT_SEND);
     }
 
     /**

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.predictor.library.jni.ChestnutData;
+import com.predictor.library.net.lib.CNetStateWatcher;
 import com.predictor.library.utils.CNBaseTools;
 import com.tencent.bugly.crashreport.CrashReport;
 
@@ -28,6 +29,8 @@ public class CNBaseInvoke {
     public boolean init(Context context, String key, boolean isDebug, String buglyKey) {
         this.context = context;
         CNBaseTools.init(context);
+        //初始化网络状态变化监听器
+        CNetStateWatcher.getInstance().getInstance(context);
         boolean k = ChestnutData.getToken(context, key, isDebug);
         if (k) {
             CrashReport.initCrashReport(context, buglyKey, isDebug);

@@ -69,6 +69,7 @@ dependencies {
     //微信与支付宝支付
     api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0'
     api 'com.alipay.sdk:alipaysdk-android:15.8.11'
+    implementation 'com.nineoldandroids:library:2.4.0'
 }
 
 // 指定编码
