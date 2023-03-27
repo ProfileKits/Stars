@@ -70,7 +70,7 @@ public class AliAuthorization {
         // 必须异步调用
         Thread authThread = new Thread(authRunnable);
         authThread.start();
-        
+
         return "参数正常";
     }
 
